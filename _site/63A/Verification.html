@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="canonical" href="/63A/Verification">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Google Analytics -->
+    <!--<script type="text/javascript" id="_fed_an_js_tag" src="http://www.nist.gov/js/federated-analytics.all.min.js?agency=NIST&subagency=mml&pua=UA-66610693-1&yt=true&exts=ppsx,pps,f90,sch,rtf,wrl,txz,m1v,xlsm,msi,xsd,f,tif,eps,mpg,xml,pl,xlt,c"></script> -->
+    <!-- DAP Analytics -->
+    <script type="text/javascript" id="_fed_an_ua_tag"
+            src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NIST&pua=UA-66610693-1&yt=true&exts=ppsx,pps,f90,sch,rtf,wrl,txz,m1v,xlsm,msi,xsd,f,tif,eps,mpg,xml,pl,xlt,c"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/RC-800-63-3/static/css/NISTStyle.css">
+    <link rel="stylesheet" href="/RC-800-63-3/static/css/NISTPages.css">
+    <link rel="stylesheet" href="/RC-800-63-3/static/css/graphics.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+    <title>Verification</title>
+    <meta property="og:title" content="Verification"/>
+    
+
+    
+    <meta name="description" content="Resource Center for the NIST Special Publication 800-63 Digital Identity Guidelines">
+    <meta property="og:description" content="Resource Center for the NIST Special Publication 800-63 Digital Identity Guidelines"/>
+    
+</head>
+<body>
+<header class="nist-header">
+    <h1>
+        <a class="nist-logo" target="_blank" href="http://www.nist.gov/" title="Go to nist.gov">National Institute of
+            Standards and Technology</a>
+    </h1>
+    <div class="nist-links">
+        <a class="nist-links-button" target="_blank" href="http://www.nist.gov">NIST Website</a>
+        <a class="nist-links-button mobile-hide" target="_blank" href="http://www.nist.gov/public_affairs/nandyou.cfm">About
+            NIST</a>
+        <a class="nist-links-button mobile-hide" target="_blank" href="https://github.com/usnistgov">usnistgov on
+            Github</a>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-default navbar-fixed-left" role="navigation">
+  <ul class="nav navbar-nav">
+    
+
+    <li><a href="/RC-800-63-3/">Home</a></li>
+    <li><a href="/RC-800-63-3/63-3/">SP 800-63-3</a></li>
+		<ul>
+			<li><a href="/RC-800-63-3/63-3/process">Process Flow</a></li>
+			<li><a href="/RC-800-63-3/63-3/acceptance">Risk Accpetance</a></li>
+			<li><a href="/RC-800-63-3/63-3/rmf">Risk Management</a></li>
+			<li><a href="/RC-800-63-3/63-3/key_stakeholders">Key Stakeholders</a></li>
+		</ul>
+    <li><a href="/RC-800-63-3/63A/">SP 800-63A</a></li>
+    <li><a href="/RC-800-63-3/63B/">SP 800-63B</a></li>
+    <li><a href="/RC-800-63-3/63C/">SP 800-63C</a></li>
+    <li>
+      <a href="https://github.com/usnistgov/800-63-3/issues/" class="icon">Comment</a>
+      <a href="/RC-800-63-3/comment_help.html" class="icon icon-fa">
+        <i class="fa fa-question-circle" title="Get help with leaving a comment" aria-hidden="true"></i>
+        <span class="sr-only">Get help with leaving a comment</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+<div class="container">
+  <div class="row">
+    <p>The goal of identity verification is to confirm and establish a linkage between the claimed identity and the physical, live existence of the person actually presenting the evidence. This can be done by a physical or biometric comparison, or a KBV challenge, or by authenticating the applicant with methods and credentials that are appropriate for the level of assurance.</p>
+
+<p>The following table presents the verification methods that should be considered to achieve a given level of strength of fair or above. The requirements for these levels have been outlined in Table 5-3 in SP800-63A.</p>
+
+<p><strong>Table: Verification Methods and Strengths</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Strength</strong></th>
+      <th><strong>Method</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Superior</td>
+      <td>Biometric Verification</td>
+      <td>Comparison against strongest piece of evidence, remote or in-person</td>
+    </tr>
+    <tr>
+      <td>Strong</td>
+      <td>In-Person Physical Verification</td>
+      <td>Physical comparison to photograph against strongest piece of evidence</td>
+    </tr>
+    <tr>
+      <td>Strong</td>
+      <td>Remote Physical Verification</td>
+      <td>Physical comparison to photograph against strongest piece of evidence</td>
+    </tr>
+    <tr>
+      <td>Fair</td>
+      <td>Knowledge-Based Verification</td>
+      <td>Comparison of challenge response provided by applicant against known information, remote or in-person</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Biometrics can play a key role in identity proofing and verification of individuals. This utility can come in multiple stages of the identity proofing process.</p>
+
+<p>In enrollment, agencies can capture biometrics in the form of fingerprints, face, iris images, etc. They can compare requirements with their options to identify which single or multi-modal biometric solution can best respond to their needs and implement the system accordingly.</p>
+
+<p><strong>Table: Biometric Verification</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Verification</th>
+      <th>Strength</th>
+      <th>Example</th>
+      <th>Considerations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Biometric comparison of image of user to photo in issuer or authoritative records</td>
+      <td>Superior</td>
+      <td>The image of the user captured via a device (e.g., mobile or laptop camera) is comapred using an automated matching process to a picture stored in records (e.g., DMV database).</td>
+      <td>While less vulnerable to falisfied evidence, this is still subject to spoofing and other presentation attacks. Inclusion of PAD and image quality requirements can mitigate some of these risks.</td>
+    </tr>
+    <tr>
+      <td>Biometric comparison of image to template stored on evidence</td>
+      <td>Superior</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Biometric comparison of image of user to photo on evidence</td>
+      <td>Strong</td>
+      <td>Using an automated matching process to compare the image of a user captured via a device (e.g., mobile device or laptop camera) to a picture on the piece of evidence.</td>
+      <td>Approach is vulnerable to the user presenting a forged piece of evidence or presentation attacks featuring stolen images of the user or evidence. When instituting agencies should consider additional mitigation measures to help prevent such attacks, including Presentation Attack Detection (PAD), device analytics, and image quality requirements.</td>
+    </tr>
+    <tr>
+      <td>Physical comparison by trained professional</td>
+      <td>Strong</td>
+      <td>A trained professional physically examines presented evidence and compares to the user to verify they are the same indivdual.</td>
+      <td>Subject to human error, training of individuals in proper recognition and comparison techniques can help to mitigate some of this risk.</td>
+    </tr>
+    <tr>
+      <td>Physical comparison by trained professional done remotely</td>
+      <td>Strong</td>
+      <td>A trained professional examines the evidence via a live and protected video session with the applicant to verfiy the indvidual presenting the evidence is the same individual on the evidence.</td>
+      <td>Subject to both human error and technical diffculties. Incoprporation of technology aides, image quality requirements, and training can be leveraged to mitigate these threats. See section 5.3.3.2 for requirements associated with “Supervised Remote In-Person Proofing” events.</td>
+    </tr>
+    <tr>
+      <td>Knowledge Based Verification</td>
+      <td>Fair</td>
+      <td>KBV leverages the users knoweldge of information associated with a piece of evidence to confirm their posession or association with it. This can be done through knowledge of recent transactions or responding to questions associated with the evidence.</td>
+      <td>Knowledge Based Verification can be done to link an individual to a fair piece of evidence. However, since IAL2 requires the stronged piece of evidence to be verified, there is limited value in verification of “fair” evidence.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  </div>
+</div>
+
+<footer role="contentInfo" class="site-footer">
+  <div class="section-container">
+    <div class="section-content">
+    </div>
+  </div>
+</footer>
+
+<hr>
+<section class="footer">
+<br><a target="_blank" href="http://www.nist.gov/public_affairs/privacy.cfm#privpolicy">Privacy Policy</a> | <a target="_blank" href="http://www.nist.gov/public_affairs/privacy.cfm#secnot">Security Notice</a> | <a href="http://www.nist.gov/public_affairs/privacy.cfm#accesstate">Accessibility Statement</a> | <a href="https://github.com/usnistgov/800-63-3/issues/">Send feedback</a>
+  <a href="/RC-800-63-3/comment_help.html" class="icon icon-fa">
+    <i class="fa fa-question-circle" title="Get help with leaving a comment" aria-hidden="true"></i>
+    <span class="sr-only">Get help with leaving a comment</span>
+  </a>
+</section>
+
+</body>
+</html>

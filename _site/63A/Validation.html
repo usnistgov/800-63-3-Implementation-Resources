@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="canonical" href="/63A/Validation">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Google Analytics -->
+    <!--<script type="text/javascript" id="_fed_an_js_tag" src="http://www.nist.gov/js/federated-analytics.all.min.js?agency=NIST&subagency=mml&pua=UA-66610693-1&yt=true&exts=ppsx,pps,f90,sch,rtf,wrl,txz,m1v,xlsm,msi,xsd,f,tif,eps,mpg,xml,pl,xlt,c"></script> -->
+    <!-- DAP Analytics -->
+    <script type="text/javascript" id="_fed_an_ua_tag"
+            src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NIST&pua=UA-66610693-1&yt=true&exts=ppsx,pps,f90,sch,rtf,wrl,txz,m1v,xlsm,msi,xsd,f,tif,eps,mpg,xml,pl,xlt,c"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/RC-800-63-3/static/css/NISTStyle.css">
+    <link rel="stylesheet" href="/RC-800-63-3/static/css/NISTPages.css">
+    <link rel="stylesheet" href="/RC-800-63-3/static/css/graphics.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+    <title>Validation</title>
+    <meta property="og:title" content="Validation"/>
+    
+
+    
+    <meta name="description" content="Resource Center for the NIST Special Publication 800-63 Digital Identity Guidelines">
+    <meta property="og:description" content="Resource Center for the NIST Special Publication 800-63 Digital Identity Guidelines"/>
+    
+</head>
+<body>
+<header class="nist-header">
+    <h1>
+        <a class="nist-logo" target="_blank" href="http://www.nist.gov/" title="Go to nist.gov">National Institute of
+            Standards and Technology</a>
+    </h1>
+    <div class="nist-links">
+        <a class="nist-links-button" target="_blank" href="http://www.nist.gov">NIST Website</a>
+        <a class="nist-links-button mobile-hide" target="_blank" href="http://www.nist.gov/public_affairs/nandyou.cfm">About
+            NIST</a>
+        <a class="nist-links-button mobile-hide" target="_blank" href="https://github.com/usnistgov">usnistgov on
+            Github</a>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-default navbar-fixed-left" role="navigation">
+  <ul class="nav navbar-nav">
+    
+
+    <li><a href="/RC-800-63-3/">Home</a></li>
+    <li><a href="/RC-800-63-3/63-3/">SP 800-63-3</a></li>
+		<ul>
+			<li><a href="/RC-800-63-3/63-3/process">Process Flow</a></li>
+			<li><a href="/RC-800-63-3/63-3/acceptance">Risk Accpetance</a></li>
+			<li><a href="/RC-800-63-3/63-3/rmf">Risk Management</a></li>
+			<li><a href="/RC-800-63-3/63-3/key_stakeholders">Key Stakeholders</a></li>
+		</ul>
+    <li><a href="/RC-800-63-3/63A/">SP 800-63A</a></li>
+    <li><a href="/RC-800-63-3/63B/">SP 800-63B</a></li>
+    <li><a href="/RC-800-63-3/63C/">SP 800-63C</a></li>
+    <li>
+      <a href="https://github.com/usnistgov/800-63-3/issues/" class="icon">Comment</a>
+      <a href="/RC-800-63-3/comment_help.html" class="icon icon-fa">
+        <i class="fa fa-question-circle" title="Get help with leaving a comment" aria-hidden="true"></i>
+        <span class="sr-only">Get help with leaving a comment</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+<div class="container">
+  <div class="row">
+    <p>The goal of identity validation is to collect from the applicant the most appropriate identity evidence (for example, a passport or driver’s license) and determine its authenticity and accuracy. Regardless of identity assurance level, steps must be taken to validate the evidence to prevent an attacker from fraudulently completing the identity proofing process by presenting forged or modified evidence.</p>
+
+<p>Identity validation is made up of two process steps: confirming the evidence is genuine and authentic, and confirming the data contained on the identity evidence is valid, current, and related to an actual, live individual.</p>
+
+<p>At IAL 2, agencies may allow applicants to present evidence digitally to facilitate remote proofing. Evidence presented in this manner will often be examined visually to determine if it appears fraudulent, counterfeit, or otherwise modified. The collection of evidence and validation of their authenticity may occur at the same time. For example, if an applicant provides a digital image of their driver’s license, the system accepting that image may be able to automatically read the ID number or barcode and perform a lookup in the issuing state’s motor vehicles department to confirm its authenticity.</p>
+
+<p>Agencies should also examine the evidence visually. Techniques for remote validation should be comparable to in-person validation. Table 5-2 in SP800-63A describe methods for validating identity evidence at each strength.</p>
+
+<p>To determine whether the evidence is genuine, agencies should examine the security features of the provided evidence. These could be the physical or digital security features of a document or the cryptographically protected information contained within a physical document, or the cryptographically protected information within an electronic document. In each of these cases, methods such as the physical validation of the security features or electronic validation of the cryptographically protected content should be utilized to declare the evidence genuine or not. The table below provides examples of physical and digital security features.</p>
+
+<p>To check if the identity evidence is valid, accuracy of the information such as that presented within the attributes should be confirmed with the issuing source, or machine-readable evidence such as passports or driver’s licenses should be automatically validated by equipment used by the agency.</p>
+
+<p><strong>Table: Physical and Digital Security Features</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Feature</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Holographic Security Threads</td>
+      <td>Incorporate diffractive surface elements with variable colors and patterns. They can also be equipped with machine-readable properties such as magnetic and electrical conductivity.</td>
+    </tr>
+    <tr>
+      <td>Iridescent Inks and Custom Foil Stamping</td>
+      <td>Provide custom designs and prints that are dificult to duplicate.</td>
+    </tr>
+    <tr>
+      <td>Dynamic Fluorescent Feature</td>
+      <td>Dynamic response generated in UV light at varying distances from the source is hard to duplicate by attackers.</td>
+    </tr>
+    <tr>
+      <td>Ghosting</td>
+      <td>Design that produces a faint image of the card layout on top of the original layout, and used to promote visual security.</td>
+    </tr>
+    <tr>
+      <td>Integrated Circuit with PKI Protection</td>
+      <td>Asymmetric cryptography protects data content.</td>
+    </tr>
+    <tr>
+      <td>Digital Watermark</td>
+      <td>Documents signed by digital watermarking (DWM) (such as driver’s license images) can also be used by CSPs as a piece of strong evidence in identity proofing. Watermarks are embedded in images used in secure identity verification and use applications to verify the rightful owner of an evidence document.</td>
+    </tr>
+    <tr>
+      <td>Barcodes</td>
+      <td>Optical, machine readable, representation of data that is embedded on the document can be used to carry data and validate strong evidence by CSPs that wish to validate evidence.</td>
+    </tr>
+    <tr>
+      <td>Checksums</td>
+      <td>Checksums provide a method to validate electronic evidence, whereby CSP’s can generate cryptographic checks to associate with documents used as evidence, which are then subject to a check for validation.</td>
+    </tr>
+    <tr>
+      <td>Radio-frequency identification (RFID)</td>
+      <td>Transmits data to the surrounding vicinity upon is stimulated by a suitable radio frequency source.</td>
+    </tr>
+    <tr>
+      <td>Embedded holograms</td>
+      <td>Unique optical properties that are used to diffract light and create virtual effects that render photocopying or scanning useless.</td>
+    </tr>
+    <tr>
+      <td>UV and Infrared printing</td>
+      <td>A UV or infrared printed design that can only be viewed with special equipment.</td>
+    </tr>
+    <tr>
+      <td>Microtext</td>
+      <td>Very small field of static or variable data that can be confirmed when viewed under a magnifier</td>
+    </tr>
+    <tr>
+      <td>laser engraving</td>
+      <td>Burns data such as microtext, tactile data, perforated images, and variable images that change with different viewing angles.</td>
+    </tr>
+    <tr>
+      <td>Fluorescent ribbon</td>
+      <td>Print fluorescent grayscale text of images on ID cards that can only be seen by UV light.</td>
+    </tr>
+    <tr>
+      <td>Magnetic stripes</td>
+      <td>Store data using magnetism and the modification of small iron particles that can be read by swiping past a magnetic reading head.</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+</div>
+
+<footer role="contentInfo" class="site-footer">
+  <div class="section-container">
+    <div class="section-content">
+    </div>
+  </div>
+</footer>
+
+<hr>
+<section class="footer">
+<br><a target="_blank" href="http://www.nist.gov/public_affairs/privacy.cfm#privpolicy">Privacy Policy</a> | <a target="_blank" href="http://www.nist.gov/public_affairs/privacy.cfm#secnot">Security Notice</a> | <a href="http://www.nist.gov/public_affairs/privacy.cfm#accesstate">Accessibility Statement</a> | <a href="https://github.com/usnistgov/800-63-3/issues/">Send feedback</a>
+  <a href="/RC-800-63-3/comment_help.html" class="icon icon-fa">
+    <i class="fa fa-question-circle" title="Get help with leaving a comment" aria-hidden="true"></i>
+    <span class="sr-only">Get help with leaving a comment</span>
+  </a>
+</section>
+
+</body>
+</html>
