@@ -1,0 +1,94 @@
+# Site settings
+title: SP 800-63 Digital Identity Guidelines Resource Center
+description: "Resource Center for the NIST Special Publication 800-63 Digital Identity Guidelines"
+baseurl: "/RC-800-63-3" # the subpath of your site, e.g. /blog
+url: "https://github.com/jerehaynes/800-63-3" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+exclude:
+- ".ruby-version"
+- ".jekyll-metadata"
+- ".gitignore"
+- ".travis.yml"
+- todo.txt
+- resources
+- Gemfile
+- Gemfile.lock
+- Makefile
+- vendor
+- README.md
+- CONTRIBUTING.md
+- LICENSE.md
+
+# GitHub information
+org_name: usnistgov
+repo_name: 800-63-3
+
+# Navigation
+# List links that should appear in the site sidebar here
+navigation:
+- text: Introduction
+  url: ''
+  internal: true
+  coll: false
+- text: SP800-63-3
+  url: 63-3/
+  internal: true
+  coll: true
+  collname: 63-3
+- text: SP800-63A
+  url: 63A/
+  internal: true
+  coll: true
+  collname: 63A
+- text: SP800-63B
+  url: 63B/
+  internal: true
+  coll: true
+  collname: 63B
+- text: SP800-63C
+  url: 63C/
+  internal: true
+  coll: true
+  collname: 63C
+- text: Use Cases
+  url: usecases/
+  internal: true
+  coll: true
+  collname: usecases
+- text: Contribute
+  url: 'contribute'
+  internal: true
+  coll: false
+  
+collections:
+  63-3:
+    label: "NIST Special Publication 800-63-3"
+    permalink: 63-3/:path/
+    output: true
+  63A:
+    label: "NIST Special Publication 800-63A"
+    permalink: 63A/:path/
+    output: true
+  63B:
+    label: "NIST Special Publication 800-63B"
+    permalink: 63B/:path/
+    output: true
+  63C:
+    label: "NIST Special Publication 800-63C"
+    permalink: 63C/:path/
+    output: true
+  usecases:
+    label: "Use Cases"
+    permalink: usecases/:path/
+    output: true
+#host: 0.0.0.0
+
+include:
+- _stylesheets
+- _javascript
+
+# Custom site configuration
+lang: en
