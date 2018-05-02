@@ -10,10 +10,10 @@ However, in federated identity systems (as covered in SP 800-63C), the term *tok
 
 ### 3.2 Credential
 
-The term *credential* has several meanings in identity management and more broadly in society. A newly-assigned ambassador is described as presenting their credentials (a letter of introduction from their government) at a new posting. One might also describe a diploma, passport, driver’s license, or PIV card as credentials.
+The term *credential* has several meanings in identity management and more broadly in society. A newly-assigned ambassador is described as presenting their credentials (a letter of introduction from their government) at a new posting. One might also describe a diploma, passport, driver's license, or PIV card as credentials.
 
-Another meaning, used in this document and in the SP 800-63-3 document suite, is that a credential is an association that is established as a result of identity proofing between a subject’s attributes and one or more authenticators. The authoritative instance of a credential is a data structure that is securely maintained by the CSP.
+Another meaning, used in this document and in the SP 800-63-3 document suite, is that a credential is an association that is established as a result of identity proofing between a subject's attributes and one or more authenticators. The authoritative instance of a credential is a data structure that is securely maintained by the CSP.
 
-In some cases—notably, with PIV cards—copies of subject (user) attributes are stored on an authenticator, in most cases cryptographically signed by the CSP. This is useful when it isn’t possible to communicate with the CSP (notably for first responders in disaster situations). However, attributes can change, so such copies, even if accompanied by valid signatures, might be considered less authoritative if they can’t be verified online with the CSP.
+In some cases—notably, with PIV cards—copies of subject (user) attributes are stored on an authenticator, in most cases cryptographically signed by the CSP. This is useful when it isn't possible to communicate with the CSP (notably for first responders in disaster situations). However, attributes can change, so such copies, even if accompanied by valid signatures, might be considered less authoritative if they can't be verified online with the CSP.
 
-It isn’t possible to entirely avoid the usage of credential as a physical object held by the claimant. SP 800-63B attempts to use the term in the above-described way, which may prompt some confusion for readers who are expecting the notion of a user-retained physical credential.
+It isn't possible to entirely avoid the usage of credential as a physical object held by the claimant. SP 800-63B attempts to use the term in the above-described way, which may prompt some confusion for readers who are expecting the notion of a user-retained physical credential.
