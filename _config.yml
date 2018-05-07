@@ -1,0 +1,93 @@
+# Site settings
+title: SP 800-63 Digital Identity Guidelines Resource Center
+description: "Resource Center for the NIST Special Publication 800-63 Digital Identity Guidelines"
+baseurl: "/RC-800-63-3" # the subpath of your site, e.g. /blog
+url: "https://github.com/jimfenton/800-63-ImplResources" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+exclude:
+- ".ruby-version"
+- ".jekyll-metadata"
+- ".gitignore"
+- Gemfile
+- Gemfile.lock
+- Makefile
+- vendor
+- README.md
+
+# GitHub information will uncomment ones names are finalized and NIST GitHub Pages resources have been allocated
+#org_name: usnistgov
+#repo_name: 800-63-ImplResources
+
+# Navigation
+# List links that should appear in the site sidebar here
+# 5/7/2018 - Updating the "collname" property to match the folder names in the repository 
+navigation:
+- text: Introduction
+  url: ''
+  internal: true
+  coll: false
+- text: SP800-63-3
+  url: sp800-63-3/
+  internal: true
+  coll: true
+  collname: 63-3
+- text: SP800-63A
+  url: sp800-63a/
+  internal: true
+  coll: true
+  collname: 63A
+- text: SP800-63B
+  url: sp800-63b/
+  internal: true
+  coll: true
+  collname: 63B
+- text: SP800-63C
+  url: sp800-63c/
+  internal: true
+  coll: true
+  collname: 63C
+#5/7/2018: The IAL2/3 Walkthrough will be included in the 800-63A collection. Uncomment these lines to make a separate use case collection.  
+#- text: Use Cases
+  #url: usecases/
+  #internal: true
+  #coll: true
+  #collname: usecases
+- text: Contribute
+  url: 'contribute'
+  internal: true
+  coll: false
+  
+collections:
+  63-3:
+    label: "NIST Special Publication 800-63-3"
+    permalink: sp800-63-3/:path/
+    output: true
+  63A:
+    label: "NIST Special Publication 800-63A"
+    permalink: sp800-63a/:path/
+    output: true
+  63B:
+    label: "NIST Special Publication 800-63B"
+    permalink: sp800-63b/:path/
+    output: true
+  63C:
+    label: "NIST Special Publication 800-63C"
+    permalink: sp800-63c/:path/
+    output: true
+  #usecases:
+    #label: "Use Cases"
+    #permalink: usecases/:path/
+    #output: true
+    
+#Uncomment when we go live 
+#host: 0.0.0.0
+
+include:
+- _stylesheets
+- _javascript
+
+# Custom site configuration
+lang: en
