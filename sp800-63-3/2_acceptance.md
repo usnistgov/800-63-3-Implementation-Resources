@@ -18,7 +18,3 @@ In accordance with SP 800-63-3, a Digital Identity Acceptance Statement shall in
 
 Additional information included in the statement is up to individual agency discretion. 
 
-A Digital Identity Risk Acceptance Statement template is provided for agency use. The use of this template is not required, but is intended to provide agencies with a better idea of what the statement could look like. Agencies may wish to include additional information that is not present in this template, or less information, but the required information outlined above must be included in the final statement. 
-
-<a href="/SP800-63A-Resource-Center/img/Risk_Acceptance_Statement_Template_DRAFT.docx"> <button>Download the Digital Identity Risk Acceptance Statement Template</button> </a>
-
