@@ -4,9 +4,26 @@ title:  Identity Evidence
 collection: 63A
 permalink: /63A/Evidence
 ---
-Identity evidence comprises physical or digital artifacts used by a subscriber to prove the real-world existence of a claimed identity. Evidence required by the agency and provided by the applicant must contain features that support both validation (confirmed to be genuine and accurate) and verification (demonstrated to associated with the subscriber) at the appropriate strengths for a defined use case.
+Identity evidence comprises physical or digital artifacts used by a subscriber to prove the real-world existence of a claimed identity. Evidence required by the agency and provided by the applicant must contain features that enable the agency to resolve the identity and support both validation (confirmed to be genuine and accurate) and verification (demonstrated to associated with the subscriber) at the appropriate strengths for a defined use case.
 
-It is ultimately up to the agency to determine which biographic information to collect about an applicant to meet identity resolution needs. Caution should be taken in collecting, utilizing, and storing a minimally required set of attributes. Furthermore, in accordance with requirements in 800-63A, notice must be provided to users about what information is collected, why it is collected, and what will be done with it.
+It is ultimately up to the agency to determine which biographic information to collect about an applicant to meet identity resolution needs. The degree of confidence with which evidence is resolved into a single identity also needs to be determined by the agency considering their risk appetite. The goal of identity resolution should be to have a sufficient level of confidence instead of achieving 100 percent probabilistic certainty. Caution should be taken in collecting, utilizing, and storing a minimally required set of attributes. Furthermore, in accordance with requirements in 800-63A, notice must be provided to users about what information is collected, why it is collected, and what will be done with it.
+
+Sets and combinations of core and supplemental attributes provide varying levels of effectiveness, sensitivity, availability and reliability. An assessment of such metrics for core and supplemental identity attributes, e.g. name, address, date and place of birth, mother’s maiden name and gender, can be found in NASPO-IDPV-60 by the American Security Products Organization’s Identity Proofing and Verification (IDPV) working group (NASPO-IDPV-60. Establishment of Core Identity Attribute Sets and Supplemental Identity Attributes, Report of the IDPV Identity Resolution Project, Feb. 17, 2014). The analysis conducted in this study provides interesting results in terms of the effectiveness of combining attributes for resolution and also shows that there are diminishing returns to increasing the number of core attributes collected from applicants, as evidenced in the following table. Organizations that seek a balance between the effectiveness of resolution and an increasing list of collected attributes can review such studies for information. Its inclusion here is not intended to endorse the IDPV standard, but instead illustrate how attribute sets may be balanced or combined to support resolution.
+
+**Table: Estimated Resolution Effectiveness for Various Attribute Combination Scenarios** 
+
+| **Core Attributes** | *Set 1* | *Set 2* | *Set 3* | *Set 4* | *Set 5* |
+| --- | --- | --- | --- | --- | --- |
+| First Name | Y | Y | Y | Y | Y |
+| Last Name |  | Y | Y | Y | Y |
+| Middle Initial |  |  |  |  | Y |
+| Full DOB |  |  | Y |  | Y |
+| Partial DOB (YYYY or MMDD) |  | Y |  |  |  |
+| Year of Birth | Y |  |  |  |  |
+| Partial Address (Zip or City/State) |  | Y |  | Y |  |
+| Full Address |  |  |  |  | Y |
+| Last 4 Digits of SSN |  |  |  | Y | Y |
+| Estimated Resolution Effectiveness (%) | 2.56 | 98.73 | 96.29 | 96.65 | 99.89 |
 
 The following table provides examples of evidence from each category of strength defined in the aforementioned identity evidence quality table in 800-63A.
 
