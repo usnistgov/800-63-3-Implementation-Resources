@@ -16,3 +16,4 @@ Identity proofing is the process by which a Credential Service Provider (CSP) co
 
 ![Identity Proofing Process Flow]({{site.baseurl}}/img/ProofingProcess.png)
 
+Please note that while the diagram above illustrates the identity proofing process as a roadmap composed of concrete successive steps, it is meant more generally to convey the relationships between the different objectives and their definitions. In reality, collection of evidence for these steps can often take place concurrently, with no additional evidence collected beyond the initial steps in enrollment, which is both used for identity resolution and validated.
