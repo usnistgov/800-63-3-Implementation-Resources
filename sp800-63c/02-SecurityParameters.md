@@ -50,6 +50,6 @@ To enforce least-privilege and least-knowledge security principles, it is prefer
 Additionally, assertions passed in the front channel are visible to an intermediary party, the browser. The assertion's payload, which intended for consumption by the RP, can include PII attributes, internal security information, or other sensitive data. To avoid untended data leakage, the IdP can employ several techniques:
 
 1. Encrypt the payload to the RP's key, as is required at FAL2 and FAL3.
-1. Limit the information contained in the assertion payload to non-sensitive information, and use a secondary mechanism to convey sensitive details such as in {{section 2.3}}.
+1. Limit the information contained in the assertion payload to non-sensitive information, and use a secondary mechanism to convey sensitive details such as in Section 2.3.
 1. Use a back-channel presentation mechanism to prevent the assertion itself from being seen by the intermediary. 
 

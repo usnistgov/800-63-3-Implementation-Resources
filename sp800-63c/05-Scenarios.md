@@ -2,7 +2,7 @@
 layout: default
 title:  Example Federation Scenarios
 collection: 63C
-permalink: /63C/Example
+permalink: /63C/Scenarios
 ---
 
 ### 5. Example Scenarios
