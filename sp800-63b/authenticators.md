@@ -1,3 +1,10 @@
+---
+layout: default
+title:  Sample Authenticators
+collection: 63B
+permalink: /63B/SampleAuthenticators
+---
+
 # Sample Authenticators
 
 The following are examples of authenticators thought to represent each of the authenticator types described in [SP 800-63B](https://doi.org/10.6028/NIST.SP.800-63b). This list describes only authenticators; it does not include authentication providers (either products or as-a-service) that support authenticators made by third parties.

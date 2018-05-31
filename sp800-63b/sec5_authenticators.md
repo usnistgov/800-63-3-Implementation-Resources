@@ -1,3 +1,10 @@
+---
+layout: default
+title:  Authenticators
+collection: 63B
+permalink: /63B/Authenticators
+---
+
 ## 5 Authenticators and Verifiers
 
 ### 5.1 Authenticator Types

@@ -1,3 +1,10 @@
+---
+layout: default
+title:  Session Management
+collection: 63B
+permalink: /63B/Session
+---
+
 ## 7 Session Management
 
 Session management includes a number of mechanisms that are used following authentication to maintain continuity of state for a subscriber. Strength of session management procedures is as important as authentication, since the ability to hijack a session is as damaging as an authentication failure.
