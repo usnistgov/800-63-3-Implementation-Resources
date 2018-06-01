@@ -1,3 +1,10 @@
+---
+layout: default
+title:  Terminology
+collection: 63B
+permalink: /63B/Terminology
+---
+
 ## 3 Terminology
 
 While SP 800-63B does not contain its own terminology section (a common glossary may be found in [SP 800-63-3 Appendix A](https://pages.nist.gov/800-63-3/sp800-63-3.html#def-and-acr)), certain authentication-related terms are used in ways that may be unfamiliar to some readers. This section describes some of that usage.

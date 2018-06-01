@@ -1,3 +1,10 @@
+---
+layout: default
+title:  Lifecycle Management
+collection: 63B
+permalink: /63B/Lifecycle
+---
+
 ## 6 Authenticator Lifecycle Management
 
 ### 6.1 Authenticator Binding
