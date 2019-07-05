@@ -1,5 +1,6 @@
 <nav class="navbar navbar-default navbar-fixed-left" role="navigation">
 	<ul class="nav navbar-nav">
+    <!--
 		<li><a href="{{ site.baseurl }}/">Home</a></li>
 		<li class="dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			<a class="nav-link dropdown-toggle" href="{{ site.baseurl }}/63-3/">
@@ -38,5 +39,42 @@
 			<span class="sr-only">Get help with leaving a comment</span>
 		  </a>
 		</li>
+      -->
+      
+      
+      {% for link in site.navigation %}
+        {% assign current = '' %}
+        {% if page.url == link.url %}
+          {% assign current = 'active' %}
+        {% endif %}
+
+        <li class="{{ current }}">
+          <a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
+          
+          {% if page.collection == link.collname %}
+        
+            {% assign pages = site.pages | where: 'collection', page.collection | sort: 'name' %}
+            
+            <ul class="subnav">
+            {% for p in pages %}
+              
+              {% assign current = '' %}
+              {% if page.url == p.url %}
+                {% assign current = 'active' %}
+              {% endif %}
+              
+              <li class="{{ current }}"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+              
+            {% endfor %}
+          
+            </ul>
+          {% endif %}
+          
+          
+        </li>
+      {% endfor %}
+      
+      
   </ul>
+
 </nav>

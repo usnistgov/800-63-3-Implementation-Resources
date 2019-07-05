@@ -125,6 +125,29 @@ ul.audiences li {
   padding: 0;
 }
 
+.subnav {
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+.subnav>li {
+  list-style: none;
+  padding-bottom: 4px;
+}
+
+.subnav>li.active {
+  font-weight: bold;
+  list-style: disc;
+}
+
+.subnav a {
+  color: black;
+}
+
+nav.navbar-fixed-left {
+  overflow-y: scroll;
+}
+
 /* Style default/base tables since we are using markdown */
 table{
   width:100%;
