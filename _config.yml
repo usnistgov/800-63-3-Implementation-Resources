@@ -30,22 +30,22 @@ navigation:
   internal: true
   coll: false
 - text: SP800-63-3
-  url: sp800-63-3/
+  url: /63-3/
   internal: true
   coll: true
   collname: 63-3
 - text: SP800-63A
-  url: sp800-63a/
+  url: /63A/
   internal: true
   coll: true
   collname: 63A
 - text: SP800-63B
-  url: sp800-63b/
+  url: /63B/
   internal: true
   coll: true
   collname: 63B
 - text: SP800-63C
-  url: sp800-63c/
+  url: /63C/
   internal: true
   coll: true
   collname: 63C
@@ -63,20 +63,24 @@ navigation:
 collections:
   63-3:
     label: "NIST Special Publication 800-63-3"
-    permalink: sp800-63-3/:path/
+    permalink: 63-3/:path/
     output: true
+    relative_directory: sp800-63-3
   63A:
     label: "NIST Special Publication 800-63A"
-    permalink: sp800-63a/:path/
+    permalink: 63A/:path/
     output: true
+    relative_directory: sp800-63a
   63B:
     label: "NIST Special Publication 800-63B"
-    permalink: sp800-63b/:path/
+    permalink: 63B/:path/
     output: true
+    relative_directory: sp800-63b
   63C:
     label: "NIST Special Publication 800-63C"
-    permalink: sp800-63c/:path/
+    permalink: 63C/:path/
     output: true
+    directory: sp800-63c/
   #usecases:
     #label: "Use Cases"
     #permalink: usecases/:path/
