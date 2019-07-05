@@ -1,47 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-left" role="navigation">
 	<ul class="nav navbar-nav">
-    <!--
-		<li><a href="{{ site.baseurl }}/">Home</a></li>
-		<li class="dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<a class="nav-link dropdown-toggle" href="{{ site.baseurl }}/63-3/">
-					SP 800-63-3
-			</a>
-		</li>
-			<li class ="dropdown-item">
-				<a href="{{ site.baseurl }}/63-3/process">Process Flow</a>
-				<a href="{{ site.baseurl }}/63-3/acceptance">Risk Acceptance</a>
-				<a href="{{ site.baseurl }}/63-3/rmf">Risk Management</a>
-				<a href="{{ site.baseurl }}/63-3/key_stakeholders">Key Stakeholders</a>
-			</li>
-
-		<li class="dropdown-menu"><a href="{{ site.baseurl }}/63A/">SP 800-63A</a></li>
-		<li class="dropdown-menu"><a href="{{ site.baseurl }}/63B/">SP 800-63B</a></li>
-    <li class="dropdown-item">
-      <a href="{{ site.baseurl }}/63B/Terminology">Terminology</a>
-      <a href="{{ site.baseurl }}/63B/AAL">Authenticator Assurance Levels</a>
-      <a href="{{ site.baseurl }}/63B/Authenticators">Authenticators</a>
-      <a href="{{ site.baseurl }}/63B/Lifecycle">Lifecycle Management</a>
-      <a href="{{ site.baseurl }}/63B/Session">Session Management</a>
-      <a href="{{ site.baseurl }}/63B/SampleAuthenticators">Sample Authenticators</a>
-    </li>
-		<li class="dropdown-menu"><a href="{{ site.baseurl }}/63C/">SP 800-63C</a></li>
-    <li class="dropdown-item">
-      <a href="{{ site.baseurl }}/63C/SecurityParameters">Security Parameters</a>
-      <a href="{{ site.baseurl }}/63C/RP">Guide for Relying Parties</a>
-      <a href="{{ site.baseurl }}/63C/IdP">Guide for Identity Providers</a>
-      <a href="{{ site.baseurl }}/63C/Scenarios">Example Federation Scenarios</a>
-      <a href="{{ site.baseurl }}/63C/Resources">Additional Resources</a>
-    </li>
-		<li>
-		  <a href="https://github.com/{{ site.org_name }}/{{ site.repo_name }}/issues/" class="icon">Comment</a>
-		  <a href="{{ site.baseurl }}/comment_help.html" class="icon icon-fa">
-			<i class="fa fa-question-circle" title="Get help with leaving a comment" aria-hidden="true"></i>
-			<span class="sr-only">Get help with leaving a comment</span>
-		  </a>
-		</li>
-      -->
-      
-      
       {% for link in site.navigation %}
         {% assign current = '' %}
         {% if page.url == link.url %}
