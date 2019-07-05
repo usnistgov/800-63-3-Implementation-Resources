@@ -9,9 +9,9 @@
         <li class="{{ current }}">
           <a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
           
-          {% if page.collection == link.collname %}
+          {% if link.coll and page.collection == link.collname %}
         
-            {% assign pages = site.pages | where: 'collection', page.collection | sort: 'name' %}
+            {% assign pages = site.pages | where: 'collection', page.collection | sort: 'navOrder' %}
             
             <ul class="subnav">
             {% for p in pages %}
@@ -21,7 +21,7 @@
                 {% assign current = 'active' %}
               {% endif %}
               
-              <li class="{{ current }}"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+              <li class="{{ current }}"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.navTitle }}</a></li>
               
             {% endfor %}
           
