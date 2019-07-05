@@ -3,6 +3,8 @@ layout: default
 title:  Key Stakeholders in the Risk Assessment Process
 collection: 63-3	
 permalink: /63-3/key_stakeholders	
+navOrder: 4  
+navTitle: Stakeholders  
 ---		
 **Key Stakeholders in the Digital Identity Risk Assessment Process**
 

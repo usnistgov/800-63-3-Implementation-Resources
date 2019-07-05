@@ -3,6 +3,8 @@ layout: default
 title:  Federation Implementation Resources
 collection: 63C
 permalink: /63C/
+navOrder: 1  
+navTitle: Home  
 ---
 
 # Federation Implementation Resources

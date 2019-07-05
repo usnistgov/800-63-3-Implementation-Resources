@@ -3,6 +3,8 @@ layout: default
 title:  Digital Identity Risk Acceptance Statement Template	
 collection: 63-3	
 permalink: /63-3/acceptance
+navOrder: 2  
+navTitle: Acceptance  
 ---		
 
 **Digital Identity Risk Acceptance Statement Template**

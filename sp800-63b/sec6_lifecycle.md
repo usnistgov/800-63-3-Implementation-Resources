@@ -3,6 +3,8 @@ layout: default
 title:  Lifecycle Management
 collection: 63B
 permalink: /63B/Lifecycle
+navOrder: 5  
+navTitle: Lifecycle  
 ---
 
 ## 6 Authenticator Lifecycle Management

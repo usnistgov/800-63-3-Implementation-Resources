@@ -3,6 +3,8 @@ layout: default
 title:  Sample Authenticators
 collection: 63B
 permalink: /63B/SampleAuthenticators
+navOrder: 8  
+navTitle: Samples  
 ---
 
 # Sample Authenticators

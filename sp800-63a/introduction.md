@@ -3,6 +3,8 @@ layout: default
 title:  SP 800-63A
 collection: 63A
 permalink: /63A/
+navOrder: 0  
+navTitle: Home  
 ---
 NIST Special Publication 800-63-A Digital Identity Guidelines: Enrollment and Identity Proofing (SP 800-63 or NIST SP 800-63A) provides detailed requirements for enrollment and identity proofing of individuals with which federal identity management systems are expected to comply.
 

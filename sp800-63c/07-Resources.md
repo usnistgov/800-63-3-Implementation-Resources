@@ -3,6 +3,8 @@ layout: default
 title:  Federation Resources
 collection: 63C
 permalink: /63C/Resources
+navOrder: 6  
+navTitle: Resources  
 ---
 
 ### 7. Educational Resources

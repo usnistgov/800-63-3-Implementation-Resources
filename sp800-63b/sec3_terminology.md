@@ -3,6 +3,8 @@ layout: default
 title:  Terminology
 collection: 63B
 permalink: /63B/Terminology
+navOrder: 2  
+navTitle: Terminology  
 ---
 
 ## 3 Terminology

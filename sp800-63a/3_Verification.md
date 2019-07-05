@@ -3,6 +3,8 @@ layout: default
 title:  Verification
 collection: 63A
 permalink: /63A/Verification
+navOrder: 3  
+navTitle: Verification  
 ---
 The goal of identity verification is to confirm and establish a linkage between the claimed identity and the physical, live existence of the person actually presenting the evidence. This can be done by a physical or biometric comparison, or a KBV challenge, or by authenticating the applicant with methods and credentials that are appropriate for the level of assurance.
 

@@ -3,6 +3,8 @@ layout: default
 title:  Identity Risk Assessment Process Flow	
 collection: 63-3	
 permalink: /63-3/process	
+navOrder: 1  
+navTitle: Process  
 ---		
 Risk assessments are formalized processes that aid agencies in identifying, estimating, and prioritizing information security and privacy risks by taking into consideration the threat and vulnerability landscape, with a focus on the magnitude of harm of an adverse event and the likelihood such an event will occur. 
 

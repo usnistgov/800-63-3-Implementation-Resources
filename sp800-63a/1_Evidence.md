@@ -3,6 +3,8 @@ layout: default
 title:  Identity Evidence
 collection: 63A
 permalink: /63A/Evidence
+navOrder: 1  
+navTitle: Evidence  
 ---
 Identity evidence comprises physical or digital artifacts used by a subscriber to prove the real-world existence of a claimed identity. Evidence required by the agency and provided by the applicant must contain features that support both validation (confirmed to be genuine and accurate) and verification (demonstrated to associated with the subscriber) at the appropriate strengths for a defined use case.
 

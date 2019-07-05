@@ -3,6 +3,8 @@ layout: default
 title:  Validation
 collection: 63A
 permalink: /63A/Validation
+navOrder: 2  
+navTitle: Validation  
 ---
 The goal of identity validation is to collect from the applicant the most appropriate identity evidence (for example, a passport or driver's license) and determine its authenticity and accuracy. Regardless of identity assurance level, steps must be taken to validate the evidence to prevent an attacker from fraudulently completing the identity proofing process by presenting forged or modified evidence.
 

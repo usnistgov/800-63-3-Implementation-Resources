@@ -3,6 +3,8 @@ layout: default
 title:  Session Management
 collection: 63B
 permalink: /63B/Session
+navOrder: 7  
+navTitle: Sessions  
 ---
 
 ## 7 Session Management

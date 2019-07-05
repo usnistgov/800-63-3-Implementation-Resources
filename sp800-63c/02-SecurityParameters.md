@@ -3,6 +3,8 @@ layout: default
 title:  Choosing Security Parameters
 collection: 63C
 permalink: /63C/SecurityParameters
+navOrder: 2  
+navTitle: Parameters  
 ---
 
 ### 2. Choosing Security Parameters

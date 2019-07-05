@@ -3,6 +3,8 @@ layout: default
 title:  Example Federation Scenarios
 collection: 63C
 permalink: /63C/Scenarios
+navOrder: 5  
+navTitle: Scenarios  
 ---
 
 ### 5. Example Scenarios
