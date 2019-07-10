@@ -56,7 +56,7 @@ navigation:
   #coll: true
   #collname: usecases
 - text: Contribute
-  url: /contribute
+  url: /contribute/
   internal: true
   coll: false
   

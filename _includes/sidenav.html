@@ -2,10 +2,10 @@
 	<ul class="nav navbar-nav">
       {% for link in site.navigation %}
         {% assign current = '' %}
-        {% if page.url == link.url %}
+        {% if link.url == page.url or (link.coll and page.collection == link.collname) %}
           {% assign current = 'active' %}
         {% endif %}
-
+        
         <li class="{{ current }}">
           <a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
           
@@ -16,12 +16,12 @@
             <ul class="subnav">
             {% for p in pages %}
               
-              {% assign current = '' %}
+              {% assign scurrent = '' %}
               {% if page.url == p.url %}
-                {% assign current = 'active' %}
+                {% assign scurrent = 'active' %}
               {% endif %}
               
-              <li class="{{ current }}"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.navTitle }}</a></li>
+              <li class="{{ scurrent }}"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.navTitle }}</a></li>
               
             {% endfor %}
           
