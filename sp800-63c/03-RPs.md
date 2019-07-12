@@ -7,17 +7,17 @@ navOrder: 4
 navTitle: RPs  
 ---
 
-### 3. Guidance for Relying Parties
+### Guidance for Relying Parties
 
 While it is the responsibility of the IdP to provide strong and trustworthy federation assertions, relying parties need to validate the elements of an assertion during a federated transaction [[section 6.2]]. 
 
-#### 3.1. Purpose
+#### Purpose
 
 Relying parties can be a valuable target for attackers to impersonate valid subscribers or gain valuable information about them. If relying parties do not check the validity of the information they receive, attackers can gain access to the various services that subscribers are logging in to. 
 
 If all of these checks are performed properly, the compromise of a single relying party does not threaten the rest of the network. This is in contrast to systems with individual authenticators at each site, where the theft of a subscriber's password from one site often leads to the compromise of other sites in the network due to password reuse. 
 
-#### 3.2. General Guidance
+#### General Guidance
 
 Relying parties need to do two major checks against incoming assertions:
 
@@ -28,7 +28,7 @@ Relying parties need to validate IdP signatures, assertion expirations, and audi
 
 Relying parties need to also verify the origin of the information that they receive, as an attacker might try to inject a valid assertion from another subscriber in order to take over an account. RPs can do this by making sure that the assertion is signed by a trusted IdP's key and that the assertion isn't being replayed.
 
-##### 3.2.1. Validating IdP Signatures
+##### Validating IdP Signatures
 
 At all FALs, an identity assertion is signed by an IdP so that it cannot be forged by an attacker [[section 6.2.2]]. The IdP is the only entity with access to its private key [[section 4.1]], so a valid signature indicates that the assertion is from the IdP itself and not an attacker. If an RP does not check the validity of the IdP signature, attackers will be able to forge identity assertions and gain access to protected systems without authorization. Additionally, if the relying party does not check the signature, an attacker could modify an otherwise valid assertion in transit, associating attributes and access rights to the current subscriber that were not asserted by the IdP. 
 
@@ -38,7 +38,7 @@ The RP needs to make sure it is using the correct key for the claimed IdP, espec
 
 Testing whether RPs will reject unsigned assertions or assertions with invalid signatures is critical, though not an obvious test to do. Properly authorized transactions will still work even if an RP isn't checking assertion signatures, since the RP will accept the (valid) assertion whether or not it has a valid signature. Therefore, in such cases there is no outward indication of a problem in the system and there will be no error messages or login failures to indicate that something is wrong. Only a failure from a negative test -- that is to say, the explicit rejection of an unsigned assertion or an assertion with an invalid signature -- will indicate that a relying party is properly checking keys and signatures.
 
-##### 3.2.2. Checking Assertion Expirations
+##### Checking Assertion Expirations
 
 Federated identity assertions are intended to be short-lived, since they are used to establish a session at the RP and not to manage a full session at the RP [[section 5.2]]. While details vary per protocol family, an assertion lasting a small number of minutes will in most cases give the system ample time to process the assertion and create a session for the subscriber. Since federation assertions are passed between different systems on the network, it is reasonable to allow a small amount of padding to the time checks to account for clock skew. This skew ought to be very short, such as a few seconds, so as to not inadvertently open the attacker's window for using expired assertions. A time synchronization protocol such as NTP can be used on all systems on the network if possible to ensure the system clocks are as accurate as possible. 
 
@@ -46,7 +46,7 @@ An identity assertion which expires quickly makes it difficult for attackers to 
 
 Some assertions also contain a timestamp indicating when the assertion was issued, and an RP shouldn't accept any assertion that claims to have been issued in the future. Some assertions will also have a timestamp indicating when the assertion is not to be used before, which an RP can process to ensure it is not accepting an assertion too early. The use of the "not-before" processing mechanism is relatively rare in modern federation protocols, as the assertions are created in response to specific login requests. 
 
-##### 3.2.3. Checking Audience Parameters
+##### Checking Audience Parameters
 
 When an IdP creates an assertion, it includes an audience field indicating which RP requested the assertion [[section 6.2.4]]. By checking the audience field, an RP can detect when an attacker is presenting an assertion intended for a different RP.
 
@@ -54,27 +54,27 @@ If an RP does not check for a matching audience parameter, it is possible for an
 
 An RP that isn't checking audience parameters will still accept a valid authorization with no outward indication of a problem. Therefore, it is important to test the RP with an assertion containing an errant or missing audience field.
 
-##### 3.2.4. Checking Assertion Uniqueness
+##### Checking Assertion Uniqueness
 
 An attacker that gains possession of a bearer assertion could try to replay that assertion at an RP in order to take over a subscriber's session. To prevent this, an IdP is required to make each assertion unique [[section 6.2.1]]. The RP consequently needs to check the assertion for uniqueness within the assertion's expiry window by checking any unique identifiers within the assertion and accepting each unique assertion identifier once and only once to establish a session with a single subscriber. If an assertion is seen multiple times by an RP, especially from multiple connections, the RP can consider this assertion stolen. 
 
 The RP ought to remember the identifiers of assertions as long as those identifiers are valid. Since assertions have a relatively short lifespan, this can be accomplished without large storage requirements by remembering only otherwise-valid assertion IDs within their validity window. If an assertion is replayed after it has expired, it will be rejected based on its expiration.
 
-##### 3.2.5. Retrieving IdP Keys
+##### Retrieving IdP Keys
 
 The RP can trust the assertion's signature only as much as it can trust that the keys used to verify the signature are associated with the IdP [[section 6.2.2]]. The keys need to be retrieved in a secure fashion, such as over an authenticated protected channel or pre-placed by a systems administrator. Only the keys identified in the assertion can be used to evaluate the signature of an assertion. 
 
-#### 3.3. Guidance by Product Family
+#### Guidance by Product Family
 
 This document covers two main product families that enable federated identity transactions - SAML and OpenID Connect, the latter of which is built on top of OAuth. Other protocols and approaches are possible to use while fulfilling the requirements of the guidelines.
 
-##### 3.3.1. SAML
+##### SAML
 
 All parties need to be careful about passing and validating metadata. Incorrectly communicated or configured metadata could leak information about a subscriber that was not approved for distribution. Metadata that is not validated could have been tampered with by an attacker to gain access to valuable personal information.
 
 Always check certificates before accepting identity assertions. Attackers can forge certificates and phish subscribers in an attempt to impersonate them. 
 
-##### 3.3.2. OpenID Connect
+##### OpenID Connect
 
 Different OAuth grant types or "flows" are appropriate for different kinds of applications at different FALs.
 

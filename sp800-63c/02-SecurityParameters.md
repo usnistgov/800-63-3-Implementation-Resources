@@ -7,11 +7,11 @@ navOrder: 2
 navTitle: Parameters  
 ---
 
-### 2. Choosing Security Parameters
+### Choosing Security Parameters
 
 Different federation protocols and implementations of those protocols have many options that lead to different outcomes in the security of a system. All of these options have trade-offs in terms of complexity, robustness, and other characteristics. Choosing the right set of options for a given situation helps ensure that transactions will be as secure, functional, and efficient as possible.
 
-### 2.1. Selecting a Federation Assurance Level (FAL)
+### Selecting a Federation Assurance Level (FAL)
 
 The Federation Assurance Level (FAL) defined in SP 800-63C [[section 4]] provides a set of requirements for federation transactions. These requirements are grouped into an ascending scale of three levels: FAL1, FAL2, and FAL3. Each successive level includes all the features of lower levels and adds additional requirements on top of them. 
 
@@ -21,7 +21,7 @@ FAL2 provides an extra layer of security by requiring that the assertion be encr
 
 FAL3 is intended to be forward-looking and is not yet readily available in off-the-shelf standards and products. FAL3 provides an additional layer in the form of a cryptographic key that are presented by the subscriber in addition to the signed and encrypted assertion itself. This level requires that the IdP manage references to keys representing the subscriber at each RP in addition to managing the keys for the RPs themselves. The IdP needs to correctly associate the subscriber's key to the correct RP in the assertion, and the RP needs to be able to process and validate the presentation of the key by the subscriber. This key could be the same key that's presented by the subscriber at the IdP, such as an X.509 certificate, or it could be a separate key with no identity information associated with it that's not used at the IdP, such as a FIDO token. In both cases, the assertion needs to reference the key and the RP needs to ensure the correct key is presented by the subscriber.
 
-### 2.2. Risk Management
+### Risk Management
 
 Selecting and conforming to an FAL ought to be part of a larger risk management process and program. Conforming to FAL3 does not make an organization's security infallible, but instead provides protection against particular attacks while incurring certain costs to both the applications and the subscribers. Rather than attempting to make your federation infrastructure conform to the highest standards available, you need to analyze the risks that are inherent in your organization and choose how strongly to protect against them given their severity and likelihood of occurrence.
 
@@ -29,7 +29,7 @@ The additional information management and implementation complexity of higher FA
 
 Because it is the front door to many critical systems, authentication is a key piece of risk management strategy. Strong federation can protect against many potential subscriber impersonation and man-in-the-middle attacks. Instead of each RP needing to manage subscriber accounts and authenticators separately, creating many vulnerable surfaces, federation concentrates the key security practices in a dedicated component, the IdP. Upgrades to authenticators, software, and practices at the IdP automatically benefit the downstream RPs and the overall network. 
 
-### 2.3. Personally Identifiable Information (PII)
+### Personally Identifiable Information (PII)
 
 Personally Identifiable Information (PII) needs to be limited to only what's needed to perform a transaction [[section 7.3]]. For many login transactions, the RP will need to know only an identifier for the current subscriber. After an initial login, this identifier is used by the RP to tie the subscriber to a record in the RP application, and this record often contains attributes collected from various sources including the IdP and direct interaction with the subscriber. 
 
@@ -39,7 +39,7 @@ Assertions at all levels can include additional attributes about the subscriber 
 
 Some protocols, such as SAML, require all available attributes be present in the assertion itself. In such cases, the RP needs to be very judicious about which attributes it requests. In other protocols, such as OpenID Connect, attributes can be sent through both the assertion and a secondary channel, the UserInfo endpoint. In OpenID Connect the ID Token serves as the assertion, and by default it contains a non-PII subject identifier for the subscriber. Additional information about the subscriber can be obtained through the UserInfo Endpoint by using an OAuth access token. Since this information is communicated in the back channel from the IdP to the RP over a an authenticated protected channel, it need not be separately encrypted as it is not handled or presented by an intermediary party (though of course it can be encrypted as well).
 
-### 2.4. Selecting a Presentation Mechanism
+### Selecting a Presentation Mechanism
 
 Assertions can be sent either over the back channel between the IdP and RP [[section 7.1]] or over the front channel using the subscriber and their browser as an intermediary [[section 7.2]]. While both methods are allowed at all FALs, back channel presentation has a number of advantages and is preferred where possible.
 
