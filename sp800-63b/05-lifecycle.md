@@ -19,7 +19,7 @@ SP 800-63B uses the term binding rather than issuance to better accommodate brin
 
 The binding refers to the association between the subscriber's account at the CSP (the credential) and the authenticators that can be used to access it. While binding multiple authenticators does increase the attack surface of the subscriber's account, availability of a reasonable number of authenticators minimizes the need for account recovery, which can be made more secure if it is a rare event. It also accommodates the different interfaces available on different devices.
 
-Each authenticator has a metadata record associated with it, including information on the binding that was established and unsuccessful authentications attempted with it. The latter includes state information that is needed to implement rate limiting of a specific authenticator as described in Section 5.2.2 without necessarily rate limiting the entire account.
+Each authenticator has a metadata record associated with it, including information on the binding that was established and unsuccessful authentications attempted with it. The latter includes state information that is needed to implement rate limiting of a specific authenticator as described in [Section 5.2.2](https://pages.nist.gov/800-63-3/sp800-63b.html#throttle) without necessarily rate limiting the entire account.
 
 #### Binding at Enrollment
 

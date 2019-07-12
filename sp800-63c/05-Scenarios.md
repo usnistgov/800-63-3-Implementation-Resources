@@ -33,11 +33,11 @@ There are many benefits to using federated identity management as opposed to req
 
 #### Privacy-enhancing Federated Identity
 
-In many cases, relying parties do not need to know the full identity of a subscriber. Relying parties need to request only as much information as they need to complete the transaction requested by the subscriber, and IdPs need to limit what information relying parties have access to within a transaction [[section 5.2]]. Furthermore, with protocols like OpenID Connect, the attributes of the subscriber can be sent separately from the assertion itself, limiting leakage of this information. 
+In many cases, relying parties do not need to know the full identity of a subscriber. Relying parties need to request only as much information as they need to complete the transaction requested by the subscriber, and IdPs need to limit what information relying parties have access to within a transaction as per [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63c.html#privacy-reqs). Furthermore, with protocols like OpenID Connect, the attributes of the subscriber can be sent separately from the assertion itself, limiting leakage of this information. 
 
-Pairwise identifiers ought to be used in place of persistent or correlatable identifiers whenever possible [[section 6.3]]. This limits relying parties in attempts of tracking or identifying individual subscribers across different systems. 
+Pairwise identifiers ought to be used in place of persistent or correlatable identifiers whenever possible (See [Section 6.3](https://pages.nist.gov/800-63-3/sp800-63c.html#ppi)). This limits relying parties in attempts of tracking or identifying individual subscribers across different systems. 
 
-When possible, claim references ought to be used to communicate identity information rather than raw data [[section 7.3]]. For example, if a relying party needs to know whether a subscriber is over eighteen years old, the IdP can respond that the subscriber is over eighteen without sharing the subscriber's age or birthdate.
+When possible, claim references ought to be used to communicate identity information rather than raw data (See [Section 7.3](https://pages.nist.gov/800-63-3/sp800-63c.html#protecting-information)). For example, if a relying party needs to know whether a subscriber is over eighteen years old, the IdP can respond that the subscriber is over eighteen without sharing the subscriber's age or birthdate.
 
 #### Parallel Authentication
 
@@ -47,7 +47,7 @@ At FAL3, holder-of-key transactions occur by verifying both the assertion from t
 
 ### Brokered Identity Management
 
-Some federated identity architectures are based on brokered identity management [[section 5.1.4]], where a single broker intermediates transactions between registered IdPs and RPs. In this architecture, each entity in the system only has to register with one broker in order to interoperate with everyone else in the system. It also means that an IdP can authenticate a subscriber without knowledge of which RP requested the authentication event.
+Some federated identity architectures are based on brokered identity management described in [Section 5.1.4](https://pages.nist.gov/800-63-3/sp800-63c.html#proxied), where a single broker intermediates transactions between registered IdPs and RPs. In this architecture, each entity in the system only has to register with one broker in order to interoperate with everyone else in the system. It also means that an IdP can authenticate a subscriber without knowledge of which RP requested the authentication event.
 
 Recent advances in automated registration processes have made IdP/RP integrations much less onerous than they used to be. It is possible for an IdP and RP to register with each other in a very short amount of time without any manual processes. This has lessened the value of brokered identity architectures, since interoperability can be simple and fast even without a central broker.
 

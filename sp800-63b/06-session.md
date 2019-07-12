@@ -13,7 +13,7 @@ See [SP 800-63 B](https://pages.nist.gov/800-63-3/sp800-63b.html#sec7) for norma
 
 Session management includes a number of mechanisms that are used following authentication to maintain continuity of state for a subscriber. Strength of session management procedures is as important as authentication, since the ability to hijack a session is as damaging as an authentication failure.
 
-Sessions have well-defined maximum lifetimes. This lifetime can be extended through the reauthentication procedures outlined in Section 7.2 provided that reauthentication occurs before the previous session has expired.
+Sessions have well-defined maximum lifetimes. This lifetime can be extended through the reauthentication procedures outlined in [Section 7.2](https://pages.nist.gov/800-63-3/sp800-63b.html#sessionreauthn) provided that reauthentication occurs before the previous session has expired.
 
 ### Session Bindings
 

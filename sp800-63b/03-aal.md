@@ -19,7 +19,7 @@ SP 800-63B encourages the binding of multiple authenticators with a subscriber a
 
 ### Authenticator Assurance Level 1
 
-AAL1 permits single-factor authentication using a wide variety of authenticators listed in SP 800-63B Section 4.1.1. By far the most common authenticator at AAL1 is the memorized secret, but it is equally acceptable to use a physical authenticator such as an OTP device at AAL1. When multifactor authenticators are used at AAL1, the nature of those devices requires that the additional factor, i.e., a memorized secret or biometric, be provided to allow those authenticators to operate.
+AAL1 permits single-factor authentication using a wide variety of authenticators listed in [SP 800-63B Section 4.1.1](https://pages.nist.gov/800-63-3/sp800-63b.html#411-permitted-authenticator-types). By far the most common authenticator at AAL1 is the memorized secret, but it is equally acceptable to use a physical authenticator such as an OTP device at AAL1. When multifactor authenticators are used at AAL1, the nature of those devices requires that the additional factor, i.e., a memorized secret or biometric, be provided to allow those authenticators to operate.
 
 Biometrics by themselves are not considered authenticators in SP 800-63B because they must always be strongly bound to a physical authenticator and are considered an activation factor for that authenticator. For that reason, a biometric cannot be used alone for authentication, even at AAL1.
 
@@ -44,7 +44,7 @@ Some of these characteristics are satisfied jointly by the authenticator and ver
 
 #### Permitted Authenticator Types
 
-SP 800-63B Section 4.3.1 identifies six combinations of authenticators that can meet the requirements of AAL3. There might be additional combinations that work, such as combinations of four or more authenticators to meet all of the AAL3 requirements, but these are unlikely to be used because of the complexity of the user experience.
+[SP 800-63B Section 4.3.1](https://pages.nist.gov/800-63-3/sp800-63b.html#aal3types) identifies six combinations of authenticators that can meet the requirements of AAL3. There might be additional combinations that work, such as combinations of four or more authenticators to meet all of the AAL3 requirements, but these are unlikely to be used because of the complexity of the user experience.
 
 Even though two authentication factors are required at AAL3, one combination of authenticators (Hardware Single-Factor OTP Device plus a Single-Factor Cryptographic Software Authenticator plus a Memorized Secret) consists of three authenticators. This combination stems from the fact that the hardware-based Single-Factor OTP Devices do not provide verifier impersonation resistance, so a Single-Factor Cryptographic Software Authenticator can satisfy that requirement. But since both of those authenticators are something you have, a Memorized Secret is required to satisfy the requirement for two different authentication factors.
 
@@ -52,4 +52,4 @@ Use of an authenticator or combination of authenticators on this list is not suf
 
 ### Privacy Requirements
 
-While the privacy requirements in SP 800-63B Section 4.4 are expressed primarily in wording that applies to federal agencies, the requirements are relevant for other uses of authentication as well. A key requirement is that data that is collected be limited to its intended use (authentication) unless the subscriber consents to additional use. Any such additional use must be voluntary, and not be a condition for the use of the service without a strong justification.
+While the privacy requirements in [SP 800-63B Section 4.4](https://pages.nist.gov/800-63-3/sp800-63b.html#aal_privacy) are expressed primarily in wording that applies to federal agencies, the requirements are relevant for other uses of authentication as well. A key requirement is that data that is collected be limited to its intended use (authentication) unless the subscriber consents to additional use. Any such additional use must be voluntary, and not be a condition for the use of the service without a strong justification.
