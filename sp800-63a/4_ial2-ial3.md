@@ -15,17 +15,17 @@ The agency proceeds to resolve all core attributes collected from the applicant 
 
 In our IAL2 example, following the initial registration step shown in the following diagram, the agency can leverage identity document image verification software to obtain the full name, address and DOB for an applicant from the image of their driver’s license or passport that they received via the app. Once attribute information is produced from the document image, the agency has two or more sets of attributes for the applicant –one from the application entries provided by the applicant, and one or more from the document(s).
 
-![Registration Workflow]({{site.baseurl}}/img/workflow-3-enrollment.png)
+![Registration Workflow]({{site.baseurl}}/img/workflow-3-enrollment.png){:width="1000"}
 
 The agency can then run a matching algorithm, as depicted in the following figure, to obtain a similarity score that reflects the extent to which the different sets of identity attributes resolve, and, comparing this against a threshold, decide success or failure.
 
-![Resolution Workflow]({{site.baseurl}}/img/workflow-4-resolution.png)
+![Resolution Workflow]({{site.baseurl}}/img/workflow-4-resolution.png){:width="1000"}
 
 ### Validation
 
 To validate the identity the agency must examine the documents collected from the applicant. Automated software (or an operator) will first check the security features on the document that has been uploaded by the applicant using the mobile application –-holograms, secure inks and other devices-– to check that it is genuine. Second, the agency will also validate the personalized information on the card –-name, date of birth, address, driver’s license or passport number, account number-– and make sure that the information in the documents is valid. An example is illustrated in the following figure, where an automated system that uses the picture of the applicant’s passport to extract information and physical security features to validate the evidence in terms of both the features and the information.
 
-![Validation Workflow]({{site.baseurl}}/img/workflow-5-validation.png)
+![Validation Workflow]({{site.baseurl}}/img/workflow-5-validation.png){:width="1000"}
 
 ### Verification
 
