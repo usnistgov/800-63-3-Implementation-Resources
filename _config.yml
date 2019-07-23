@@ -80,7 +80,7 @@ collections:
     label: "NIST Special Publication 800-63C"
     permalink: 63C/:path/
     output: true
-    directory: sp800-63c/
+    relative_directory: sp800-63c
   #usecases:
     #label: "Use Cases"
     #permalink: usecases/:path/
