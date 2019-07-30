@@ -28,66 +28,40 @@ navigation:
 - text: Introduction
   url: /
   internal: true
-  coll: false
+  collection: false
 - text: SP800-63-3
   url: /63-3/
   internal: true
-  coll: true
-  collname: 63-3
+  collection: 63-3
 - text: SP800-63A
   url: /63A/
   internal: true
-  coll: true
-  collname: 63A
+  collection: 63A
 - text: SP800-63B
   url: /63B/
   internal: true
-  coll: true
-  collname: 63B
+  collection: 63B
 - text: SP800-63C
   url: /63C/
   internal: true
-  coll: true
-  collname: 63C
-#5/7/2018: The IAL2/3 Walkthrough will be included in the 800-63A collection. Uncomment these lines to make a separate use case collection.  
-#- text: Use Cases
-  #url: usecases/
-  #internal: true
-  #coll: true
-  #collname: usecases
+  collection: 63C
 - text: Contribute
   url: /contribute/
   internal: true
-  coll: false
+  collection: false
   
 collections:
   63-3:
-    label: "NIST Special Publication 800-63-3"
-    permalink: 63-3/:path/
     output: true
-    relative_directory: sp800-63-3
   63A:
-    label: "NIST Special Publication 800-63A"
-    permalink: 63A/:path/
     output: true
-    relative_directory: sp800-63a
   63B:
-    label: "NIST Special Publication 800-63B"
-    permalink: 63B/:path/
     output: true
-    relative_directory: sp800-63b
   63C:
-    label: "NIST Special Publication 800-63C"
-    permalink: 63C/:path/
     output: true
-    relative_directory: sp800-63c
-  #usecases:
-    #label: "Use Cases"
-    #permalink: usecases/:path/
-    #output: true
-    
+
 #Uncomment when we go live 
-#host: 0.0.0.0
+host: 0.0.0.0
 
 include:
 - _stylesheets
