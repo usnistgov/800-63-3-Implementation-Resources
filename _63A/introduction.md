@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  SP 800-63A
-collection: 63A
 permalink: /63A/
 navOrder: 0  
 navTitle: Home  

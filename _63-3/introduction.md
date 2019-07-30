@@ -1,7 +1,6 @@
 ---	
 layout: default	
 title:  SP800-63-3 Resource and Tools	
-collection: 63-3	
 permalink: /63-3/	
 navOrder: 0  
 navTitle: Home  

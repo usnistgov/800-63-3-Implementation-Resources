@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  IAL2-IAL3 Use Case
-collection: 63A
 permalink: /63A/UseCase
 navOrder: 4  
 navTitle: Use Case  

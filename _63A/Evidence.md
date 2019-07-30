@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  Identity Evidence
-collection: 63A
 permalink: /63A/Evidence
 navOrder: 1  
 navTitle: Evidence  

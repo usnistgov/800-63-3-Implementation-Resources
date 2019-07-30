@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  Validation
-collection: 63A
 permalink: /63A/Validation
 navOrder: 2  
 navTitle: Validation  

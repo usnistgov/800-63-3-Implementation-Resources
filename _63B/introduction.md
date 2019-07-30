@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  Introduction
-collection: 63B
 permalink: /63B/
 navOrder: 1  
 navTitle: Home  
