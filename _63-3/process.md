@@ -1,7 +1,6 @@
 ---	
 layout: default	
 title:  Identity Risk Assessment Process Flow	
-collection: 63-3	
 permalink: /63-3/process	
 navOrder: 1  
 navTitle: Process  

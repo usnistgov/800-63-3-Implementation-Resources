@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  Authenticators
-collection: 63B
 permalink: /63B/Authenticators
 navOrder: 4  
 navTitle: Authenticators  

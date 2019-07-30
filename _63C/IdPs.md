@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  Guide for Identity Providers
-collection: 63C
 permalink: /63C/IdP
 navOrder: 4  
 navTitle: IdPs  

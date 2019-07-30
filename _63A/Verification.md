@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  Verification
-collection: 63A
 permalink: /63A/Verification
 navOrder: 3  
 navTitle: Verification  

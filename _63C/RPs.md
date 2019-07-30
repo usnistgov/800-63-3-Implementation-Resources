@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  Guide for Relying Parties
-collection: 63C
 permalink: /63C/RP
 navOrder: 4  
 navTitle: RPs  

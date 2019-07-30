@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  Authenticator Assurance Levels
-collection: 63B
 permalink: /63B/AAL
 navOrder: 3  
 navTitle: AAL  

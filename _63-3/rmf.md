@@ -1,7 +1,6 @@
 ---	
 layout: default	
 title:  800-63-3 and the Risk Management Framework (RMF)	
-collection: 63-3	
 permalink: /63-3/rmf	
 navOrder: 3  
 navTitle: RMF  
