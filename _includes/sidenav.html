@@ -2,16 +2,17 @@
 	<ul class="nav navbar-nav">
       {% for link in site.navigation %}
         {% assign current = '' %}
-        {% if link.url == page.url or (link.coll and page.collection == link.collname) %}
+        {% if link.url == page.url or (link.collection and page.collection == link.collection) %}
           {% assign current = 'active' %}
         {% endif %}
         
         <li class="{{ current }}">
           <a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
           
-          {% if link.coll and page.collection == link.collname %}
+          {% if link.collection and page.collection == link.collection %}
         
-            {% assign pages = site.pages | where: 'collection', page.collection | sort: 'navOrder' %}
+            {% assign c = site.collections | where: "label", link.collection | first %}
+            {% assign pages = c.docs | sort: 'navOrder' %}
             
             <ul class="subnav">
             {% for p in pages %}
