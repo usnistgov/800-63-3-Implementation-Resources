@@ -28,4 +28,4 @@ Another meaning, used in this document and in the SP 800-63-3 document suite, is
 
 In some cases&mdash;notably, with PIV cards&mdash;copies of subject (user) attributes are stored on an authenticator, in most cases cryptographically signed by the CSP or other authority. This is useful when it isn't possible to communicate with the CSP, e.g., in disaster situations. However, attributes can change so such copies, even if accompanied by valid signatures, might be considered less authoritative if they can't be verified online with the CSP.
 
-It isn't possible to entirely avoid the usage of *credential* as a physical object held by the claimant. SP 800-63B attempts be consistent in its use of use the term in the above-described way, rather than as a user-retained physical credential.
+It isn't possible to entirely avoid the usage of *credential* as a physical object held by the claimant. SP 800-63B attempts be consistent in its use of the term in the above-described way, rather than as a user-retained physical credential.
