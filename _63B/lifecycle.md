@@ -8,13 +8,13 @@ navTitle: Lifecycle
 
 ## Authenticator Lifecycle Management
 
-See [SP 800-63 B](https://pages.nist.gov/800-63-3/sp800-63b.html#sec6) for normative requirements.
+See [SP 800-63B Section 6](https://pages.nist.gov/800-63-3/sp800-63b.html#sec6) for normative requirements.
 
 ### Authenticator Binding
 
 One of the changes in SP 800-63B from previous editions of SP 800-63 is the explicit recognition of bring-your-own authenticators. It is no longer assumed that CSPs will issue authenticators, which is important in the case of physical authenticators and with the increased use of two-factor authentication: it should not be necessary for a subscriber to carry, manage, and protect a "keyring" of devices for authentication on multiple services. While this issue is mitigated greatly by the use of federated authentication, many subscribers will nevertheless have accounts at multiple CSPs. The use of multiple authenticators at each CSP, prompted by more secure account recovery procedures, also increases the number of authenticators that must be managed.
 
-SP 800-63B uses the term binding rather than issuance to better accommodate bring-your-own authenticators since the authenticator(s) being used may have been issued elsewhere. At the same time, bring-your-own authenticators introduce a new problem: the need for the CSP to determine the type and strength of authenticators it binds to the account. This is discussed above.
+SP 800-63B uses the term *binding* rather than *issuance* to better accommodate bring-your-own authenticators since the authenticator(s) being used may have been issued elsewhere. At the same time, bring-your-own authenticators introduce a new problem: the need for the CSP to determine the type and strength of authenticators it binds to the account. This is discussed in the section on authenticator attestation.
 
 The binding refers to the association between the subscriber's account at the CSP (the credential) and the authenticators that can be used to access it. While binding multiple authenticators does increase the attack surface of the subscriber's account, availability of a reasonable number of authenticators minimizes the need for account recovery, which can be made more secure if it is a rare event. It also accommodates the different interfaces available on different devices.
 
