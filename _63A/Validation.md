@@ -1,38 +1,58 @@
 ---
 layout: default
-title:  Validation
-permalink: /63A/Validation
-navOrder: 2  
-navTitle: Validation  
+title:  'SP 800-63A: Identity Validation'
+permalink: /63A/validation/
+navOrder: 4
+navTitle: Validation
 ---
-The goal of identity validation is to collect from the applicant the most appropriate identity evidence (for example, a passport or driver's license) and determine its authenticity and accuracy. Regardless of identity assurance level, steps must be taken to validate the evidence to prevent an attacker from fraudulently completing the identity proofing process by presenting forged or modified evidence.
 
-Identity validation is made up of two process steps: confirming the evidence is genuine and authentic, and confirming the data contained on the identity evidence is valid, current, and related to an actual, live individual.
+# Identity Validation
 
-At IAL 2, agencies may allow applicants to present evidence digitally to facilitate remote proofing. Evidence presented in this manner will often be examined visually to determine if it appears fraudulent, counterfeit, or otherwise modified. The collection of evidence and validation of their authenticity may occur at the same time. For example, if an applicant provides a digital image of their driver's license, the system accepting that image may be able to automatically read the ID number or barcode and perform a lookup in the issuing state's motor vehicles department to confirm its authenticity.
+The objective of identity validation is to determine the authenticity, integrity and accuracy of identity evidence collected from the applicant to support the claimed identity for identity proofing. Identity validation is made up of two process steps: confirming the evidence is genuine and confirming that the data on the identity evidence is valid, current, and related to an actual, live individual.
 
-Agencies should also examine the evidence visually. Techniques for remote validation should be comparable to in-person validation. Table 5-2 in SP800-63A describe methods for validating identity evidence at each strength.
+## Validation of Evidence Authenticity
 
-To determine whether the evidence is genuine, agencies should examine the security features of the provided evidence. These could be the physical or digital security features of a document or the cryptographically protected information contained within a physical document, or the cryptographically protected information within an electronic document. In each of these cases, methods such as the physical validation of the security features or electronic validation of the cryptographically protected content should be utilized to declare the evidence genuine or not. The table below provides examples of physical and digital security features.
+Evidence validation for authenticity involves examining the evidence for:
 
-To check if the identity evidence is valid, accuracy of the information such as that presented within the attributes should be confirmed with the issuing source, or machine-readable evidence such as passports or driver's licenses should be automatically validated by equipment used by the agency.
+- Confirmation of required information completeness and format for the identity evidence type.
+- Detection of evidence tampering or the creation of counterfeit or fraudulent evidence.
+- Confirmation of security features.
 
-**Table: Physical and Digital Security Features**
+SP 800-63A Table5-2 _Validating Identity Evidence_(5.2.2) presents validation techniques for 5 levels of validation strength, ranging from unacceptable to SUPERIOR. One of the validation techniques that may be used for evidence validation at FAIR, STRONG, and SUPERIOR strength is to confirm that the evidence is genuine using "appropriate technologies". In this case, "appropriate technologies" refers to identity document validation products and services with the capability to perform one or more of the tests for authenticity listed below for the types of identity evidence presented. Such evidence validation products and services may be used for either in-person or remote identity proofing methods. Therefore, such products may be used when the identity evidence is physically presented for in-person proofing or submitted via video or images that are captured via scanner, webcam, or mobile phone camera for remote identity proofing. Such products and services should conduct one or more of the following necessary evidence authenticity tests:
 
-| **Feature** | **Description** |
+- Test identity evidence for authenticity against document type libraries for information completeness, format, and correctness;
+- Test identity evidence for authenticity through tamper and counterfeit detection; and
+- Test identity evidence for authenticity by confirming presence and verification of security features for the type of evidence presented.
+
+There are multiple commercial products that can perform these types of document validation capabilities at varying degrees of accuracy and reliability. If a single product cannot perform each of the three genuineness validation tests above, then other products should be used in combination to perform these validation tests or manual intervention and examination would be necessary. SP 800-63A Table5-2 _Validating Identity Evidence_(5.2.2) could be interpreted that use of appropriate technologies as described above alone would be sufficient for evidence validation at validation strengths of FAIR and STRONG. However, in practice most document validation products require some degree of manual intervention to resolve data collisions and evidence conflicts in order to proceed with identity proofing processes. Manual intervention to resolve collisions and conflicts most likely would require trained personnel from the product vendor or agency personnel, depending on the type of product or service and any associated service level agreements. Agencies should include these considerations in the evaluation of products and services used for evidence validation for identity proofing.
+
+Identity evidence may contain multiple forms of security features. Some forms of security features may be confirmed through visible inspection, tactile examination, specialized lighting, manipulation (e.g., tilting or turning to allow light refraction), or specialized equipment. Following are descriptions for common types of security features, including the capabilities necessary for confirmation of the security feature.
+
+| Security Feature**** (examination capability) | Description |
 | --- | --- |
-| Holographic Security Threads | Incorporate diffractive surface elements with variable colors and patterns. They can also be equipped with machine-readable properties such as magnetic and electrical conductivity.  |
-| Iridescent Inks and Custom Foil Stamping | Provide custom designs and prints that are dificult to duplicate. |
-| Dynamic Fluorescent Feature | Dynamic response generated in UV light at varying distances from the source is hard to duplicate by attackers. |
-| Ghosting | Design that produces a faint image of the card layout on top of the original layout, and used to promote visual security. |
-| Integrated Circuit with PKI Protection | Asymmetric cryptography protects data content. |
-| Digital Watermark | Documents signed by digital watermarking (DWM) (such as driver's license images) can also be used by CSPs as a piece of strong evidence in identity proofing. Watermarks are embedded in images used in secure identity verification and use applications to verify the rightful owner of an evidence document. |
-| Barcodes | Optical, machine readable, representation of data that is embedded on the document can be used to carry data and validate strong evidence by CSPs that wish to validate evidence. |
-| Checksums | Checksums provide a method to validate electronic evidence, whereby CSP's can generate cryptographic checks to associate with documents used as evidence, which are then subject to a check for validation. |
-| Radio-frequency identification (RFID) | Transmits data to the surrounding vicinity upon is stimulated by a suitable radio frequency source. |
-| Embedded holograms  | Unique optical properties that are used to diffract light and create virtual effects that render photocopying or scanning useless.  |
-| UV and Infrared printing | A UV or infrared printed design that can only be viewed with special equipment.  |
-| Microtext |  Very small field of static or variable data that can be confirmed when viewed under a magnifier |
-| laser engraving | Burns data such as microtext, tactile data, perforated images, and variable images that change with different viewing angles. |
-| Fluorescent ribbon | Print fluorescent grayscale text of images on ID cards that can only be seen by UV light.  |
-| Magnetic stripes | Store data using magnetism and the modification of small iron particles that can be read by swiping past a magnetic reading head.  |
+| Fine-line or Guilloche Pattern (visual) | Background pattern of continuous fine lines printed in wavy, overlapping pattern. |
+| Ghost image(visual) | Half-tone reproduction of original image (e.g., facial image), may be printed behind printed data. |
+| Overlapped data(visual) | Variable data (e.g., signature, seal, text) printed over another field such as facial image or seal. |
+| Transparent image(visual) | See-through, window-like image feature (e.g., facial image) visible for both sides of the evidence. |
+| Rainbow printing(visual) | Controlled color shifts of printed text in a continuous, linear fashion. |
+| Holographic Images(visual, tilting) | Light field record of objects that will appear and change as view of evidence is tilted and turned. Most state-issued driver's licenses and IDs contain at least one holographic image. |
+| Variable laser engraved images(visual, tilting) | Laser-engraved images at different angles so that image view changes with tilting angle of viewing evidence. |
+| Iridescent Inks and Custom Foil Stamping(visual, tilting) | Custom designs and printing that will change color properties depending on the angle at which evidence is viewed. |
+| Laser perforation (visual, light, tactile) | Perforated holes made by laser beam to form images. The images can be viewed under light source; image holes have tactile feel. |
+| UV printing (visual, UV lighting) | A UV image or text that can only be viewed with special lighting. UV images may appear on the front or back of the evidence. |
+| Microprinting (visual, magnifier) | Microtext of static or variable data that can be confirmed when viewed under a magnifier. Requires magnification of at least 10X to view.  |
+| Laser embossing(tactile) | Use of laser to emboss image or text for tactile feel on only one side of the evidence. |
+| Barcode(visual, barcode reader) | Machine readable, encoded data (typically personalized printed data) for 2-D barcode, readable with barcode reader. |
+| UV printing (visual, UV lighting) | A UV image or text that can only be viewed with specialized lighting. UV images may appear on the front or back of a card. |
+
+SP 800-63A (5.2.2) also provides that the genuineness tests above for identity evidence validation may be performed through confirmation of cryptographic security features contained on the evidence in order to meet FAIR and STRONG validation strength; this is a requirement for SUPERIOR validation strength. Such cryptographic security features generally refer to cryptographically signed (e.g., digitally signed) data objects that are stored on an integrated circuit chip on the data evidence that can be used to compare and validate printed information on the evidence. The federal Personal Identity Verification (PIV) Card is an example of this type of evidence. The cryptographically signed data objects on the chip can be used to confirm the personalized data, including facial image, printed on the evidence for evidence validation. Cryptographic security features require specialized equipment to access and validate cryptographically signed data objects on the evidence.
+
+Unless identity evidence validation products and services as described above are used, CSP personnel will need to possess the capabilities to confirm correct information and format, detection of any tampering or counterfeiting, and presence and confirmation of security features for various types of identity evidence that may be presented by applicants. Due to the complexity of evidence validation, SP 800-63A (5.2.2) requires training for CSP personnel that are responsible for evidence validation: _Training requirements for personnel validating evidence SHALL be based on the policies, guidelines, or requirements of the CSP or RP._ CSPs should determine the types and scopes of various types of evidence that may need to be validated and adjust training requirements to address those types of evidence as well as the policies and procedures that are established for the presentation and validation of identity evidence.
+
+Most of the capabilities to confirm security features on identity evidence are dependent upon physically viewing the evidence directly, tactile feel of the evidence, and viewing the evidence under specialized lighting or through the use of specialized equipment. Therefore, the validation of evidence that may be submitted remotely for remote identity proofing methods is particularly challenging. For this reason, CSPs opting to provide remote identity proofing may find it most effective to use automated evidence validation products and services as described above which are permitted as "appropriate technologies" for evidence validation in SP 800-63A section 5.2.2. If such validation services are not used, operator training for evidence validation will depend on the CSP policies, guidelines and requirements. For this reason, training requirements for evidence validation requirements are not specified in SP 800-63A. Such training is especially important for CSPs that provide for IAL2 remote identity proofing or IAL3 supervised remote identity proofing For these remote identity proofing methods, images of identity evidence are submitted remotely, but the capabilities for evidence validation are very limited as seen in the table of common types of security features presented above. If automated evidence validation solutions are not used, CSPs may choose to apply similar procedures for IAL2 remote proofing as are required for IAL3 supervised remote proofing. These procedures provide that a trained operator can remotely supervise the evidence collection process, require the applicant to turn or tilt evidence or apply lighting to be able to confirm security features on evidence that is presented for the identity proofing encounter in a recorded video or webcast. Alternatively, a CSP may use an automated interface for the capture of identity evidence images that similarly can direct the applicant to turn, tilt or provide lighting on evidence presented for identity proofing purposes. Therefore, the training for personnel involved in the validation of evidence for remote proofing methods will depend on the CSPs' policies and procedures. Regardless, the confirmation of genuineness of identity evidence presented to support the claimed identity for identity proofing is critical and necessary for identity validation.
+
+## Evidence Information Validation
+
+The second step in identity validation is to validate the correctness of information from the identity evidence against the issuing source for the evidence or an authoritative source that has linkage to the issuing source. This step applies to evidence validation at the STRONG and SUPERIOR Strengths (5.2.2): _All personal details and evidence details have been confirmed as valid by comparison with information held or published by the issuing source or authoritative source(s)._ It should be noted that the validation of all personal details and evidence details may not be possible for some types of common identity evidence. For example, state motor vehicle departments and driver's license verification services can typically verify issuing state and license number but may only be able to validate selected personal and document information from the license. Therefore, the CSP may not be able to validate all personal details and evidence information on the evidence but must validate all information that can be validated with the issuing or authoritative sources.
+
+The results of identity evidence information validation and evidence genuineness validation should be recorded in enrollment records or audit logs as appropriate for the CSP.
