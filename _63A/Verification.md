@@ -6,7 +6,7 @@ navOrder: 5
 navTitle: Verification
 ---
 
-# Identity Verification
+# A.5 Identity Verification {#s-a-5}
 
 Identity verification represents the processes of confirming that the evidence, previously shown to be valid, actually refers to the applicant that is appearing for identity proofing; The objective of identity verification is to confirm a linkage between the validated evidence for the claimed identity and the physical, live existence of the person presenting the evidence. For IAL2 and IAL3 this binding is done by a physical or biometric comparison of the photograph on the strongest piece of evidence to the applicant or by a biometric comparison between information on the evidence and a biometric characteristic obtained from the applicant.
 

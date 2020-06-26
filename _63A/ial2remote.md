@@ -6,7 +6,7 @@ navOrder: 10
 navTitle: IAL2 Remote
 ---
 
-# IAL2 Remote Identity Proofing
+# A.10 IAL2 Remote Identity Proofing {#s-a-10}
 
 > Note: This section of the SP 800-63A Implementation Resources repeats some of the text of other sections of the Implementation Resources as it is anticipated that this section for IAL2 remote identity proofing may be used as a stand-alone resource.
 
@@ -21,11 +21,11 @@ Note that "unsupervised" (conventional) remote identity proofing is not intended
 
 Conventional remote identity proofing, which may be used at IAL2, generally involves the applicant (the person undergoing identity proofing) using their own hardware to complete the proofing process. This will typically involve the use of a camera to capture images of the applicant and the evidence they are presenting. When available, devices such as scanners may be used to capture higher-resolution images of the evidence being presented. However, the use of separate devices like scanners may make it more difficult to securely associate the image of the captured evidence with the primary (webcam) session.
 
-## Identity Resolution
+## A.10.1 Identity Resolution {#s-a-10-1}
 
 Identity proofing begins with the resolution process. The applicant provides attribute information (e.g., name, physical address, date of birth, email address, phone number) to the CSP and one to three forms of identity evidence. In rare cases, the attribute information provided may not resolve to a unique individual; if this is the case, additional attributes may be requested to resolve the ambiguity. If necessary, ambiguities can be resolved through the use of knowledge-based verification (KBV).
 
-### Identity Evidence Collection
+### A.10.1.1 Identity Evidence Collection {#s-a-10-1-1}
 
 Several combinations of evidence quality are accepted at IAL2 as shown in the table below.
 
@@ -38,7 +38,7 @@ A single piece of Superior or Strong evidence can be used for identity proofing 
 
 Additional evidence strength combinations at IAL2 are: two pieces of STRONG evidence. or a single piece of Strong evidence along with two pieces of Fair evidence.
 
-## Identity Validation
+## A.10.2 Identity Validation {#s-a-10-2}
 
 The objective of identity validation is to determine the authenticity, integrity and accuracy of identity evidence collected from the applicant to support the claimed identity for identity proofing. Identity validation is made up of two process steps: confirming the evidence is authentic and confirming that the data on the identity evidence is valid, current, and related to an actual, live individual.
 
@@ -60,13 +60,13 @@ Manual validation of identity evidence, particularly the confirmation of integri
 
 Therefore, the validation of evidence that may be submitted remotely for remote identity proofing methods is particularly challenging. For this reason, CSPs opting to provide remote identity proofing may find it most effective to use automated evidence validation products and services as described above which are permitted as "appropriate technologies" for evidence validation in SP 800-63A section 5.2.2. If such validation services are not used, operator training for evidence validation will depend on the CSP policies, guidelines and requirements. For this reason, training requirements for evidence validation requirements are not specified in SP 800-63A. Such training is especially important for CSPs that provide for IAL2 remote identity proofing or IAL3 supervised remote identity proofing For these remote identity proofing methods, images of identity evidence are submitted remotely, but the capabilities for evidence validation are very limited as seen in the table of common types of security features presented in the Identity Validation section of these Implementation Resources. If automated evidence validation solutions are not used, CSPs may choose to apply similar procedures for IAL2 remote proofing as are required for IAL3 supervised remote proofing. These procedures provide that a trained operator can remotely supervise the evidence collection process, require the applicant to turn or tilt evidence or apply lighting to be able to confirm security features on evidence that is presented for the identity proofing encounter in a recorded video or webcast. Alternatively, a CSP may use an automated interface for the capture of identity evidence images that similarly can direct the applicant to turn, tilt or provide lighting on evidence presented for identity proofing purposes. Therefore, the training for personnel involved in the validation of evidence for remote proofing methods will depend on the CSPs' policies and procedures. Regardless, the confirmation of genuineness of identity evidence presented to support the claimed identity for identity proofing is critical and necessary for identity validation.
 
-## Evidence Information Validation
+## A.10.3 Evidence Information Validation {#s-a-10-3}
 
 The second step in identity validation is to validate the correctness of information from the identity evidence against the issuing source for the evidence or an authoritative source that has linkage to the issuing source. This step applies to evidence validation at the STRONG and SUPERIOR Strengths (5.2.2): _All personal details and evidence details have been confirmed as valid by comparison with information held or published by the issuing source or authoritative source(s)._ It should be noted that the validation of all personal details and evidence details may not be possible for some types of common identity evidence. For example, state motor vehicle departments and driver's license verification services can typically verify issuing state and license number but may only be able to validate selected personal and document information from the license. Therefore, the CSP may not be able to validate all personal details and evidence information on the evidence but must validate all information that can be validated with the issuing or authoritative sources.
 
 The results of identity evidence information validation and evidence genuineness validation should be recorded in enrollment records or audit logs as appropriate for the CSP.
 
-### Identity Binding Verification
+### A.10.3.1 Identity Binding Verification {#s-a-10-3-1}
 
 Verification of identity evidence is the process of confirming that the evidence, previously shown to be valid, actually refers to the applicant that is appearing for identity proofing; SP 800-63A refers to this as verification of the binding of the validated identity evidence to the applicant. As with evidence requirements for resolution and validation requirements above, verification requirements depend on the quality being ascribed to the evidence.
 

@@ -6,13 +6,13 @@ navOrder: 4
 navTitle: IdPs  
 ---
 
-# Guidance for Identity Providers
+# C.4 Guidance for Identity Providers {#s-c-4}
 
 While every RP is responsible for its own internal security, the nature of federation protocols allows the IdP to specialize in security in a way that benefits all RPs that connect to it. With traditional application security authentication methods, security breaches can cascade between systems. Common practices like password reuse allow the compromise of a single RP to lead to the compromise of many other RPs for a given account. In a federation network, the identity provider (IdP) is the only party that can assert the presence and validity of subscribers and their attributes. The compromise of a single RP does not cascade through the network. 
 
 As the linchpin of security in a federation network, IdPs have the difficult task of keeping track of both subscribers and RPs as well as connecting them in a secure fashion with a federation protocol. Compromise of the IdP will affect all downstream RPs. However, unlike RPs that are trying to provide a service or application, the IdP's primary purpose is to act as a security component for the rest of the federation. As such, it is vitally important that the IdP be held to the highest of security standards in implementation and deployment. As a specialty service, it makes sense to invest heavily in good security practices.
 
-## General Guidance
+## C.4.1 General Guidance {#s-c-4-1}
 
 IdPs manage the primary authenticators and authentication processes for subscribers in a federation. Guidance for managing such authentication can be found in [SP 800-63B](https://pages.nist.gov/800-63-3/sp800-36b.html), all of which applies to the IdP. In particular, IdPs need to manage and store subscriber credentials appropriately for the types of credentials in use. IdPs also ought to implement phishing-resistant technologies in subscriber-facing pages and may want to use risk-based security methods for all connections, including any hosted identity APIs. 
 
@@ -28,11 +28,11 @@ IdPs have to securely store any symmetric secrets used by RPs in a fashion that 
 
 If an IdP provides public and private keypairs to subscribers or RPs, the IdP need to store only the public portion of the RP's key. This practice prevents the IdP becoming a potential attack target for this key material.
 
-## Guidance by Product Family
+## C.4.2 Guidance by Product Family {#s-c-4-2}
 
 This document covers two main product families that enable federated identity transactions - SAML and OpenID Connect, the latter of which is built on top of OAuth. Other protocols and approaches are possible to use while fulfilling the requirements of the guidelines.
 
-### SAML
+### C.4.2.1 SAML {#s-c-4-2-1}
 
 Both IdPs and RPs ought to publish metadata in a well-known location. While there is no widely accepted standard for SAML metadata exchange, it is advisable to use a well-documented metadata endpoint to serve the IdPs metadata in the form of a single XML file to any RP who wishes to consume it.
 
@@ -42,7 +42,7 @@ Identity federations like [InCommon](https://www.incommon.org/) share the metada
 
 Apply best practices to protect subscriber information. All SAML assertions containing personally identifiable information ought to be encrypted to the relying party to protect the PII from being leaked to the browser. Assertions containing only authentication information and no personally identifiable information can relax this encryption requirement.
 
-### OpenID Connect
+### C.4.2.2 OpenID Connect {#s-c-4-2-2}
 
 IdPs can use OpenID Connect's discovery mechanism, published in JSON format at an HTTPS location ending in `/.well-known/openid-configuration` as specified in the [OpenID Connect discovery specification](https://openid.net/specs/openid-connect-discovery-1_0.html). The discovery document contains all of the information that an RP would need to interact with the server. This document is usually made available in a location based on the IdP's unique issuer URL, and a single discovery location should be considered canonical for a given IdP.
 

@@ -6,7 +6,7 @@ navOrder: 8
 navTitle: SRIP
 ---
 
-# Supervised Remote Identity Proofing
+# A.8 Supervised Remote Identity Proofing {#s-a-8}
 
 SP 800-63A section 5.3.3.2 provides for supervised remote identity proofing. Supervised remote identity proofing is intended to provide controls for comparable levels of confidence and security to the in-person identity proofing process for identity proofing processes that are performed remotely. Supervised remote identity proofing is optional for CSPs; that is, if a CSP chooses to use supervised remote identity proofing, then the requirements of section 5.3.3.2 would apply. It should be noted that the term "supervised remote identity proofing" has specialized meaning in SP 800-63A and is used only to refer to the specialized equipment and controls required in section 5.3.3.2.
 

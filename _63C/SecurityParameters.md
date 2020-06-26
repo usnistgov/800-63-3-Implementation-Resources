@@ -6,13 +6,13 @@ navOrder: 2
 navTitle: Parameters  
 ---
 
-# Choosing Security Parameters
+# C.2 Choosing Security Parameters {#s-c-2}
 
 Different federation protocols and implementations of those protocols have many options that lead to different outcomes in the security of a system. All of these options have trade-offs in terms of complexity, robustness, and other characteristics. Choosing the right set of options for a given situation helps ensure that transactions will be as secure, functional, and efficient as possible.
 
 There must always be a balance between the complexity of a solution and the threats it protects against, and each deployment situation will lead to its own requirements. There is, unfortunately, not a one-size-fits-all approach that can be applied blindly to all situations.
 
-## Selecting a Protocol
+## C.2.1 Selecting a Protocol {#s-c-2-1}
 
 A number of different federation protocols exist, but the two most common ones today are [Security Assertion Markup Language (SAML)](http://saml.xml.org/saml-specifications) and [OpenID Connect (OIDC)](http://openid.net/connect/). These protocols are not compatible with each other, but they offer some similar capabilities. For the most part, protocol selection will be based on the technology support available in the target environments. However, some core aspects of the protocols themselves lend them to different choices.
 
@@ -20,7 +20,7 @@ SAML is a protocol based on passing XML documents between different parties. The
 
 OIDC is a protocol based on the OAuth 2 delegation framework. While OIDC is primarily a web-focused protocol, it is also usable with mobile and native applications. Since it is built on OAuth 2, OIDC allows for delegated access to additional APIs alongside identity information, a feature that is often desirable in today's integrations.
 
-## Selecting a Federation Assurance Level (FAL)
+## C.2.2 Selecting a Federation Assurance Level (FAL) {#s-c-2-2}
 
 The Federation Assurance Level (FAL) defined in [SP 800-63C Section 4](https://pages.nist.gov/800-63-3/sp800-63c.html#fal) provides a set of requirements for federation transactions. These requirements are grouped into an ascending scale of three levels: FAL1, FAL2, and FAL3. Each successive level includes all the features of lower levels and adds additional requirements on top of them. Each level introduces protections against specific kinds of attacks, and these protections are applicable only in some situations.
 
@@ -30,7 +30,7 @@ The Federation Assurance Level (FAL) defined in [SP 800-63C Section 4](https://p
 
 **FAL3** is intended to be a forward-looking requirement and is not yet readily available in off-the-shelf standards and products. FAL3 provides an additional layer in the form of a cryptographic key that are presented by the subscriber directly to the RP in addition to the signed and encrypted assertion itself. This level requires that the IdP manage references to keys representing the subscriber at each RP in addition to managing the keys for the RPs themselves. The IdP needs to correctly associate the subscriber's key to the correct RP in the assertion, and the RP needs to be able to process and validate the presentation of the key by the subscriber. This key could be the same key that's presented by the subscriber at the IdP, or it could be a separate key that's not used at the IdP. The key could be in a credential with its own attributes, such as an X.509 certificate, or it could be tied to an authenticator, such as a FIDO token. In all of these cases, the assertion needs to reference the key and the RP needs to ensure the correct key is presented by the subscriber.
 
-### Risk Management
+### C.2.2.1 Risk Management {#s-c-2-2-1}
 
 Selecting and conforming to an FAL ought to be part of a larger risk management process and program. Conforming to FAL3 does not make an organization's security infallible, but instead provides protection against particular attacks while incurring certain costs to both the applications and the subscribers. Rather than attempting to make your federation infrastructure conform to the highest standards available, you need to analyze the risks that are inherent in your organization and choose how strongly to protect against them given their severity and likelihood of occurrence.
 
@@ -38,7 +38,7 @@ The additional information management and implementation complexity of higher FA
 
 Because it is the front door to many critical systems, authentication is a key piece of risk management strategy. Strong federation can protect against many potential subscriber impersonation and man-in-the-middle attacks. Instead of each RP needing to manage subscriber accounts and authenticators separately, creating many vulnerable surfaces, federation concentrates the key security practices in a dedicated component, the IdP. Upgrades to authenticators, software, and practices at the IdP automatically benefit the downstream RPs and the overall network. 
 
-## Personally Identifiable Information (PII)
+## C.2.2 Personally Identifiable Information (PII) {#s-c-2-2}
 
 Personally Identifiable Information (PII) needs to be limited to only what's needed to perform a transaction as per [Section 7.3](https://pages.nist.gov/800-63-3/sp800-63c.html#protecting-information). For many login transactions, the RP will need to know only an identifier for the current subscriber. After an initial login, this identifier is used by the RP to tie the subscriber to a record or account in the RP application, and this record often contains attributes collected from various sources including the IdP and direct interaction with the subscriber. 
 
@@ -48,7 +48,7 @@ Assertions at all levels can include additional attributes about the subscriber 
 
 FAL2 is required if PII will be sent in an identity assertion that is passed through an intermediary such as a browser, as personally identifiable information needs to be protected in transit. If the PII is sent over the back channel instead, either in the assertion or in a separate request, then FAL2 is not required in order for the information to be sufficiently protected in transit.
 
-## Selecting a Presentation Mechanism
+## C.2.3 Selecting a Presentation Mechanism {#s-c-2-3}
 
 Assertions can be sent either over the back channel between the IdP and RP as per [Section 7.1](https://pages.nist.gov/800-63-3/sp800-63c.html#back-channel) or over the front channel using the subscriber and their browser as an intermediary as per [Section 7.2](https://pages.nist.gov/800-63-3/sp800-63c.html#front-channel). While both methods are allowed at all FALs, back channel presentation has a number of advantages and is preferred where possible.
 

@@ -6,11 +6,11 @@ navOrder: 4
 navTitle: Authenticators  
 ---
 
-## Authenticators and Verifiers
+# B.4 Authenticators and Verifiers {#s-b-4}
 
 See [SP 800-63B Section 5](https://pages.nist.gov/800-63-3/sp800-63b.html#sec5) for normative requirements.
 
-### Authenticator Types
+## B.4.1 Authenticator Types {#s-b-4-1}
 
 There are nine recognized authenticator types.
 
@@ -18,7 +18,7 @@ Pre-registered knowledge tokens&mdash;sometimes referred to as security question
 
 The single-factor cryptographic software authenticator, discussed in [SP 800-63B Section 5.1.6](https://pages.nist.gov/800-63-3/sp800-63b.html#sfcs), is a new authenticator type introduced in SP 800-63B.
 
-#### Memorized Secrets
+### B.4.1.2 Memorized Secrets {#s-b-4-1-2}
 
 <div class="text-left" markdown="1">
   <table style="width:100%">
@@ -54,11 +54,11 @@ In addition to common memorized secrets perhaps obtained elsewhere, it is useful
 
 When a subscriber attempts to choose a blocklisted memorized secret, it is helpful to give additional guidance to them. Measures like strength indicators (password meters) may encourage them not to choose a memorized secret that is a trivial modification of one on the blocklist.
 
-##### Examples
+#### B.4.1.2.1 Examples {#s-b-4-1-2-1}
 
 As mentioned above, memorized secrets include passwords, passphrases, and PINs. The term passphrase is often used when the expectation is that the secret will be longer than a password, and when spaces may be included, but otherwise the terms are equivalent. PINs normally denote a numeric secret that is often randomly chosen by the CSP/verifier and assigned to the user. The length requirement for randomly chosen PINs is shorter than for user-chosen secrets because they would be expected to be uniformly distributed and therefore have more entropy than a user-chosen secret of the same length and composition. CSP-chosen secrets may be used for memorized secrets other than PINs as well, although the length requirements for such secrets are the same as for user-chosen memorized secrets.
 
-#### Look-up Secrets
+### B.4.1.3 Look-up Secrets {#s-b-4-1-3}
 
 <div class="text-left" markdown="1">
   <table style="width:100%">
@@ -82,14 +82,14 @@ In some cases, look-up secrets are issued in a form suitable for the subscriber 
 
 Look-up secrets need to be protected by the verifier as well. While [Section 5.1.2.1 of SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html#lusa) permits look-up secrets to have as little as 20 bits of entropy, their use as backup authenticators makes usability less of a concern and permits the use of look-up secrets with sufficient entropy to resist offline attacks. The use of high-entropy look-up secrets is highly encouraged.
 
-##### Examples
+#### B.4.1.3.1 Examples {#s-b-4-1-3-1}
 The most common form of look-up secret authenticator is a printed list of secrets. These secrets are generated using an approved random bit generator, and may be expressed in any encoding that provides acceptable usability. This often includes grouping the secret into a number of sections to enhance its readability from the media on which it is delivered. One popular format is the version 4 (random) UUID, because of the wide support available for rendering UUID values.
 
 One-time secrets can be used sequentially or a particular order specified by the verifier (e.g., "Enter OTP #4:"). This gives a bit of a challenge/response characteristic to the transaction. However, look-up secrets are required to be used only once, so "OTP #4" in this example would not be reused. This requirement is meant to ensure that an attacker with pervasive access to the authentication session (e.g., a key logger) would not be able to exploit the authenticator output in the future. The use of a specified order (verifier challenge) is acceptable but not required.
 
 A third common example of a look-up secret authenticator is a secret grid. In this arrangement, the verifier gives the coordinates for squares in a grid under the control of the subscriber. Again, the grid squares can be used only once to meet SP 800-63B requirements. This also has the disadvantage that it is difficult to store the values in the individual squares securely: if the squares contain short values, hashed values stored by the verifier would be easily dictionary attacked. This form of look-up secret authenticator, while permissible, does not have any particular advantages and, being more susceptible to dictionary attacks, is discouraged.
 
-#### Out-of-Band Devices
+### B.4.1.4 Out-of-Band Devices {#s-b-4-1-4}
 
 <div class="text-left" markdown="1">
   <table style="width:100%">
@@ -116,7 +116,7 @@ In all of these situations, it is important that the out-of-band device be secur
 
 It should be noted that the authenticator is not required to be a physically separate device from that on which the authentication is occurring. The requirement for separation applies to the communication channel, not the device. Therefore, it is permissible to authenticate a browser session on a mobile device using an application resident on the same device, provided they use separate communication channels (e.g., TLS sessions) and provided that the application uniquely identifies itself to the verifier.
 
-##### Examples
+#### B.4.1.4.1 Examples {#s-b-4-1-4-1}
 
 The most common example of an out-of-band device is also a restricted authenticator: the use of SMS to send a random secret to the subscriber's mobile telephone. Many security weaknesses with this have been identified, including SS7 (telephone signaling) vulnerabilities and the possibility of the telephone number being reassigned to a different device, perhaps by social engineering of a carrier or retail representative by an attacker.
 
@@ -124,7 +124,7 @@ Some secure communications apps, such as Signal, create a fingerprint that chang
 
 A verifier-specific application can also be used to terminate the user side of the secondary communication channel. This application would need to maintain a secret (probably a key pair) that it uses to authenticate to the verifier in accepting or providing the secret being exchanged.
 
-#### Single-Factor OTP Device
+### B.4.1.5 Single-Factor OTP Device {#s-b-4-1-5}
 
 <div class="text-left" markdown="1">
   <table style="width:100%">
@@ -146,11 +146,11 @@ Time-based OTP devices maintain an internal clock that must be kept in relativel
 
 Unlike earlier editions of SP 800-63, SP 800-63B treats devices that are connected directly to the endpoint as crypto devices rather than as OTP devices, even if they only supply a one-time password. The authenticator output for OTP devices is defined to be manually transferred from the OTP device to the application being authenticated. For this reason, OTP devices are never considered verifier-impersonation resistant as described in [SP 800-63B Section 5.2.5](https://pages.nist.gov/800-63-3/sp800-63b.html#verifimpers). The goal of verifier-impersonation resistance is to not depend on the claimant detecting a phishing attack, and an OTP authenticator cannot control where its output is entered.
 
-##### Examples
+#### B.4.1.5.1 Examples {#s-b-4-1-5-1}
 
 A number of readily-available commercial OTP products, both hardware and software, are available on the market. The [Initiative for Open Authentication](https://openauthentication.org/) (OATH) is an industry consortium promoting the use of OTP authenticators.
 
-#### Multi-Factor OTP Devices
+### B.4.1.6 Multi-Factor OTP Devices {#s-b-4-1-6}
 
 <div class="text-left" markdown="1">
   <table style="width:100%">
@@ -172,7 +172,7 @@ When the wrong memorized secret is entered, the authenticator can take one of tw
 
 Because of the significant false reject rates associated with biometrics, the generation of an intentionally incorrect output is likely to have a greater impact on devices activated by a biometric. In using biometric-activated OTP devices, the severe throttling requirements described in [SP 800-63B Section 5.2.3](https://pages.nist.gov/800-63-3/sp800-63b.html#biometric_use) should be considered, and alternatives provided if the user is unable to successfully complete biometric authentication. These alternatives could include the use of a memorized secret for activation, or use of a completely different authenticator.
 
-#### Single-Factor Cryptographic Software
+### B.4.1.7 Single-Factor Cryptographic Software {#s-b-4-1-7}
 
 <div class="text-left" markdown="1">
   <table style="width:100%">
@@ -190,11 +190,11 @@ Because of the significant false reject rates associated with biometrics, the ge
 
 The characteristics of cryptographic authenticators depend on the method by which the authenticator output is generated. One such method is the generation of a one-time password; this is different from an OTP device because the authenticator output is directly supplied to the application by the authenticator. This makes a larger (higher entropy) authenticator output practical, but does not provide the additional security benefits of a challenge-response protocol.
 
-##### Examples
+#### B.4.1.7.1 Examples {#s-b-4-1-7-1}
 
 The classic example of a single-factor cryptographic software authenticator is the use of a client X.509 (TLS) certificate. The certificate (signed public key) is accompanied by a private key that is held securely by the subscriber. The verifier needs to have some basis for associating the public key with the subscriber. This may be accomplished by a certificate that is signed by a certificate authority accepted by the verifier (in some cases, by the verifier itself) associating the certificate's common name with the subscriber. Alternatively, the verifier may directly associate the certificate's public key with the subscriber. Because the verifier only needs to associate specific certificates with subscribers, the use of generally-recognized root certificate authorities is often not required.
 
-#### Single-Factor Cryptographic Devices
+### B.4.1.8 Single-Factor Cryptographic Devices {#s-b-4-1-8}
 
 <div class="text-left" markdown="1">
   <table style="width:100%">
@@ -212,7 +212,7 @@ The classic example of a single-factor cryptographic software authenticator is t
 
 As with cryptographic software authenticators, cryptographic device authenticators have capabilities that range from one-time password generation (not challenge-response, and not verifier-impersonation resistant) to others having many of the supplementary characteristics described in [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#52-general-authenticator-requirements).
 
-##### Examples
+#### B.4.1.8.1 Examples {#s-b-4-1-8-1}
 
 Single-factor cryptographic devices exist in a wide range of shapes and sizes. "Smart cards" with an embedded processor in a credit card form factor are quite popular, and may be read either via a dedicated device associated with the endpoint or through a USB adapter. Other devices, notably [FIDO](https://fidoalliance.org/) U2F authenticators, have direct USB interfaces and may be designed to be kept on a subscriber's (physical) keychain or for semi-permanent installation in an endpoint such as a laptop computer.
 
@@ -220,7 +220,7 @@ Single-factor cryptographic devices may also be embedded in a user endpoint, suc
 
 Some single-factor cryptographic devices operate in more than one mode, and it is important to consider the capabilities of the particular mode being used. For example, some authenticators that implement FIDO U2F (a challenge-response protocol that may be verifier impersonation resistant) also implement a legacy one-time password mode, which is not verifier impersonation resistant.
 
-#### Multi-Factor Cryptographic Software
+### B.4.1.9 Multi-Factor Cryptographic Software {#s-b-4-1-9}
 
 <div class="text-left" markdown="1">
   <table style="width:100%">
@@ -238,7 +238,7 @@ Some single-factor cryptographic devices operate in more than one mode, and it i
 
 One of the operational problems associated with multi-factor cryptographic software authenticators is in determining whether a multi-factor authentication has in fact taken place. Since the encrypted private key is available to the subscriber's software, a non-cooperative subscriber could decrypt and store the key, degrading authentication to single-factor (but less effort for the subscriber) without the verifier's knowledge or consent. Since there is less opportunity to extract and decrypt the private keys on some platforms (particularly some mobile devices), these authenticators are more certain to be effective on these than on general-purpose devices.
 
-#### Multi-Factor Cryptographic Devices
+### B.4.1.10 Multi-Factor Cryptographic Devices {#s-b-4-1-10}
 
 <div class="text-left" markdown="1">
   <table style="width:100%">
@@ -262,11 +262,11 @@ The activation factor, either a memorized secret or biometric, is subject to thr
 
 As with other cryptographic authenticators, a range of capabilities is possible, including generation of one-time passwords and challenge-response. The primary distinguishing factor between a cryptographic device and an OTP device is that the former is directly connected to the endpoint and the latter requires manual entry of the authenticator output by the claimant.
 
-##### Examples
+#### B.4.1.10.1 Examples {#s-b-4-1-10-1}
 
 The classic examples of multi-factor cryptographic authenticators are US Government PIV and Department of Defense CAC authenticators. Other "smart card" authenticators, such as the Estonian e-resident card, are also in this category. Multi-factor cryptographic devices can also be embedded in endpoints, as is the case of FIDO UAF authenticators.
 
-### General Authenticator Requirements
+## B.4.2 General Authenticator Requirements {#s-b-4-2}
 
 The subsections of [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#52-general-authenticator-requirements) describe requirements applicable to multiple classes of authenticator, or in some cases supplemental requirements applicable at higher AALs. These are summarized in the table below.
 
@@ -284,13 +284,13 @@ The subsections of [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#
 
 \* If the activation factor is not cached
 
-#### Physical Authenticators
+### B.4.2.1 Physical Authenticators {#s-b-4-2-1}
 
 This section addresses the need for physical authenticators (any authenticator that includes something you have) to be protected against theft and loss. The CSP needs to establish procedures to handle these situations, and needs to ensure that the subscriber knows what to do (how to report the event) when they occur.
 
 In order to avoid denial-of-service attacks on subscribers, the CSP needs to identify the subscriber when accepting such a report. Typically, the cost associated with erroneously suspending a subscriber is lower than that associated with use of a stolen authenticator, so this identification can often be weaker than would be acceptable for authentication. However, in certain cases erroneous suspension could be very serious, so procedures for revocation need to be designed accordingly.
 
-#### Rate Limiting (Throttling)
+### B.4.2.2 Rate Limiting (Throttling) {#s-b-4-2-2}
 
 Rate limiting, also referred to as throttling, is the primary defense against online attacks on the authenticator, authenticator output, or an activation factor used by a multi-factor authenticator. The throttling parameters have been chosen based on the value being guessed by the attacker having approximately 20 bits of entropy, or a likelihood of success of 1 in 1 million guesses. The 100 guesses permitted therefore gives an attacker approximately a 1 in 10 thousand chance of success.
 
@@ -298,7 +298,7 @@ Rate limiting, of course, is an opportunity for an attacker to be able to perfor
 
 When multiple authentication factors are being used, it is sometimes possible to rate-limit only when one of the factors is successful. For example, an authentication using a memorized secret plus an OTP authenticator output might only throttle (or perhaps even prompt for) the OTP when the memorized secret is correct. It might also prompt for both and not indicate which factor, if any, had succeeded and thereby only throttle the unsuccessful factor, whichever it was, if the other factor was correct.
 
-#### Use of Biometrics
+### B.4.2.3 Use of Biometrics {#s-b-4-2-3}
 
 Biometric authentication is a rapidly evolving area, and it is important to use biometric systems with actual measured performance characteristics. It is also important to work within the revocability and secrecy limitations of biometrics.
 
@@ -310,7 +310,7 @@ Current performance of biometric sensors and processing leads to the requirement
 
 Biometrics can be verified centrally, although increases in processor performance (e.g., in mobile devices) makes it increasingly practical to verify biometrics at the sensor location. If central verification is performed, additional requirements about the security of the biometric data in transit and authentication of the sensor/endpoint are imposed. In particular, use of a biometric is required to be tightly bound to specific device(s) for which the sensor and endpoint have been determined by the verifier to meet the required performance parameters.
 
-#### Attestation
+### B.4.2.4 Attestation {#s-b-4-2-4}
 
 While verifiers must of course authenticate the claimant, they must also have some information about the manner in which that has occurred. In some cases, this may be obvious, e.g., the use of a memorized secret plus an OTP, with both authenticator outputs being presented to the verifier. In others, the similarities between some multi-factor authenticators and their single-factor counterparts gives rise to a need to securely determine what type of authenticator is used. This need is particularly applicable for "bring your own authenticator" situations, where the subscriber uses an authenticator obtained elsewhere rather than one that has been provided by, and is known to, the CSP. On the other hand, when the CSP has issued the authenticator, or has an opportunity to examine it, the CSP can determine the nature of the authenticator directly.
 
@@ -318,7 +318,7 @@ One situation in which attestation or direct examination is needed is in determi
 
 Attestation usually is required only at the time the authenticator is bound to the subscriber's account and not in connection with each authentication, since it is expected that it will be difficult to move secrets from an acceptable authenticator to one that is less secure.
 
-#### Verifier Impersonation Resistance
+### B.4.2.6 Verifier Impersonation Resistance {#s-b-4-2-6}
 
 Verifier impersonation resistance is a characteristic of some cryptographic authenticators that bind the authenticator output to a specific authenticated protected session (usually a TLS session). Verifier impersonation resistance is effective against certain types of "phishing" attacks where the claimant is misdirected to a look-alike site where they are encouraged to authenticate.
 
@@ -328,11 +328,11 @@ Establishment of authenticated protected sessions creates encryption keys unique
 
 Note that verifier impersonation resistance requires both a directly-connected authenticator (a cryptographic device or cryptographic software authenticator) as well as support in the application, such as a web browser, in which it will be used. Some cryptographic devices do not actually bind to the protected session secrets and are therefore not verifier impersonation resistant.
 
-#### Verifier-CSP Communications
+### B.4.2.7 Verifier-CSP Communications {#s-b-4-2-7}
 
 SP 800-63B assumes a very close relationship between the verifier and the CSP: that they are two different roles for the same entity or that they are very closely associated, perhaps under common administration. In the latter case, this section reinforces the requirement that all communications between the entities be strongly protected by a mutually-authenticated secure channel.
 
-#### Verifier Compromise Resistance
+### B.4.2.8 Verifier Compromise Resistance {#s-b-4-2-8}
 
 A common form of authentication compromise is an attack on the verifier, which if successful may be able to harvest information that can later be used to authenticate to that verifier. Authentication protocols where the verifier has data that can only be used to verify, and not generate, the authenticator output are referred to as bring verifier compromise resistant.
 
@@ -340,11 +340,11 @@ Public keys used with approved algorithms and having at least the minimum securi
 
 Certain types of authenticators, notably OTP devices and cryptographic devices that generate one-time passwords, cannot be verifier compromise resistant because they need to share a secret with the authenticator in order to generate an authenticator output for comparison.
 
-#### Replay Resistance
+### B.4.2.9 Replay Resistance {#s-b-4-2-9}
 
 An authenticator output is considered replay resistant if its output can be used only once for authentication. Most authenticators specified are replay-resistant, with the notable exception of memorized secrets when they are used independently (other than as an activation factor for a multifactor authenticator).
 
-#### Authentication Intent
+### B.4.2.10 Authentication Intent {#s-b-4-2-10}
 
 One of the concerns with embedded and directly-connected authenticators (typically cryptographic device authenticators) is the question of whether malware in the endpoint device that hosts the authenticator can cause authentication to occur without the subscriber's knowledge or consent. In this situation, the malware could proxy authenticator challenges from the attacker if needed, and obtain the authenticator output needed to sign the attacker into a service of interest. In common use, some cryptographic authenticators are left connected for multiple authentications, and are subject to this concern.
 
@@ -354,7 +354,7 @@ Authentication intent does not require that the claimant be authenticated in any
 
 Wireless authenticators (e.g., NFC, Bluetooth, ISO 14443) require special consideration with respect to authentication intent. Since a connection with the authenticator could be established by an attacker who happens to be close to a subscriber carrying one of these authenticators, intent cannot be established by connection to the authenticator alone. These authenticators should require the pressing of a button or similar action to operate, even if a challenge/response protocol is being used (a mobile attacker could proxy an authentication challenge nonce and collect the result).
 
-#### Restricted Authenticators
+### B.4.2.11 Restricted Authenticators {#s-b-4-2-11}
 
 As both authentication technologies and attacker capabilities mature, some authenticator classes and sub-classes will inevitably become less effective. In severe cases, these authenticators will be removed from acceptable use. In SP 800-63B, this has been done with pre-registered knowledge tokens (knowledge-based authentication) and with the use of email as an out-of-band authentication technique.
 

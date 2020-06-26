@@ -6,7 +6,7 @@ navOrder: 6
 navTitle: Resources  
 ---
 
-# Educational Resources
+# C.6 Educational Resources {#s-c-6}
 
 All specifications for identity federation standards mentioned in this resource guide are freely available online:
 
@@ -24,7 +24,7 @@ The OpenID Foundation lists OpenID Connect security concerns [within the specifi
 
 OASIS has published [SAML Privacy and Security Considerations](http://docs.oasis-open.org/security/saml/v2.0/saml-sec-consider-2.0-os.pdf) and hosts a [mailing list](https://lists.oasis-open.org/archives/security-services/) to track SAML vulnerabilities.
 
-## Communicating with Stakeholders
+## C.6.1 Communicating with Stakeholders {#s-c-6-1}
 
 Stakeholders need to be aware that selecting an FAL is part of a larger risk- and resource-management process. While it is tempting for stakeholders to request the highest level of security, that is not always in the best interest of the organization. Federated identity projects at higher FALs can be long and complicated, and such complications can take resources away from other work that a security team could be doing that would be of greater benefit to the organization.
 

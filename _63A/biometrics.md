@@ -6,7 +6,7 @@ navOrder: 7
 navTitle: Biometrics
 ---
 
-# Biometrics Collection
+# A.7 Biometrics Collection {#s-a-7}
 
 SP 800-63A presents two use cases for the collection of biometrics for purposes of identity proofing and enrollment: biometric matching of biometric data objects contained on identity evidence for the purpose of identity verification; and enrollment and registration of biometric characteristics as an authentication factor in the subscribers' enrollment account for purposes of account recovery and non-repudiation.
 
