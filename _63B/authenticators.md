@@ -20,25 +20,14 @@ The single-factor cryptographic software authenticator, discussed in [SP 800-63B
 
 ### B.4.1.2 Memorized Secrets {#s-b-4-1-2}
 
-<div class="text-left" markdown="1">
-  <table style="width:100%">
-    <tr>
-      <td>
-        <img src="../63B/media/Memorized-secret.png" alt="authenticator" style="width: 100px;height: 100px;min-width:100px;min-height:100px;">
-      </td>
-      <td>
-        The memorized secret is by far the most common type of authenticator. It is also the only authenticator that is a <i>something you know</i> factor (pre-registered knowledge tokens were also something you know in SP 800-63-2 and earlier editions).
-      </td>
-    </tr>
-  </table>
-</div>
-
+|![Memorized Secrets]({{site.baseurl}}/{{page.collection}}/images/Memorized-secret.png){:style="width: 100px;height: 100px;min-width:100px;min-height:100px;" latex-src="Memorized-secret.png"}|The memorized secret is by far the most common type of authenticator. It is also the only authenticator that is a *something you know* factor (pre-registered knowledge tokens were also something you know in SP 800-63-2 and earlier editions).|
 
 The term *memorized secret* was chosen as a single term encompassing passwords, passphrases, and PINs. The intent of a memorized secret is that it be potentially memorable to a subscriber, even if not chosen by the subscriber. This differentiates it from a key, which is never chosen by the subscriber, typically has at least 112 bits of entropy, and therefore is not expected to be memorized nor entered by the average subscriber.
 
 One of the significant changes in SP 800-63B is a rethinking of the role of memorized secrets and minimization of their burden on subscribers. In accordance with [Executive Order 13681](https://www.federalregister.gov/d/2014-25439), transactions involving any significant risk, including any which involve the release of personal information, require multi-factor authentication. As a result, memorized secrets will be used alone only when a low level of security is required.
 
 [Research](https://www.microsoft.com/en-us/research/publication/an-administrators-guide-to-internet-password-research/?from=http%3A%2F%2Fresearch.microsoft.com%2Fapps%2Fpubs%2Fdefault.aspx%3Fid%3D227130) has shown that there is a significant gap between the requirement for memorized secrets that must protect against an offline attack as compared with those that only protect against throttled online attacks. For memorized secrets to be considered secure against current offline attacks, a considerably higher minimum length would be required. Even so, there is no assurance that subscribers would pick memorized secrets that don't lend themselves to automated guessing attacks. Accordingly, a two-pronged approach was adopted:
+
 * Set minimum memorized secret requirements to protect against online attacks only, accept the risk of offline attacks, and throttle online attempts.
 * Require verifiers to implement secure hashing of memorized secrets, including iterated hashing with a salt, and recommend hashing with a secret value as well.
 
@@ -60,19 +49,7 @@ As mentioned above, memorized secrets include passwords, passphrases, and PINs. 
 
 ### B.4.1.3 Look-up Secrets {#s-b-4-1-3}
 
-<div class="text-left" markdown="1">
-  <table style="width:100%">
-    <tr>
-      <td>
-        <img src="../63B/media/Look-up-secrets.png" alt="authenticator" style="width: 100px;height: 100px;min-width:100px;min-height:100px;">
-      </td>
-      <td>
-        Look-up secrets are secrets that are issued by the CSP to the subscriber each of which can be used for one successful authentication. They are considered <i>something you have</i>, the "something" being the printed or other media containing a set of these secrets. They are well suited for use as a backup authenticator to be used when a primary authenticator is lost, stolen, or malfunctions.
-      </td>
-    </tr>
-  </table>
-</div>
-
+|![Look-up Secrets]({{site.baseurl}}/{{page.collection}}/images/Look-up-secrets.png){:style="width: 100px;height: 100px;min-width:100px;min-height:100px;" latex-src="Look-up-secrets.png"}|Look-up secrets are secrets that are issued by the CSP to the subscriber each of which can be used for one successful authentication. They are considered *something you have*, the "something" being the printed or other media containing a set of these secrets. They are well suited for use as a backup authenticator to be used when a primary authenticator is lost, stolen, or malfunctions.|
 
 The primary disadvantage of look-up secrets is that they can only be used for a specific number of authentications, after which a new set of look-up secrets needs to be issued to the subscriber. However, they are among the lowest-cost authenticators to issue. Issuance of look-up secrets can occur in person (typically at the end of an in-person identity proofing session), via postal mail, or in a mutually-authenticated protected session where the subscriber authentication also included something you have.
 
@@ -91,20 +68,7 @@ A third common example of a look-up secret authenticator is a secret grid. In th
 
 ### B.4.1.4 Out-of-Band Devices {#s-b-4-1-4}
 
-<div class="text-left" markdown="1">
-  <table style="width:100%">
-    <tr>
-      <td>
-        <img src="../63B/media/Out-of-band-OOB.png" alt="authenticator" style="width: 100px;height: 100px;min-width:100px;min-height:100px;">
-      </td>
-      <td>
-        Out-of-band authenticators use a private communication channel that is separate from the channel being authenticated to establish the claimant’s control of a specific physical device. An out-of-band authenticator is <i>something you have</i>.
-      </td>
-    </tr>
-  </table>
-</div>
-
-
+|![Out-of-Band Devices]({{site.baseurl}}/{{page.collection}}/images/Out-of-band-OOB.png){:style="width: 100px;height: 100px;min-width:100px;min-height:100px;" latex-src="Out-of-band-OOB.png"}|Out-of-band authenticators use a private communication channel that is separate from the channel being authenticated to establish the claimant’s control of a specific physical device. An out-of-band authenticator is *something you have*.|
 
 While there are many different implementations of out-of-band authenticators, it is important to remember that the primary objective is to establish that the claimant controls a specific device associated with the subscriber—that the claimant and subscriber are the same person. To the extent that devices can be substituted without re-enrollment or more than one device can be used for a given out-of-band authentication, the authenticator is weaker, or in some cases unsuitable for use. Accordingly, (1) email services and (2) telephony that terminates in a voice-over-IP (VoIP) endpoint are not acceptable for out-of-band authentication because these often can be received by more than one endpoint. If the registration of an out-of-band device is rejected because it is a VoIP endpoint, it is helpful to explain the rationale for this to the subscriber.
 
@@ -126,19 +90,7 @@ A verifier-specific application can also be used to terminate the user side of t
 
 ### B.4.1.5 Single-Factor OTP Device {#s-b-4-1-5}
 
-<div class="text-left" markdown="1">
-  <table style="width:100%">
-    <tr>
-      <td>
-        <img src="../63B/media/Single-factor-otp-device.png" alt="authenticator" style="width: 100px;height: 100px;min-width:100px;min-height:100px;">
-      </td>
-      <td>
-        A single-factor OTP device is something that is in the possession of the subscriber that generates one-time passwords that are displayed and manually entered by the claimant. Even though it is referred to as a "device", this authenticator can be either a distinct physical device or a software application running on a general-purpose device such as a smartphone. A single-factor OTP device is <i>something you have</i>.
-      </td>
-    </tr>
-  </table>
-</div>
-
+|![Single-Factor OTP Device]({{site.baseurl}}/{{page.collection}}/images/Single-factor-otp-device.png){:style="width: 100px;height: 100px;min-width:100px;min-height:100px;" latex-src="Single-factor-otp-device.png"}|A single-factor OTP device is something that is in the possession of the subscriber that generates one-time passwords that are displayed and manually entered by the claimant. Even though it is referred to as a "device", this authenticator can be either a distinct physical device or a software application running on a general-purpose device such as a smartphone. A single-factor OTP device is *something you have*.|
 
 Single-factor OTP devices that are not time-based usually operate based on the pressing of a button to obtain a single one-time password. While it is important that a one-time password be accepted only once, non-time-based devices might be operated by mistake, as a test, or in a session that authenticates unsuccessfully due to a communications error. Accordingly, the verifier should accept any of several possible future one-time passwords, and advance its state to the authenticator output most recently used when a successful authentication is performed.
 
@@ -152,19 +104,7 @@ A number of readily-available commercial OTP products, both hardware and softwar
 
 ### B.4.1.6 Multi-Factor OTP Devices {#s-b-4-1-6}
 
-<div class="text-left" markdown="1">
-  <table style="width:100%">
-    <tr>
-      <td>
-        <img src="../63B/media/Multi-factor-otp-device.png" alt="authenticator" style="width: 100px;height: 100px;min-width:100px;min-height:100px;">
-      </td>
-      <td>
-        Multi-Factor OTP Devices are similar to Single-Factor OTP devices, but require activation by input of a memorized secret or the successful presentation of a biometric in order to obtain a one-time password. A multi-factor OTP device is <i>something you have</i> and is activated by <i>something you know</i> or <i>something you are</i>.
-      </td>
-    </tr>
-  </table>
-</div>
-
+|![Multi-Factor OTP Devices]({{site.baseurl}}/{{page.collection}}/images/Multi-factor-otp-device.png){:style="width: 100px;height: 100px;min-width:100px;min-height:100px;" latex-src="Multi-factor-otp-device.png"}|Multi-Factor OTP Devices are similar to Single-Factor OTP devices, but require activation by input of a memorized secret or the successful presentation of a biometric in order to obtain a one-time password. A multi-factor OTP device is *something you have* and is activated by *something you know* or *something you are*.|
 
 Many of the same considerations associated with single-factor OTP devices apply to these authenticators as well.
 
@@ -174,19 +114,7 @@ Because of the significant false reject rates associated with biometrics, the ge
 
 ### B.4.1.7 Single-Factor Cryptographic Software {#s-b-4-1-7}
 
-<div class="text-left" markdown="1">
-  <table style="width:100%">
-    <tr>
-      <td>
-        <img src="../63B/media/Single-factor-software-crypto.png" alt="authenticator" style="width: 100px;height: 100px;min-width:100px;min-height:100px;">
-      </td>
-      <td>
-        A single-factor cryptographic software authenticator is a secret cryptographic key and associated software stored on a software-accessible medium. Authentication is accomplished by proving possession of the embedded key. A single-factor cryptographic software authenticator is <i>something you have</i>.
-      </td>
-    </tr>
-  </table>
-</div>
-
+|![Single-Factor Cryptographic Software]({{site.baseurl}}/{{page.collection}}/images/Single-factor-software-crypto.png){:style="width: 100px;height: 100px;min-width:100px;min-height:100px;" latex-src="Single-factor-software-crypto.png"}|A single-factor cryptographic software authenticator is a secret cryptographic key and associated software stored on a software-accessible medium. Authentication is accomplished by proving possession of the embedded key. A single-factor cryptographic software authenticator is *something you have*.|
 
 The characteristics of cryptographic authenticators depend on the method by which the authenticator output is generated. One such method is the generation of a one-time password; this is different from an OTP device because the authenticator output is directly supplied to the application by the authenticator. This makes a larger (higher entropy) authenticator output practical, but does not provide the additional security benefits of a challenge-response protocol.
 
@@ -196,19 +124,7 @@ The classic example of a single-factor cryptographic software authenticator is t
 
 ### B.4.1.8 Single-Factor Cryptographic Devices {#s-b-4-1-8}
 
-<div class="text-left" markdown="1">
-  <table style="width:100%">
-    <tr>
-      <td>
-        <img src="../63B/media/Single-factor-crypto.png" alt="authenticator" style="width: 100px;height: 100px;min-width:100px;min-height:100px;">
-      </td>
-      <td>
-        Single-factor cryptographic devices are similar to single-factor cryptographic software authenticators, except that the private key is contained within a hardware device and cannot be exported in normal operation. This means that the hardware device also performs the cryptographic operations associated with authentication. A single-factor cryptographic device is <i>something you have</i>.
-      </td>
-    </tr>
-  </table>
-</div>
-
+|![Single-Factor Cryptographic Devices]({{site.baseurl}}/{{page.collection}}/images/Single-factor-crypto.png){:style="width: 100px;height: 100px;min-width:100px;min-height:100px;" latex-src="Single-factor-crypto.png"}|Single-factor cryptographic devices are similar to single-factor cryptographic software authenticators, except that the private key is contained within a hardware device and cannot be exported in normal operation. This means that the hardware device also performs the cryptographic operations associated with authentication. A single-factor cryptographic device is *something you have*.|
 
 As with cryptographic software authenticators, cryptographic device authenticators have capabilities that range from one-time password generation (not challenge-response, and not verifier-impersonation resistant) to others having many of the supplementary characteristics described in [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#52-general-authenticator-requirements).
 
@@ -222,37 +138,13 @@ Some single-factor cryptographic devices operate in more than one mode, and it i
 
 ### B.4.1.9 Multi-Factor Cryptographic Software {#s-b-4-1-9}
 
-<div class="text-left" markdown="1">
-  <table style="width:100%">
-    <tr>
-      <td>
-        <img src="../63B/media/Multi-factor-software-crypto.png" alt="authenticator" style="width: 100px;height: 100px;min-width:100px;min-height:100px;">
-      </td>
-      <td>
-        Multi-factor cryptographic software authenticators are similar to single-factor cryptographic software authenticators except that they require the input of a memorized secret in order to access the private key for authentication. Multi-factor cryptographic software authenticators are <i>something you have</i> and are activated by <i>something you know</i>.
-      </td>
-    </tr>
-  </table>
-</div>
-
+|![Multi-Factor Cryptographic Software]({{site.baseurl}}/{{page.collection}}/images/Multi-factor-software-crypto.png){:style="width: 100px;height: 100px;min-width:100px;min-height:100px;" latex-src="Multi-factor-software-crypto.png"}|Multi-factor cryptographic software authenticators are similar to single-factor cryptographic software authenticators except that they require the input of a memorized secret in order to access the private key for authentication. Multi-factor cryptographic software authenticators are *something you have* and are activated by *something you know*.|
 
 One of the operational problems associated with multi-factor cryptographic software authenticators is in determining whether a multi-factor authentication has in fact taken place. Since the encrypted private key is available to the subscriber's software, a non-cooperative subscriber could decrypt and store the key, degrading authentication to single-factor (but less effort for the subscriber) without the verifier's knowledge or consent. Since there is less opportunity to extract and decrypt the private keys on some platforms (particularly some mobile devices), these authenticators are more certain to be effective on these than on general-purpose devices.
 
 ### B.4.1.10 Multi-Factor Cryptographic Devices {#s-b-4-1-10}
 
-<div class="text-left" markdown="1">
-  <table style="width:100%">
-    <tr>
-      <td>
-        <img src="../63B/media/Multi-factor-crypto-device.png" alt="authenticator" style="width: 100px;height: 100px;min-width:100px;min-height:100px;">
-      </td>
-      <td>
-        Multi-factor cryptographic device authenticators are similar to single-factor cryptographic device authenticators except that they require activation by the entry of a memorized secret or verification of a biometric. Multi-factor cryptographic device authenticators are <i>something you have</i> and are activated by either <i>something you know</i> or <i>something you are</i>.
-      </td>
-    </tr>
-  </table>
-</div>
-
+|![Multi-Factor Cryptographic Devices]({{site.baseurl}}/{{page.collection}}/images/Multi-factor-crypto-device.png){:style="width: 100px;height: 100px;min-width:100px;min-height:100px;" latex-src="Multi-factor-crypto-device.png"}|Multi-factor cryptographic device authenticators are similar to single-factor cryptographic device authenticators except that they require activation by the entry of a memorized secret or verification of a biometric. Multi-factor cryptographic device authenticators are *something you have* and are activated by either *something you know* or *something you are*.|
 
 Since the private key (authentication secret) associated with the device is embedded in a hardware device with security requirements (depending on the AAL at which it is used), activation of the authenticator can cause decryption of the secret key, as in the case of a multi-factor cryptographic software authenticator. It can also simply make the key available to an authentication operation. The latter is the mode in which biometric activation usually operates.
 
@@ -273,16 +165,16 @@ The subsections of [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#
 |  | Rate Limiting | Biometrics | Attestation | Verifier Impersonation Resistance | Verifier Compromise Resistance | Replay Resistance | Intent |
 |-----|-----|-----|-----|----|-----|-----|-----|
 | **Memorized Secret** | Required | N/A | N/A | No | No | No | Yes |
-|**Look-up Secret** | Required if <64 bits | N/A | N/A | No | Maybe | Yes | Yes
+| **Look-up Secret** | Required if <64 bits | N/A | N/A | No | Maybe | Yes | Yes
 | **OOB** | Not required | N/A | N/A | No | Yes | Yes | Yes |
 | **SF OTP** | Required | N/A | N/A | No | No | Yes | Yes |
 | **MF OTP** | Required | N/A | Offline | No | No | Yes | Yes |
 | **SF Crypto SW** | Not required | N/A | N/A | Maybe | Maybe | Yes | Maybe |
 | **SF Crypto Dev** | Not required | N/A | Issuance or certificate | Maybe | Maybe | Yes | Maybe |
-| **MF Crypto SW** | Required for activation | N/A | Offline, procedures | Maybe | Maybe | Yes | Yes* |
-| **MF Crypto Dev** | Required for activation | Required for biometric activation | Issuance or certificate | Maybe | Maybe | Yes | Yes* |
+| **MF Crypto SW** | Required for activation | N/A | Offline, procedures | Maybe | Maybe | Yes | Yes[^cached] |
+| **MF Crypto Dev** | Required for activation | Required for biometric activation | Issuance or certificate | Maybe | Maybe | Yes | Yes[^cached] |
 
-\* If the activation factor is not cached
+[^cached]: If the activation factor is not cached.
 
 ### B.4.2.1 Physical Authenticators {#s-b-4-2-1}
 

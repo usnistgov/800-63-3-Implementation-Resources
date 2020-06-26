@@ -27,9 +27,10 @@ As technology continues to improve and solutions evolve, agencies are encouraged
 
 Identity proofing is the process by which a Credential Service Provider (CSP) collects and verifies information about a person for the purpose of issuing credentials to that person, as illustrated in Figure 1.
  
-Figure 1: Individual Identity Proofing Journey
+[Figure 1: Individual Identity Proofing Journey](introduction.md#fig-1){:name="fig-1"}
+{:latex-ignore="true"}
 
-![Figure 1: Individual Identity Proofing Journey]({{site.baseurl}}/img/ProofingProcess.png)
+![Figure 1: Individual Identity Proofing Journey]({{site.baseurl}}/{{page.collection}}/images/ProofingProcess.png){:style="width: 1047px;" latex-src="ProofingProcess.png" latex-fig="1"}
 
 These identity proofing processes and associated controls and requirements are presented in NIST SP 800-63A in order to achieve the following processing objectives:
 

@@ -62,10 +62,10 @@ In the event an applicant does not have access to a connected device, is unable 
 
 ## A.3.2 Strength of Evidence {#s-a-3-2}
 
-SP 800-63A specifies (4.4.1.2, 4.5.2) the amount and strength of identity evidence that must be presented to meet IAL2 and IAL3 assurance levels as shown in the table below.
+SP 800-63A specifies (4.4.1.2, 4.5.2) the amount and strength of identity evidence that must be presented to meet IAL2 and IAL3 assurance levels as shown here.
 
 IAL1
-: No identity evidence is collected.
+:  - No identity evidence is collected.
 
 IAL2
 :   - One piece of SUPERIOR or STRONG evidence depending on strength of original proof and validation occurs with the issuing source, or
@@ -90,7 +90,7 @@ Notional Strength of Evidence Table
 | Type of Evidence | Strength | Notes |
 | --- | --- | --- |
 | US Passport | SUPERIOR | Includes US Passport cards |
-| Foreign e-Passport | SUPERIOR | ![](RackMultipart20200624-4-1396k6r_html_680261a21c1898ab.jpg) |
+| Foreign e-Passport | SUPERIOR | |
 | Personal Identity Verification (PIV) card | SUPERIOR | |
 | Common Access card (CAC) | SUPERIOR | |
 | Personal Identity Verification Interoperable (PIV-I) card | SUPERIOR | |
