@@ -44,13 +44,15 @@ Initial application information may be captured via an online form directly from
 
 Common methods which a CSP can use to digitally capture evidence are presented below.
 
+[Table A-3-1. Digital Collection Methods](resolution.md#table-A-3-1){:name="table-A-3-1"}
+{:latex-ignore="true"}
+
 | Method | Device | Information |
 | --- | --- | --- |
 | Document Image Capture | Camera | This can be used to capture an applicant's photo or the image of an evidence such as a driver's license. Agencies can consider pictures at 300 dpi or above to be of sufficient resolution. |
 | Document Image Capture | Scanner | This can capture a document, which is compared against a known template by automated software to extract information. For optical character recognition, scans at high than 300 dpi are typically considered to be of sufficient quality. |
 | Barcode | Scanner | Commercial off-the-shelf scanners can capture and extract information from standardized barcodes embedded on identity evidence. |
-
-Digital Collection Methods
+{:latex-columns="p@0.28\textwidth,p@0.38\textwidth,m@0.25\textwidth" latex-table="A-3-1" latex-caption="Digital Collection Methods"}
 
 ### A.3.1.2 In Person {#s-a-3-1-2}
 
@@ -77,15 +79,14 @@ IAL3
     - One piece of SUPERIOR evidence and one piece of STRONG evidence depending on strength of original proof and validation occurs with the issuing source, or
     - Two pieces of STRONG evidence plus one piece of FAIR evidence
 
-IAL Evidence Requirements
-
-SP 800-63A also specifies (5.2.1) the characteristics of identity evidence in order to meet the following strength and quality classifications: UNACCEPTABLE, WEAK, FAIR, STRONG, and SUPERIOR. As indicated, one piece of STRONG evidence may be used to meet IAL2 requirements and one piece of SUPERIOR evidence and one piece of STRONG evidence may be used to meet IAL3 requirements depending on the strength of the original proof for the STRONG evidence and validation of the evidence occurs with the issuing source. The text _depending on the strength of the original proof_ refers to the identity proofing process that was used in order to issue that type of STRONG evidence. If the identity proofing process for issuance of the STRONG evidence confirmed the claimed identity by collecting two of more forms of SUPERIOR or STRONG evidence, then the STRONG evidence can be considered to meet the first part of the requirement for consideration as STRONG+ to meet the IAL2 and IAL3 requirements. State-issued REAL ID driver's licenses represent an example of this type of identity proofing requirements that may be considered to meet this condition. The text for the second condition for consideration as STRONG+ evidence is that _validation occurs with the issuing source_. This refers to the required validation of identity evidence (5.2.2) and STRONG evidence can be considered to meet this requirement if the evidence is validated with the issuing source. For the example above, state-issued REAL ID driver's licenses can be considered to meet this condition for consideration as STRONG+ evidence if the CSP validates information from the driver's license with the respective State Department of Motor Vehicles or the DMV databases maintained by the American Association of Motor Vehicle Administrators (AAMVA).
+SP 800-63A also specifies (5.2.1) the characteristics of identity evidence in order to meet the following strength and quality classifications: UNACCEPTABLE, WEAK, FAIR, STRONG, and SUPERIOR. As indicated, one piece of STRONG evidence may be used to meet IAL2 requirements and one piece of SUPERIOR evidence and one piece of STRONG evidence may be used to meet IAL3 requirements depending on the strength of the original proof for the STRONG evidence and validation of the evidence occurs with the issuing source. The text _depending on the strength of the original proof_ refers to the identity proofing process that was used in order to issue that type of STRONG evidence. If the identity proofing process for issuance of the STRONG evidence confirmed the claimed identity by collecting two of more forms of SUPERIOR or STRONG evidence, then the STRONG evidence can be considered to meet the first part of the requirement for consideration as STRONG+[^strongplus] to meet the IAL2 and IAL3 requirements. State-issued REAL ID driver's licenses represent an example of this type of identity proofing requirements that may be considered to meet this condition. The text for the second condition for consideration as STRONG+ evidence is that _validation occurs with the issuing source_. This refers to the required validation of identity evidence (5.2.2) and STRONG evidence can be considered to meet this requirement if the evidence is validated with the issuing source. For the example above, state-issued REAL ID driver's licenses can be considered to meet this condition for consideration as STRONG+ evidence if the CSP validates information from the driver's license with the respective State Department of Motor Vehicles or the DMV databases maintained by the American Association of Motor Vehicle Administrators (AAMVA).
 
 ### A.3.2.1 Notional Strength of Evidence {#s-a-3-2-1}
 
 SP 800-63A (5.2.1) is directed to CSPs to specify the strength of evidence that may be collected based on evidence quality characteristics. Such determinations are dependent upon the jurisdiction, population served, identity proofing policies, procedures, and controls applied, and the specific quality characteristics for the types of identity evidence that the CSP may collect. The following table presents notional strength based on the quality characteristics for common types of evidence that may be presented by applicants for identity proofing. It is noted that this classification is notional based on the general quality characteristics for the listed evidence types.
 
-Notional Strength of Evidence Table
+[Table A-3-2. Notional Strength of Evidence](resolution.md#table-A-3-2){:name="table-A-3-2"}
+{:latex-ignore="true"}
 
 | Type of Evidence | Strength | Notes |
 | --- | --- | --- |
@@ -97,9 +98,9 @@ Notional Strength of Evidence Table
 | Transportation Worker Identification Credential (TWIC) | SUPERIOR | |
 | Permanent Resident Card | SUPERIOR | Issued on or after May 11, 2010 |
 | Native American Enhanced Tribal Card | SUPERIOR | |
-| REAL ID cards | STRONG+ | Includes REAL ID driver's licenses and ID cards. REAL ID cards have a star printed in the upper right-hand corner. Card and personal information must be validated with appropriate DMV or AAMVA. |
-| Enhanced ID cards | STRONG+ | Includes Enhanced ID driver's licenses and ID cards. Must be validated with appropriate DMV or AAMVA. |
-| U.S. Uniformed Services Privilege and Identification Card (U.S. Military ID) | STRONG+ | Includes Uniformed Services Dependent ID Cards. Must be validated with appropriate military issuing source. |
+| REAL ID cards | STRONG+[^strongplus] | Includes REAL ID driver's licenses and ID cards. REAL ID cards have a star printed in the upper right-hand corner. Card and personal information must be validated with appropriate DMV or AAMVA. |
+| Enhanced ID cards | STRONG+[^strongplus] | Includes Enhanced ID driver's licenses and ID cards. Must be validated with appropriate DMV or AAMVA. |
+| U.S. Uniformed Services Privilege and Identification Card (U.S. Military ID) | STRONG+[^strongplus] | Includes Uniformed Services Dependent ID Cards. Must be validated with appropriate military issuing source. |
 | Permanent Resident Card | STRONG | Issued Prior to May 11, 2010 |
 | Native American Tribal Photo Identification Card | STRONG | |
 | Driver's License or ID card (REAL ID non-compliant) | STRONG | |
@@ -109,5 +110,6 @@ Notional Strength of Evidence Table
 | Financial institution account statement | FAIR | |
 | US Social Security Card | WEAK | |
 | Original or certified copy of a birth certificate issued by a state, county, municipal authority or outlying possession of the United States bearing an official seal | WEAK | |
+{:latex-columns="p@0.28\textwidth,p@0.38\textwidth,m@0.25\textwidth" latex-table="A-3-2" latex-caption="Notional Strength of Evidence"}
 
-Note: the classification STRONG+ denotes evidence that may be considered to meet the evidence strength requirement for the IAL2 requirement for one piece of STRONG evidence and the IAL3 evidence strength requirement for one piece of SUPERIOR evidence and one piece of STRONG evidence, provided that the STRONG evidence must be validated with the issuing sources listed in order to meet this evidence strength classification.
+[^strongplus]: The classification STRONG+ denotes evidence that may be considered to meet the evidence strength requirement for the IAL2 requirement for one piece of STRONG evidence and the IAL3 evidence strength requirement for one piece of SUPERIOR evidence and one piece of STRONG evidence, provided that the STRONG evidence must be validated with the issuing sources listed in order to meet this evidence strength classification.

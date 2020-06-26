@@ -28,22 +28,23 @@ There are multiple commercial products that can perform these types of document 
 
 Identity evidence may contain multiple forms of security features. Some forms of security features may be confirmed through visible inspection, tactile examination, specialized lighting, manipulation (e.g., tilting or turning to allow light refraction), or specialized equipment. Following are descriptions for common types of security features, including the capabilities necessary for confirmation of the security feature.
 
-| Security Feature**** (examination capability) | Description |
-| --- | --- |
-| Fine-line or Guilloche Pattern (visual) | Background pattern of continuous fine lines printed in wavy, overlapping pattern. |
-| Ghost image(visual) | Half-tone reproduction of original image (e.g., facial image), may be printed behind printed data. |
-| Overlapped data(visual) | Variable data (e.g., signature, seal, text) printed over another field such as facial image or seal. |
-| Transparent image(visual) | See-through, window-like image feature (e.g., facial image) visible for both sides of the evidence. |
-| Rainbow printing(visual) | Controlled color shifts of printed text in a continuous, linear fashion. |
-| Holographic Images(visual, tilting) | Light field record of objects that will appear and change as view of evidence is tilted and turned. Most state-issued driver's licenses and IDs contain at least one holographic image. |
-| Variable laser engraved images(visual, tilting) | Laser-engraved images at different angles so that image view changes with tilting angle of viewing evidence. |
-| Iridescent Inks and Custom Foil Stamping(visual, tilting) | Custom designs and printing that will change color properties depending on the angle at which evidence is viewed. |
-| Laser perforation (visual, light, tactile) | Perforated holes made by laser beam to form images. The images can be viewed under light source; image holes have tactile feel. |
-| UV printing (visual, UV lighting) | A UV image or text that can only be viewed with special lighting. UV images may appear on the front or back of the evidence. |
-| Microprinting (visual, magnifier) | Microtext of static or variable data that can be confirmed when viewed under a magnifier. Requires magnification of at least 10X to view.  |
-| Laser embossing(tactile) | Use of laser to emboss image or text for tactile feel on only one side of the evidence. |
-| Barcode(visual, barcode reader) | Machine readable, encoded data (typically personalized printed data) for 2-D barcode, readable with barcode reader. |
-| UV printing (visual, UV lighting) | A UV image or text that can only be viewed with specialized lighting. UV images may appear on the front or back of a card. |
+| Security Feature | Examination Capability | Description |
+|---|---|---|
+| Fine-line or Guilloche Pattern |Visual| Background pattern of continuous fine lines printed in wavy, overlapping pattern. |
+| Ghost image|Visual| Half-tone reproduction of original image (e.g., facial image), may be printed behind printed data. |
+| Overlapped data|Visual| Variable data (e.g., signature, seal, text) printed over another field such as facial image or seal. |
+| Transparent image|Visual| See-through, window-like image feature (e.g., facial image) visible for both sides of the evidence. |
+| Rainbow printing|Visual| Controlled color shifts of printed text in a continuous, linear fashion. |
+| Holographic Images|Visual, Tilting| Light field record of objects that will appear and change as view of evidence is tilted and turned. Most state-issued driver's licenses and IDs contain at least one holographic image. |
+| Variable laser engraved images|Visual, Tilting| Laser-engraved images at different angles so that image view changes with tilting angle of viewing evidence. |
+| Iridescent Inks and Custom Foil Stamping|Visual, Tilting| Custom designs and printing that will change color properties depending on the angle at which evidence is viewed. |
+| Laser perforation |Visual, Light, Tactile| Perforated holes made by laser beam to form images. The images can be viewed under light source; image holes have tactile feel. |
+| UV printing |Visual, UV Lighting| A UV image or text that can only be viewed with special lighting. UV images may appear on the front or back of the evidence. |
+| Microprinting |Visual, Magnifier| Microtext of static or variable data that can be confirmed when viewed under a magnifier. Requires magnification of at least 10X to view.  |
+| Laser embossing|Tactile| Use of laser to emboss image or text for tactile feel on only one side of the evidence. |
+| Barcode|Visual, Barcode Reader| Machine readable, encoded data (typically personalized printed data) for 2-D barcode, readable with barcode reader. |
+| UV printing |Visual, UV Lighting| A UV image or text that can only be viewed with specialized lighting. UV images may appear on the front or back of a card. |
+{:latex-columns="p@0.28\textwidth,p@0.38\textwidth,m@0.25\textwidth" latex-table="A-4-1" latex-caption="Validation of Evidence Authenticity"}
 
 SP 800-63A (5.2.2) also provides that the genuineness tests above for identity evidence validation may be performed through confirmation of cryptographic security features contained on the evidence in order to meet FAIR and STRONG validation strength; this is a requirement for SUPERIOR validation strength. Such cryptographic security features generally refer to cryptographically signed (e.g., digitally signed) data objects that are stored on an integrated circuit chip on the data evidence that can be used to compare and validate printed information on the evidence. The federal Personal Identity Verification (PIV) Card is an example of this type of evidence. The cryptographically signed data objects on the chip can be used to confirm the personalized data, including facial image, printed on the evidence for evidence validation. Cryptographic security features require specialized equipment to access and validate cryptographically signed data objects on the evidence.
 

@@ -165,7 +165,7 @@ The subsections of [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#
 |  | Rate Limiting | Biometrics | Attestation | Verifier Impersonation Resistance | Verifier Compromise Resistance | Replay Resistance | Intent |
 |-----|-----|-----|-----|----|-----|-----|-----|
 | **Memorized Secret** | Required | N/A | N/A | No | No | No | Yes |
-| **Look-up Secret** | Required if <64 bits | N/A | N/A | No | Maybe | Yes | Yes
+| **Look-up Secret** | Required if &lt;64 bits | N/A | N/A | No | Maybe | Yes | Yes |
 | **OOB** | Not required | N/A | N/A | No | Yes | Yes | Yes |
 | **SF OTP** | Required | N/A | N/A | No | No | Yes | Yes |
 | **MF OTP** | Required | N/A | Offline | No | No | Yes | Yes |
@@ -173,6 +173,7 @@ The subsections of [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#
 | **SF Crypto Dev** | Not required | N/A | Issuance or certificate | Maybe | Maybe | Yes | Maybe |
 | **MF Crypto SW** | Required for activation | N/A | Offline, procedures | Maybe | Maybe | Yes | Yes[^cached] |
 | **MF Crypto Dev** | Required for activation | Required for biometric activation | Issuance or certificate | Maybe | Maybe | Yes | Yes[^cached] |
+{:latex-columns="p@0.28\textwidth,p@0.38\textwidth,m@0.25\textwidth" latex-table="B-4-1" latex-caption="General Authenticator Requirements"}
 
 [^cached]: If the activation factor is not cached.
 
