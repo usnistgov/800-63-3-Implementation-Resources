@@ -34,9 +34,9 @@ IAL2
     - Two pieces of STRONG evidence, or
     - One piece of STRONG evidence plus two (2) pieces of FAIR evidence
 
-A single piece of Superior or Strong evidence can be used for identity proofing at IAL2 if the evidence itself was issued pursuant to a sufficiently strong identity proofing process and if the CSP validates the evidence directly with the issuing source. See the Notional Strength of Evidence table in the Strength of Evidence section of these Implementation Resources. Strong evidence types that may be considered to meet this level of quality are presented as STRONG+ in that table.
+A single piece of SUPERIOR or STRONG evidence can be used for identity proofing at IAL2 if the evidence itself was issued pursuant to a sufficiently strong identity proofing process and if the CSP validates the evidence directly with the issuing source. See the Notional Strength of Evidence table in the Strength of Evidence section of these Implementation Resources. STRONG evidence types that may be considered to meet this level of quality are presented as STRONG+ in that table.
 
-Additional evidence strength combinations at IAL2 are: two pieces of STRONG evidence. or a single piece of Strong evidence along with two pieces of Fair evidence.
+Additional evidence strength combinations at IAL2 are: two pieces of STRONG evidence. or a single piece of STRONG evidence along with two pieces of FAIR evidence.
 
 ## Identity Validation
 
