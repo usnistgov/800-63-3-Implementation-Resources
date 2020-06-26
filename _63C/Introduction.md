@@ -3,10 +3,10 @@ layout: default
 title:  Federation Implementation Resources
 permalink: /63C/
 navOrder: 1  
-navTitle: Home  
+navTitle: Introduction  
 ---
 
-# Federation Implementation Resources
+# Introduction
 
 Federated identity transactions allow for a more secure and more usable internet by allowing subscribers to have a smaller number of accounts that can be used across many sites and applications, without using the same authenticator at multiple sites or applications. There are several major protocols that enable federation transactions, and a multitude of software packages and libraries that implement them. This document outlines what to look for in software that enables federation and how to apply best practices to that software to meet the requirements in [SP 800-63C](https://pages.nist.gov/800-63-3/sp800-63c.html).
 
