@@ -1,8 +1,7 @@
 # Site settings
 title: SP 800-63 Digital Identity Guidelines Resource Center
 description: "Resource Center for the NIST Special Publication 800-63 Digital Identity Guidelines"
-baseurl: "/RC-800-63-3" # the subpath of your site, e.g. /blog
-url: "https://github.com/jimfenton/800-63-ImplResources" # the base hostname & protocol for your site
+baseurl: "/800-63-ImplResourceCenter" # the subpath of your site, e.g. /blog
 
 # Build settings
 markdown: kramdown
@@ -16,43 +15,33 @@ exclude:
 - Makefile
 - vendor
 - README.md
+- "*.yml"
+- "*/images/*.pdf"
 
 # GitHub information will uncomment ones names are finalized and NIST GitHub Pages resources have been allocated
 #org_name: usnistgov
-#repo_name: 800-63-ImplResources
+#repo_name: 800-63-ImplResourceCenter
 
 # Navigation
 # List links that should appear in the site sidebar here
-# 5/7/2018 - Updating the "collname" property to match the folder names in the repository 
 navigation:
 - text: Introduction
   url: /
-  internal: true
   collection: false
-- text: SP800-63-3
-  url: /63-3/
-  internal: true
-  collection: 63-3
 - text: SP800-63A
   url: /63A/
-  internal: true
   collection: 63A
 - text: SP800-63B
   url: /63B/
-  internal: true
   collection: 63B
 - text: SP800-63C
   url: /63C/
-  internal: true
   collection: 63C
-- text: Contribute
-  url: /contribute/
-  internal: true
-  collection: false
+- text: FAQ
+  url: 'https://pages.nist.gov/800-63-FAQ/'
+  external: true
   
 collections:
-  63-3:
-    output: true
   63A:
     output: true
   63B:
