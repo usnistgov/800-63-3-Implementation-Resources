@@ -44,7 +44,7 @@ Identity evidence may contain multiple forms of security features. Some forms of
 | Laser embossing|Tactile| Use of laser to emboss image or text for tactile feel on only one side of the evidence. |
 | Barcode|Visual, Barcode Reader| Machine readable, encoded data (typically personalized printed data) for 2-D barcode, readable with barcode reader. |
 | UV printing |Visual, UV Lighting| A UV image or text that can only be viewed with specialized lighting. UV images may appear on the front or back of a card. |
-{:latex-columns="p@0.28\textwidth,p@0.38\textwidth,m@0.25\textwidth" latex-table="A-4-1" latex-caption="Validation of Evidence Authenticity"}
+{:latex-columns="p@0.24\textwidth,p@0.30\textwidth,p@0.37\textwidth" latex-longtable="true"}
 
 SP 800-63A (5.2.2) also provides that the genuineness tests above for identity evidence validation may be performed through confirmation of cryptographic security features contained on the evidence in order to meet FAIR and STRONG validation strength; this is a requirement for SUPERIOR validation strength. Such cryptographic security features generally refer to cryptographically signed (e.g., digitally signed) data objects that are stored on an integrated circuit chip on the data evidence that can be used to compare and validate printed information on the evidence. The federal Personal Identity Verification (PIV) Card is an example of this type of evidence. The cryptographically signed data objects on the chip can be used to confirm the personalized data, including facial image, printed on the evidence for evidence validation. Cryptographic security features require specialized equipment to access and validate cryptographically signed data objects on the evidence.
 

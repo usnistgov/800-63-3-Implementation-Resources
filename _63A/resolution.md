@@ -52,7 +52,7 @@ Common methods which a CSP can use to digitally capture evidence are presented b
 | Document Image Capture | Camera | This can be used to capture an applicant's photo or the image of an evidence such as a driver's license. Agencies can consider pictures at 300 dpi or above to be of sufficient resolution. |
 | Document Image Capture | Scanner | This can capture a document, which is compared against a known template by automated software to extract information. For optical character recognition, scans at high than 300 dpi are typically considered to be of sufficient quality. |
 | Barcode | Scanner | Commercial off-the-shelf scanners can capture and extract information from standardized barcodes embedded on identity evidence. |
-{:latex-columns="p@0.28\textwidth,p@0.38\textwidth,m@0.25\textwidth" latex-table="A-3-1" latex-caption="Digital Collection Methods"}
+{:latex-columns="p@0.28\textwidth,p@0.20\textwidth,p@0.43\textwidth" latex-table="A-3-1" latex-caption="Digital Collection Methods"}
 
 ### A.3.1.2 In Person {#s-a-3-1-2}
 
@@ -98,9 +98,9 @@ SP 800-63A (5.2.1) is directed to CSPs to specify the strength of evidence that 
 | Transportation Worker Identification Credential (TWIC) | SUPERIOR | |
 | Permanent Resident Card | SUPERIOR | Issued on or after May 11, 2010 |
 | Native American Enhanced Tribal Card | SUPERIOR | |
-| REAL ID cards | STRONG+[^strongplus] | Includes REAL ID driver's licenses and ID cards. REAL ID cards have a star printed in the upper right-hand corner. Card and personal information must be validated with appropriate DMV or AAMVA. |
-| Enhanced ID cards | STRONG+[^strongplus] | Includes Enhanced ID driver's licenses and ID cards. Must be validated with appropriate DMV or AAMVA. |
-| U.S. Uniformed Services Privilege and Identification Card (U.S. Military ID) | STRONG+[^strongplus] | Includes Uniformed Services Dependent ID Cards. Must be validated with appropriate military issuing source. |
+| REAL ID cards | STRONG+ | Includes REAL ID driver's licenses and ID cards. REAL ID cards have a star printed in the upper right-hand corner. Card and personal information must be validated with appropriate DMV or AAMVA. |
+| Enhanced ID cards | STRONG+ | Includes Enhanced ID driver's licenses and ID cards. Must be validated with appropriate DMV or AAMVA. |
+| U.S. Uniformed Services Privilege and Identification Card (U.S. Military ID) | STRONG+ | Includes Uniformed Services Dependent ID Cards. Must be validated with appropriate military issuing source. |
 | Permanent Resident Card | STRONG | Issued Prior to May 11, 2010 |
 | Native American Tribal Photo Identification Card | STRONG | |
 | Driver's License or ID card (REAL ID non-compliant) | STRONG | |
@@ -110,6 +110,6 @@ SP 800-63A (5.2.1) is directed to CSPs to specify the strength of evidence that 
 | Financial institution account statement | FAIR | |
 | US Social Security Card | WEAK | |
 | Original or certified copy of a birth certificate issued by a state, county, municipal authority or outlying possession of the United States bearing an official seal | WEAK | |
-{:latex-columns="p@0.28\textwidth,p@0.38\textwidth,m@0.25\textwidth" latex-table="A-3-2" latex-caption="Notional Strength of Evidence"}
+{:latex-columns="p@0.32\textwidth,p@0.16\textwidth,p@0.43\textwidth" latex-longtable="true"}
 
 [^strongplus]: The classification STRONG+ denotes evidence that may be considered to meet the evidence strength requirement for the IAL2 requirement for one piece of STRONG evidence and the IAL3 evidence strength requirement for one piece of SUPERIOR evidence and one piece of STRONG evidence, provided that the STRONG evidence must be validated with the issuing sources listed in order to meet this evidence strength classification.

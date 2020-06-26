@@ -26,7 +26,7 @@ Certain commercial entities, equipment, or materials may be identified in this d
 | | [Google Backup Codes](https://support.google.com/accounts/answer/1187538?hl=en) |
 | Out-of-Band | [Auth0 Guardian](https://auth0.com/docs/multifactor-authentication/guardian/user-guide) |
 | | [Duo Push](https://duo.com/product/trusted-users/two-factor-authentication/authentication-methods/duo-push)
-| Single-Factor OTP | [Google Authenticator](https://support.google.com/accounts/answer/1066447?visit_id=1-636451702615247824-1299740415&hl=en&rd=1) |
+| Single-Factor OTP | [Google Authenticator](https://support.google.com/accounts/answer/1066447) |
 | | [Bluink App](htttps://bluink.ca/key) |
 | | [SecurID](https://www.rsa.com/en-us/products/rsa-securid-suite/rsa-securid-access/securid-hardware-tokens.html) |
 | | [DIGIPASS GO](https://www.vasco.com/products/two-factor-authenticators/hardware/one-button/index.html) |
@@ -44,7 +44,7 @@ Certain commercial entities, equipment, or materials may be identified in this d
 | | [Badgeo ID 2.0](https://neowave.fr/US/badgeo_ID_2.html)|
 | | [PIV](https://doi.org/10.6028/NIST.FIPS.201-2) and CAC cards |
 | | [Tyfone Side-X](https://tyfone.com/products/side-x-digital-endpoint-security/) |
-| | [Smart Card](http://www.smartcardalliance.org/smart-cards-intro-standards/#isoiec-standards) |
-{:latex-columns="p@0.28\textwidth,p@0.38\textwidth,m@0.25\textwidth" latex-table="B-7-1" latex-caption="Authenticator Examples"}
+| | [Smart Card](http://www.smartcardalliance.org/smart-cards-intro-standards/) |
+{:latex-columns="p@0.44\textwidth,p@0.52\textwidth" latex-table="B-7-1" latex-caption="Authenticator Examples"}
 
 [^u2f]: Only verifier-impersonation resistant when used in FIDO U2F mode.

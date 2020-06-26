@@ -1,0 +1,53 @@
+pdf:
+  - basedir: ""
+    filename: SP-800-63-Implementation-Resources
+    template: _pdftemplate/template.tex
+    workdir: _pdf
+    graphics: 
+      - _63A/images/
+      - _63B/images/
+      - _63C/images/
+      - _pdftemplate/images/
+    sections:
+        - name: cover
+          template: _pdftemplate/cover.tex
+        - name: toc
+          template: _pdftemplate/toc.tex
+        - name: frontmatter
+          template: _pdftemplate/frontmatter.tex
+          parts:
+              - index.md
+        - name: body
+          parts:
+              - _63A/introduction.md
+              - _63A/process.md
+              - _63A/resolution.md
+              - _63A/validation.md
+              - _63A/verification.md
+              - _63A/enrollment.md
+              - _63A/biometrics.md
+              - _63A/supervisedremote.md
+              - _63A/referees.md
+              - _63A/ial2remote.md
+              - _63B/introduction.md
+              - _63B/aal.md
+              - _63B/authenticators.md
+              - _63B/lifecycle.md
+              - _63B/session.md
+              - _63B/samples.md
+              - _63C/introduction.md
+              - _63C/securityparameters.md
+              - _63C/rps.md
+              - _63C/idps.md
+              - _63C/scenarios.md
+              - _63C/resources.md
+          part_template: _pdftemplate/sectionpart.tex
+          template: _pdftemplate/body.tex
+    doi_url: 'https://pages.nist.gov/800-63-ImplResourceCenter/'
+    issued_date: June 30, 2020
+    doc_number: SP 800 63 Implementation Resources
+    page_doc_number: SP 800 63 Implementation Resources
+    page_title: Implementation Resources
+    doc_title: 'SP 800 63 Implementation Resources'
+    pdf_title: 'SP 800 63 Implementation Resources'
+    lineno: true

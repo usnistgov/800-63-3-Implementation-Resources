@@ -21,7 +21,7 @@ The following table presents verification methods that may be applied to achieve
 | STRONG | In-Person Physical Verification | Physical comparison of applicant to facial-image photograph on strongest piece(s) of validated evidence. May be used for identity verification for FAIR and STRONG strength. |
 | STRONG | Remote Physical Verification | Physical comparison of applicant to facial-image photograph on strongest piece(s) of validated evidence. May be used for identity verification for FAIR and STRONG strength. |
 | FAIR | Knowledge-Based Verification (KBV) | Comparison of challenge response to KBV questions provided by applicant. May be used for identity verification for FAIR strength only. |
-{:latex-columns="p@0.28\textwidth,p@0.38\textwidth,m@0.25\textwidth" latex-table="A-5-1" latex-caption="Verification Methods and Strengths"}
+{:latex-columns="p@0.18\textwidth,p@0.15\textwidth,p@0.58\textwidth" latex-table="A-5-1" latex-caption="Verification Methods and Strengths"}
 
 As indicated in the table above and SP 800-63A Table 5-3 (5.3.1), physical or biometric comparison is required for STRONG verification strength and biometric comparison is required for SUPERIOR verification strength against the strongest piece of validated identity evidence.
 
