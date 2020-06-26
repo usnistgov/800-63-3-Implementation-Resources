@@ -167,9 +167,18 @@ table.authors td{
   border:hidden;
 }
 
+.nist-footer {
+  width: calc(100vw - 160px); /* Account for the sidebar */
+  margin-left: 160px;
+}
 
 
 @media screen and (max-width: 767px) {
+  .nist-footer {
+    width: 100%;
+    margin-left: 0;
+  }
+
   .nist-header {
     padding: 6px 10px;
   }
