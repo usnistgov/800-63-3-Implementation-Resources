@@ -59,7 +59,7 @@ Common methods which a CSP can use to digitally capture evidence are presented b
 | Document Image Capture | Camera | This can be used to capture an applicant's photo or the image of an evidence such as a driver's license. Agencies can consider pictures at 300 dpi or above to be of sufficient resolution. |
 | Document Image Capture | Scanner | This can capture a document, which is compared against a known template by automated software to extract information. For optical character recognition, scans at high than 300 dpi are typically considered to be of sufficient quality. |
 | Barcode | Scanner | Commercial off-the-shelf scanners can capture and extract information from standardized barcodes embedded on identity evidence. |
-{:latex-columns="p@0.28\textwidth,p@0.20\textwidth,p@0.43\textwidth" latex-table="A-3-1" latex-caption="Digital Collection Methods"}
+{:latex-columns="p@0.30\textwidth,p@0.13\textwidth,p@0.48\textwidth" latex-table="A-3-1" latex-caption="Digital Collection Methods"}
 
 ### A.3.1.2 In Person {#s-a-3-1-2}
 

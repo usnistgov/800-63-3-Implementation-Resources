@@ -169,20 +169,33 @@ The classic examples of multi-factor cryptographic authenticators are US Governm
 
 ## B.4.2 General Authenticator Requirements {#s-b-4-2}
 
-The subsections of [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#52-general-authenticator-requirements) describe requirements applicable to multiple classes of authenticators, or in some cases supplemental requirements applicable at higher AALs. These are summarized in the table below.
+The subsections of [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#52-general-authenticator-requirements) describe requirements applicable to multiple classes of authenticators, or in some cases supplemental requirements applicable at higher AALs. These are summarized in the tables below.
 
-|  | Rate Limiting | Biometrics | Attestation | Verifier Impersonation Resistance | Verifier Compromise Resistance | Replay Resistance | Intent |
-|-----|-----|-----|-----|----|-----|-----|-----|
-| **Memorized Secret** | Required | N/A | N/A | No | No | No | Yes |
-| **Look-up Secret** | Required if &lt;64 bits | N/A | N/A | No | Maybe | Yes | Yes |
-| **OOB** | Not required | N/A | N/A | No | Yes | Yes | Yes |
-| **SF OTP** | Required | N/A | N/A | No | No | Yes | Yes |
-| **MF OTP** | Required | N/A | Offline | No | No | Yes | Yes |
-| **SF Crypto SW** | Not required | N/A | N/A | Maybe | Maybe | Yes | Maybe |
-| **SF Crypto Dev** | Not required | N/A | Issuance or certificate | Maybe | Maybe | Yes | Maybe |
-| **MF Crypto SW** | Required for activation | N/A | Offline, procedures | Maybe | Maybe | Yes | Yes[^cached] |
-| **MF Crypto Dev** | Required for activation | Required for biometric activation | Issuance or certificate | Maybe | Maybe | Yes | Yes[^cached] |
-{:latex-columns="p@0.1\textwidth,p@0.1\textwidth,p@0.1\textwidth,p@0.1\textwidth,p@0.1\textwidth,p@0.1\textwidth,p@0.1\textwidth,p@0.1\textwidth" latex-table="B-4-1" latex-caption="General Authenticator Requirements"}
+|  | Rate Limiting | Biometrics | Attestation | Intent |
+|-----|-----|-----|-----|-----|
+| **Memorized Secret** | Required | N/A | N/A | Yes |
+| **Look-up Secret** | Required if &lt;64 bits | N/A | N/A | Yes |
+| **OOB** | Not required | N/A | N/A | Yes |
+| **SF OTP** | Required | N/A | N/A | Yes |
+| **MF OTP** | Required | N/A | Offline | Yes |
+| **SF Crypto SW** | Not required | N/A | N/A | Maybe |
+| **SF Crypto Dev** | Not required | N/A | Issuance or certificate | Maybe |
+| **MF Crypto SW** | Required for activation | N/A | Offline, procedures | Yes[^cached] |
+| **MF Crypto Dev** | Required for activation | Required for biometric activation | Issuance or certificate | Yes[^cached] |
+{:latex-columns="p@0.23\textwidth,p@0.17\textwidth,p@0.15\textwidth,p@0.15\textwidth,p@0.13\textwidth" latex-table="B-4-1" latex-caption="General Authenticator Requirements (1)"}
+
+|  | Verifier Impersonation Resistance | Verifier Compromise Resistance | Replay Resistance |
+|-----|----|-----|-----|
+| **Memorized Secret** | No | No | No |
+| **Look-up Secret** | No | Maybe | Yes |
+| **OOB** | No | Yes | Yes |
+| **SF OTP** | No | No | Yes |
+| **MF OTP** | No | No | Yes |
+| **SF Crypto SW** | Maybe | Maybe | Yes |
+| **SF Crypto Dev** | Maybe | Maybe | Yes |
+| **MF Crypto SW** | Maybe | Maybe | Yes |
+| **MF Crypto Dev** | Maybe | Maybe | Yes |
+{:latex-columns="p@0.23\textwidth,p@0.21\textwidth,p@0.21\textwidth,p@0.21\textwidth" latex-table="B-4-2" latex-caption="General Authenticator Requirements (2)"}
 
 [^cached]: If the activation factor is not cached.
 
