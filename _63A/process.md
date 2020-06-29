@@ -6,7 +6,7 @@ navOrder: 2
 navTitle: Process
 ---
 
-# Identity Proofing Process Documentation
+# A.2 Identity Proofing Process Documentation {#s-a-2}
 
 SP 800-63A section 4.6.6 requires the CSP to document the identity proofing and enrollment processes in an applicable written policy or _practice statement_ that specifies the steps used to perform identity proofing and enrollment processes. Such documented policies and procedures are fundamental control and prerequisite for transparency, accountability, quality control, auditability, and interoperability among federated communities. The documentation, dissemination, review and update for identity management processes and controls represent a fundamental control under NIST SP 800-53 _Security and Privacy Controls for Federal Information Systems and Organizations_ control IA-1: Identification and Authentication Policy and Procedures applicable to low, moderate and high control baselines.
 

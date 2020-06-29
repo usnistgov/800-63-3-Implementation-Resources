@@ -11,7 +11,11 @@
         {% endif %}
         
         <li class="{{ current }}">
-          <a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
+          {% if link.external %}
+              <a href="{{ link.url }}">{{ link.text }} <i class="fa fa-external-link"></i></a>
+          {% else %}
+              <a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
+          {% endif %}
           
           {% if link.collection and page.collection == link.collection %}
         

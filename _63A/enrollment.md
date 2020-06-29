@@ -6,7 +6,7 @@ navOrder: 6
 navTitle: Enrollment
 ---
 
-# Enrollment Codes
+# A.6 Enrollment Codes {#s-a-6}
 
 The use of an enrollment code for address confirmation is a requirement for IAL2 remote identity proofing and enrollment. Enrollment codes are not used for address confirmation for in-person identity proofing and enrollment but may be used for authenticator binding if one or more authenticators were not registered to the subscriber's account at the time of in-person identity proofing. This is discussed in more detail below. For either enrollment code use case – IAL2 remote identity proofing address confirmation or in-person proofing authenticator binding – enrollment codes must meet specified entropy requirements (4.6). Enrollment codes must be comprised of:
 
