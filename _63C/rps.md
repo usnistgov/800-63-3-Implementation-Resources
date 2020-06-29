@@ -18,12 +18,12 @@ If all of these checks are performed properly, the compromise of a single relyin
 
 Relying parties need to do two major checks against incoming assertions:
 
- - Check that the assertion itself is internally consistent
- - Check that the assertion is verifiably from a trusted source
+ - check that the assertion itself is internally consistent, and
+ - check that the assertion is verifiably from a trusted source.
 
 Relying parties need to validate IdP signatures, assertion expirations, and audience parameters within an assertion to validate that the assertion itself is internally consistent. Additionally, RPs need to test that these validation checks are working at all times because there will be no outward indication that something is wrong with the system until an attack occurs. In other words, RPs need to ensure that they are rejecting invalid assertions just as much as they are accepting valid assertions.
 
-RPs need to also verify the origin of the information that they receive, as an attacker might try to inject a valid assertion from another subscriber in order to take over an account. RPs can do this by making sure that the assertion is signed by a trusted IdP's key and that the assertion isn't being replayed. RPs also need to check the source of the assertion. This most often means that they will accept an assertion only if it is presented in response to a direct request for one, and not at any other time. This also means that an RP will only accept assertions generated and signed by the IdP they were connecting to.
+RPs need to also verify the origin of the information that they receive, as an attacker might try to inject a valid assertion from another subscriber in order to take over an account. RPs can do this by making sure that the assertion is signed by a trusted IdP's key and that the assertion is not being replayed. RPs also need to check the source of the assertion. This most often means that they will accept an assertion only if it is presented in response to a direct request for one, and not at any other time. This also means that an RP will only accept assertions generated and signed by the IdP they were connecting to.
 
 ### C.3.1.1 Validating IdP Signatures {#s-c-3-1-1}
 
@@ -33,7 +33,7 @@ Some protocols cover the entire assertion with a signature, while others cover o
 
 Validating the signature is not enough. The RP also needs to make sure it is using the correct key for the claimed IdP, especially if the RP accepts assertions from multiple IdPs. In OpenID Connect, for example, the IdP is identified by the "iss" field of the ID Token's payload, and the signing key is identified by the "kid" field in the ID Token's header. The RP will accept the token if and only if the signature validates using the identified key from the identified issuer, and then only if the issuer is trusted to provide identities to this RP. Additionally, the RP will accept the assertion only if it is issued by the IdP that the RP is currently communicating with. Otherwise, a rogue IdP could replay an assertion issued by another IdP in an attempt to grant an attacker access to the RP.
 
-Testing whether RPs will reject unsigned assertions or assertions with invalid signatures is critical, though not an obvious test to do. Properly authorized transactions will still work even if an RP isn't checking assertion signatures, since the RP will accept the (valid) assertion whether or not it has a valid signature. Therefore, in such cases there is no outward indication of a problem in the system and there will be no error messages or login failures to indicate that something is wrong. Only a failure from a negative test -- that is to say, the explicit rejection of an unsigned assertion or an assertion with an invalid signature -- will indicate that a relying party is properly checking keys and signatures.
+Testing whether RPs will reject unsigned assertions or assertions with invalid signatures is critical, though not an obvious test to do. Properly authorized transactions will still work even if an RP is not checking assertion signatures, since the RP will accept the (valid) assertion whether or not it has a valid signature. Therefore, in such cases there is no outward indication of a problem in the system and there will be no error messages or login failures to indicate that something is wrong. Only a failure from a negative test -- that is to say, the explicit rejection of an unsigned assertion or an assertion with an invalid signature -- will indicate that a relying party is properly checking keys and signatures.
 
 #### C.3.1.1.1 Retrieving IdP Keys {#s-c-3-1-1-1}
 
@@ -45,7 +45,7 @@ Federated identity assertions are intended to be short-lived, since they are use
 
 An identity assertion which expires quickly makes it difficult for attackers to misuse the assertion and also ensures that any identity or authorization information included in the assertion is not out-of-date. RPs need to be tested to ensure they do not accept expired assertions, which can be done by presenting the RP with an expired but otherwise valid assertion and seeing if the RP accepts or rejects it.
 
-Some assertions also contain a timestamp indicating when the assertion was issued, and an RP shouldn't accept any assertion that claims to have been issued in the future. Some assertions will also have a timestamp indicating when the assertion is not to be used before, which an RP can process to ensure it is not accepting an assertion too early. The use of the "not-before" processing mechanism is relatively rare in modern federation protocols, as the assertions are created in response to specific login requests. 
+Some assertions also contain a timestamp indicating when the assertion was issued, and an RP should not accept any assertion that claims to have been issued in the future. Some assertions will also have a timestamp indicating when the assertion is not to be used before, which an RP can process to ensure it is not accepting an assertion too early. The use of the "not-before" processing mechanism is relatively rare in modern federation protocols, as the assertions are created in response to specific login requests. 
 
 All of the date fields have to be covered by the assertion's signature.
 
@@ -55,7 +55,7 @@ Common attacks include taking an assertion intended for one RP and presenting it
 
 If an RP does not check for a matching audience parameter, it is possible for an attacker to get a valid assertion from any RP registered with the IdP and replay it at the target RP to gain unauthorized access.
 
-An RP that isn't checking audience parameters will still accept a valid authorization with no outward indication of a problem. Therefore, it is important to test the RP with an assertion containing an errant or missing audience field.
+An RP that is not checking audience parameters will still accept a valid authorization with no outward indication of a problem. Therefore, it is important to test the RP with an assertion containing an errant or missing audience field.
 
 The audience field has to be covered by the assertion's signature.
 
@@ -73,7 +73,9 @@ This document covers two main product families that enable federated identity tr
 
 All parties need to be careful about passing and validating metadata. Incorrectly communicated or configured metadata could leak information about a subscriber that was not approved for distribution. Metadata that is not validated could have been tampered with by an attacker to gain access to valuable personal information.
 
-The RP has to always check certificates before accepting identity assertions. Attackers can forge certificates and phish subscribers in an attempt to impersonate them. 
+The RP has to always check certificates before accepting identity assertions. Attackers can forge certificates and phish subscribers in an attempt to impersonate them.
+
+SAML is not well-suited for use when the RP is a mobile or desktop application. Additionally, SAML does not provide a good means for protecting APIs. These limitations should be considered when choosing a product family.
 
 ### C.3.2.2 OpenID Connect {#s-c-3-2-2}
 
@@ -81,10 +83,10 @@ Different OAuth grant types or "flows" are appropriate for different kinds of ap
 
 The authorization code flow is a back-channel presentation mechanism and ought to be used whenever possible, particularly for web server, native, or mobile applications. It is the most common and most secure way to implement OAuth, the underlying protocol of OpenID Connect. It can accommodate all three FALs depending on the exact configuration of the application. The authorization code flow makes use of back channel assertion presentation, which reduces the attack surface of the RP significantly by sending the assertion directly from the IdP to the RP without an intermediary party touching it. The RP ought to authenticate itself when presenting the authorization code to the IdP.
 
-If the RP is a native or mobile application, it can use the [PKCE extension](https://tools.ietf.org/html/rfc7636) or [dynamic client registration](https://tools.ietf.org/html/rfc7591) to ensure that different copies of the client software can't impersonate each other at the IdP. The [best current practices for OAuth 2 mobile applications](https://tools.ietf.org/html/rfc8252) specification provides additional guidance.
+If the RP is a native or mobile application, it can use the [PKCE extension](https://tools.ietf.org/html/rfc7636) or [dynamic client registration](https://tools.ietf.org/html/rfc7591) to ensure that different copies of the client software can not impersonate each other at the IdP. The [best current practices for OAuth 2 mobile applications](https://tools.ietf.org/html/rfc8252) specification provides additional guidance.
 
-In browser applications, sometimes known as Single Page Applications (SPAs) provide their own challenges. The implicit grant type is a front-channel presentation mechanism and is applicable for applications which are implemented entirely in front-end code and have to capability to store secrets outside of the subscriber's web browser. However, best current practice is to use PKCE and the authorization code grant type for an SPA, or to use the OIDC hybrid flows to protect information. These best practices are [being written up by the OAuth working group](https://tools.ietf.org/html/draft-ietf-oauth-browser-based-apps). 
+In-browser applications, sometimes known as Single Page Applications (SPAs), are particularly challenging. The implicit grant type is a front-channel presentation mechanism and is applicable for applications which are implemented entirely in front-end code and have the capability to store secrets outside of the subscriber's web browser. However, best current practice is to use PKCE and the authorization code grant type for an SPA, or to use the OIDC hybrid flows to protect information. Best practices for these applications are currently under development by the OAuth working group in [draft-ietf-oauth-browser-based-apps](https://tools.ietf.org/html/draft-ietf-oauth-browser-based-apps). 
 
 The lack of ability to store secrets means that these sorts of applications can usually only function at FAL1 because they have no method of private key management which would enable encryption of identity assertions. Modern browsers could allow a dynamic registration of the SPA and an in-browser protected keypair, but this is not a common deployment pattern at this time.
 
-The `client credentials` and `resource owner credentials` grant types are not allowed at any FAL.
+The client credentials and resource owner credentials grant types are not allowed at any FAL.

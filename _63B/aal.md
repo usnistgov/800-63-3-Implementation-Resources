@@ -25,10 +25,11 @@ AAL2 requires the use of two authentication factors, either (1) a physical authe
 As detailed below, there are restrictions on the use of biometrics, in particular that they must be securely bound to a specific physical authenticator. For this reason, a memorized secret plus a biometric is not an acceptable combination for authentication.
 
 In addition to the requirement for two authentication factors at AAL2, there are additional requirements relating to the authentication and the session. These include:
-* Shorter reauthentication time
-* Replay resistance
-* FIPS 140 Level 1 for authenticators supplied by government agencies
-* Authentication intent (recommended)
+
+* shorter reauthentication time,
+* replay resistance,
+* FIPS 140 Level 1 for authenticators supplied by government agencies, and
+* authentication intent (recommended).
 
 Multi-factor authenticators use an additional factor, either something you know or something you have, to unlock a secret that is stored in the (physical) authenticator.
 
@@ -36,9 +37,9 @@ Multi-factor authenticators use an additional factor, either something you know 
 
 AAL3 introduces several new requirements beyond AAL2, the most significant being the use of a hardware-based authenticator. There are several additional authentication characteristics that are required:
 
-* Verifier impersonation resistance
-* Verifier compromise resistance
-* Authentication intent
+* verifier impersonation resistance,
+* verifier compromise resistance, and
+* authentication intent.
 
 Some of these characteristics are satisfied jointly by the authenticator and verifier, while others are primarily authenticator characteristics. When multiple authenticators are used, these requirements are satisfied by the use of at least one authenticator with the required characteristic. For example, if a hardware-based authenticator that is not verifier impersonation resistant is used, a software-based authenticator that provides verifier impersonation resistance will satisfy that requirement.
 

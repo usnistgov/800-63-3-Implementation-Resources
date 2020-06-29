@@ -1,7 +1,7 @@
 # Site settings
 title: SP 800-63 Digital Identity Guidelines Resource Center
 description: "Resource Center for the NIST Special Publication 800-63 Digital Identity Guidelines"
-baseurl: "/800-63-ImplResourceCenter" # the subpath of your site, e.g. /blog
+baseurl: "/800-63-3-Implementation-Resources" # the subpath of your site, e.g. /blog
 
 # Build settings
 markdown: kramdown
