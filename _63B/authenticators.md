@@ -40,13 +40,13 @@ It is nevertheless desirable to provide some degree of protection against subscr
 
 No size is specified for the blocklist. While it might be tempting to use lists of millions of compromised passwords (such lists are readily available on the internet), it is really only the ones that are fairly commonly used, a much shorter list, that represent a significant risk of online attack. Excessively long lists are also likely to be frustrating to the subscriber, as are the composition rules (inclusion of specific character classes in memorized secrets) currently in common use. Bear in mind that common passwords are not just words, but sometimes typing patterns such as "qwertyuiop".
 
-In addition to common memorized secrets perhaps obtained elsewhere, it is useful to include other things that might be relevant to the specific service being authenticated, such as the agency name or domain name.
+In addition to common memorized secrets perhaps obtained elsewhere, it is useful to include other things on the blocklist that might be relevant to the specific service being authenticated, such as the agency name or domain name. Items on the blocklist can also be common constructions including those terms.
 
 When a subscriber attempts to choose a blocklisted memorized secret, it is helpful to give additional guidance to them. Measures like strength indicators (password meters) may encourage them not to choose a memorized secret that is a trivial modification of one on the blocklist.
 
 #### B.4.1.2.1 Examples {#s-b-4-1-2-1}
 
-As mentioned above, memorized secrets include passwords, passphrases, and PINs. The term passphrase is often used when the expectation is that the secret will be longer than a password, and when spaces may be included, but otherwise the terms are equivalent. PINs normally denote a numeric secret that is often randomly chosen by the CSP/verifier and assigned to the user. The length requirement for randomly chosen PINs is shorter than for user-chosen secrets because they would be expected to be uniformly distributed and therefore have more entropy than a user-chosen secret of the same length and composition.
+As mentioned above, memorized secrets include passwords, passphrases, and PINs. The term passphrase is often used when the expectation is that the secret will be longer than a password, and when spaces may be included, but otherwise the terms are equivalent. PINs normally denote a numeric secret that is often randomly chosen by the CSP/verifier and assigned to the user. The length requirement for randomly chosen memorized secrets is shorter than for user-chosen secrets because they would be expected to be uniformly distributed and therefore have more entropy than a user-chosen secret of the same length and composition.
 
 ### B.4.1.3 Look-up Secrets {#s-b-4-1-3}
 
