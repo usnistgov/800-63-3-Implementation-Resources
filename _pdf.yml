@@ -46,8 +46,8 @@ pdf:
     doi_url: 'https://pages.nist.gov/800-63-3-Implementation-Resources/'
     issued_date: June 30, 2020
     doc_number: SP 800-63-3 Implementation Resources
-    page_doc_number: SP 800-63-3
-    page_title: Implementation Resources
+    page_doc_number: SP 800-63-3 Implementation Resources
+    page_title: ''
     doc_title: 'NIST Special Publication 800-63-3 Implementation Resources'
     pdf_title: 'NIST Special Publication 800-63-3 Implementation Resources'
     lineno: true
