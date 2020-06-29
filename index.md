@@ -7,6 +7,7 @@ description: "NIST Special Publication 800-63 Digital Identity Guidelines"
 # Digital Identity Guidelines: Implementation Resources
 
 [NIST Special Publication 800-63-3](https://pages.nist.gov/800-63-3/sp800-63-3.html), *Digital Identity Guidelines*, is an umbrella publication that introduces the digitial identity model described in the SP 800-63-3 document suite. It frames identity guidelines in three major areas:
+
 * Enrollment and identity proofing ([SP 800-63A](https://pages.nist.gov/800-63-3/sp800-63a.html))
 * Authentication and lifecycle management ([SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html))
 * Federation and assertions ([SP 800-63C](https://pages.nist.gov/800-63-3/sp800-63c.html))
