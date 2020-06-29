@@ -30,11 +30,12 @@ pdf:
               - _63A/referees.md
               - _63A/ial2remote.md
               - _63B/introduction.md
+              - _63B/terminology.md
               - _63B/aal.md
               - _63B/authenticators.md
               - _63B/lifecycle.md
               - _63B/session.md
-              - _63B/samples.md
+              - _63B/examples.md
               - _63C/introduction.md
               - _63C/securityparameters.md
               - _63C/rps.md
@@ -45,9 +46,9 @@ pdf:
           template: _pdftemplate/body.tex
     doi_url: 'https://pages.nist.gov/800-63-ImplResourceCenter/'
     issued_date: June 30, 2020
-    doc_number: SP 800 63 Implementation Resources
-    page_doc_number: SP 800 63 Implementation Resources
+    doc_number: SP 800-63-3 Implementation Resources
+    page_doc_number: SP 800-63-3
     page_title: Implementation Resources
-    doc_title: 'SP 800 63 Implementation Resources'
-    pdf_title: 'SP 800 63 Implementation Resources'
+    doc_title: 'NIST Special Publication 800-63-3 Implementation Resources'
+    pdf_title: 'NIST Special Publication 800-63-3 Implementation Resources'
     lineno: true

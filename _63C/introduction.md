@@ -14,3 +14,4 @@ This document is intended to provide more direct technology discussion than SP 8
 
 This document contains no normative requirements.
 
+Note: These resources use the term IdP in a manner consistent with the use of the terms in SP 800-63C. Specifically, the IdP role is fulfilled by the CSP, and the RP is the receiver of the federated assertion.

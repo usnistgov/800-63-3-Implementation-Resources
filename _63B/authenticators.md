@@ -34,19 +34,19 @@ One of the significant changes in SP 800-63B is a rethinking of the role of memo
 
 This puts the burden on the verifier, rather than the subscriber, to the maximum extent possible.
 
-At the same time, SP 800-63B attempts to make it as easy as possible for a subscriber to choose a memorized secret that is as secure as possible. Because memorized secrets are required to be hashed before storage by the verifier, the length of the stored value is independent of the length of the memorized secret. There is no good reason, therefore, to prevent memorized secrets from being almost arbitrarily long, nor to prohibit the use spaces and of certain special characters. Since non-English speakers might more readily memorize a secret in their own language, Unicode characters should also be permitted (not just to permit the creation of emoji passwords as some have suggested).
+At the same time, SP 800-63B attempts to make it as easy as possible for a subscriber to choose a memorized secret that is as secure as possible. Because memorized secrets are required to be hashed before storage by the verifier, the length of the stored value is independent of the length of the memorized secret. There is no good reason, therefore, to prevent memorized secrets from being almost arbitrarily long, nor to prohibit the use of spaces and of certain special characters. Since non-English speakers might more readily memorize a secret in their own language, Unicode characters should also be permitted (not just to permit the creation of emoji passwords as some have suggested).
 
 It is nevertheless desirable to provide some degree of protection against subscribers who choose frequently used memorized secrets. SP 800-63B requires the use of a blocklist to prevent subscribers from choosing such secrets.
 
 No size is specified for the blocklist. While it might be tempting to use lists of millions of compromised passwords (such lists are readily available on the internet), it is really only the ones that are fairly commonly used, a much shorter list, that represent a significant risk of online attack. Excessively long lists are also likely to be frustrating to the subscriber, as are the composition rules (inclusion of specific character classes in memorized secrets) currently in common use. Bear in mind that common passwords are not just words, but sometimes typing patterns such as "qwertyuiop".
 
-In addition to common memorized secrets perhaps obtained elsewhere, it is useful to include other things that might be relevant to the specific service being authenticated, such as the agency name or domain name, or possibly even such things concatenated with common expletives.
+In addition to common memorized secrets perhaps obtained elsewhere, it is useful to include other things that might be relevant to the specific service being authenticated, such as the agency name or domain name.
 
 When a subscriber attempts to choose a blocklisted memorized secret, it is helpful to give additional guidance to them. Measures like strength indicators (password meters) may encourage them not to choose a memorized secret that is a trivial modification of one on the blocklist.
 
 #### B.4.1.2.1 Examples {#s-b-4-1-2-1}
 
-As mentioned above, memorized secrets include passwords, passphrases, and PINs. The term passphrase is often used when the expectation is that the secret will be longer than a password, and when spaces may be included, but otherwise the terms are equivalent. PINs normally denote a numeric secret that is often randomly chosen by the CSP/verifier and assigned to the user. The length requirement for randomly chosen PINs is shorter than for user-chosen secrets because they would be expected to be uniformly distributed and therefore have more entropy than a user-chosen secret of the same length and composition. CSP-chosen secrets may be used for memorized secrets other than PINs as well, although the length requirements for such secrets are the same as for user-chosen memorized secrets.
+As mentioned above, memorized secrets include passwords, passphrases, and PINs. The term passphrase is often used when the expectation is that the secret will be longer than a password, and when spaces may be included, but otherwise the terms are equivalent. PINs normally denote a numeric secret that is often randomly chosen by the CSP/verifier and assigned to the user. The length requirement for randomly chosen PINs is shorter than for user-chosen secrets because they would be expected to be uniformly distributed and therefore have more entropy than a user-chosen secret of the same length and composition.
 
 ### B.4.1.3 Look-up Secrets {#s-b-4-1-3}
 
@@ -113,7 +113,7 @@ A number of readily-available commercial OTP products, both hardware and softwar
 
 Many of the same considerations associated with single-factor OTP devices apply to these authenticators as well.
 
-When the wrong memorized secret is entered, the authenticator can take one of two actions. One is to generate an intentionally incorrect output; this allows the verifier to implement a throttling strategy to discourage guessing attacks on the memorized secret. Another possibility is to display an error indication on the device. This avoids the usability impact if the user mis-enters the secret, but requires that the authenticator implement the throttling strategy describes in [SP 800-63B section 5.2.2](https://pages.nist.gov/800-63-3/sp800-63b.html#throttle), which may be challenging on some devices.
+When the wrong memorized secret is entered, the authenticator can take one of two actions. One is to generate an intentionally incorrect output; this allows the verifier to implement a throttling strategy to discourage guessing attacks on the memorized secret. Another possibility is to display an error indication on the device. This avoids the usability impact if the user mis-enters the secret, but requires that the authenticator implement the throttling strategy described in [SP 800-63B section 5.2.2](https://pages.nist.gov/800-63-3/sp800-63b.html#throttle), which may be challenging on some devices.
 
 Because of the significant false reject rates associated with biometrics, the generation of an intentionally incorrect output is likely to have a greater impact on devices activated by a biometric. In using biometric-activated OTP devices, the severe throttling requirements described in [SP 800-63B Section 5.2.3](https://pages.nist.gov/800-63-3/sp800-63b.html#biometric_use) should be considered, and alternatives provided if the user is unable to successfully complete biometric authentication. These alternatives could include the use of a memorized secret for activation, or use of a completely different authenticator.
 
@@ -169,7 +169,7 @@ The classic examples of multi-factor cryptographic authenticators are US Governm
 
 ## B.4.2 General Authenticator Requirements {#s-b-4-2}
 
-The subsections of [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#52-general-authenticator-requirements) describe requirements applicable to multiple classes of authenticator, or in some cases supplemental requirements applicable at higher AALs. These are summarized in the table below.
+The subsections of [Section 5.2](https://pages.nist.gov/800-63-3/sp800-63b.html#52-general-authenticator-requirements) describe requirements applicable to multiple classes of authenticators, or in some cases supplemental requirements applicable at higher AALs. These are summarized in the table below.
 
 |  | Rate Limiting | Biometrics | Attestation | Verifier Impersonation Resistance | Verifier Compromise Resistance | Replay Resistance | Intent |
 |-----|-----|-----|-----|----|-----|-----|-----|
@@ -224,7 +224,7 @@ Attestation usually is required only at the time the authenticator is bound to t
 
 Verifier impersonation resistance is a characteristic of some cryptographic authenticators that bind the authenticator output to a specific authenticated protected session (usually a TLS session). Verifier impersonation resistance is effective against certain types of "phishing" attacks where the claimant is misdirected to a look-alike site where they are encouraged to authenticate.
 
-When authentication is attempted at a phishing site operated by the attacker, the attacker can capture the authenticator output and initiate their own authentication session with the actual relying party. If a one-time password (such as from an OTP device), the attacker can use the authenticator output immediately after it is entered, so even a time-based OTP does not protect against the attack. Challenge-response protocols are similarly ineffective because the attacker can open an authentication session and obtain the challenge nonce, relay it to the claimant, and then have the necessary response to authenticate the attacker's own session.
+When authentication is attempted at a phishing site operated by the attacker, the attacker can capture the authenticator output and initiate their own authentication session with the actual relying party. For example if a one-time password is used (such as from an OTP device), the attacker can use the authenticator output immediately after it is entered, so even a time-based OTP does not protect against the attack. Challenge-response protocols are similarly ineffective because the attacker can open an authentication session and obtain the challenge nonce, relay it to the claimant, and then have the necessary response to authenticate the attacker's own session.
 
 Establishment of authenticated protected sessions creates encryption keys unique to the session using Diffie-Hellman key exchange. This key can be included in calculating the authenticator output, so that the output is not valid for any other authenticated protected session (such as that between the attacker and the actual relying party in the example above).
 
