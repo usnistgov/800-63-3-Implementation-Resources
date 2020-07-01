@@ -38,7 +38,7 @@ The additional information management and implementation complexity of higher FA
 
 Because it is the front door to many critical systems, authentication is a key piece of risk management strategy. Strong federation can protect against many potential subscriber impersonation and man-in-the-middle attacks. Instead of each RP needing to manage subscriber accounts and authenticators separately, creating many vulnerable surfaces, federation concentrates the key security practices in a dedicated component, the IdP. Upgrades to authenticators, software, and practices at the IdP automatically benefit the downstream RPs and the overall network. 
 
-## C.2.2 Personally Identifiable Information (PII) {#s-c-2-2}
+## C.2.3 Personally Identifiable Information (PII) {#s-c-2-3}
 
 Personally Identifiable Information (PII) needs to be limited to only what's needed to perform a transaction as per [Section 7.3](https://pages.nist.gov/800-63-3/sp800-63c.html#protecting-information). For many login transactions, the RP will need to know only an identifier for the current subscriber. After an initial login, this identifier is used by the RP to tie the subscriber to a record or account in the RP application, and this record often contains attributes collected from various sources including the IdP and direct interaction with the subscriber. 
 
@@ -48,7 +48,7 @@ Assertions at all levels can include additional attributes about the subscriber 
 
 FAL2 is required if PII will be sent in an identity assertion that is passed through an intermediary such as a browser, as personally identifiable information needs to be protected in transit. If the PII is sent over the back channel instead, either in the assertion or in a separate request, then FAL2 is not required in order for the information to be sufficiently protected in transit.
 
-## C.2.3 Selecting a Presentation Mechanism {#s-c-2-3}
+## C.2.4 Selecting a Presentation Mechanism {#s-c-2-4}
 
 Assertions can be sent either over the back channel between the IdP and RP as per [Section 7.1](https://pages.nist.gov/800-63-3/sp800-63c.html#back-channel) or over the front channel using the subscriber and their browser as an intermediary as per [Section 7.2](https://pages.nist.gov/800-63-3/sp800-63c.html#front-channel). While both methods are allowed at all FALs, back channel presentation has a number of advantages and is preferred where possible.
 
