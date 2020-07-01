@@ -44,7 +44,7 @@ pdf:
           part_template: _pdftemplate/sectionpart.tex
           template: _pdftemplate/body.tex
     doi_url: 'https://pages.nist.gov/800-63-3-Implementation-Resources/'
-    issued_date: June 30, 2020
+    issued_date: July 1, 2020
     doc_number: SP 800-63-3 Implementation Resources
     page_doc_number: SP 800-63-3 Implementation Resources
     page_title: ''
