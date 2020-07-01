@@ -117,4 +117,4 @@ SP 800-63A ([5.2.1](https://pages.nist.gov/800-63-3/sp800-63a.html#evidence_qual
 | Financial institution account statement | FAIR | |
 | US Social Security Card | WEAK | |
 | Original or certified copy of a birth certificate issued by a state, county, municipal authority or outlying possession of the United States bearing an official seal | WEAK | |
-{:latex-columns="p@0.32\textwidth,p@0.16\textwidth,p@0.43\textwidth" latex-longtable="true"}
+{:latex-columns="p@0.32\textwidth,p@0.16\textwidth,p@0.43\textwidth" latex-longtable="true" latex-table="A-3-2" latex-caption="Notional Strength of Evidence"}
