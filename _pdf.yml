@@ -50,4 +50,4 @@ pdf:
     page_title: ''
     doc_title: 'NIST Special Publication 800-63-3 Implementation Resources'
     pdf_title: 'NIST Special Publication 800-63-3 Implementation Resources'
-    lineno: true
+    lineno: false
