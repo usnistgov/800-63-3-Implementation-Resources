@@ -18,3 +18,5 @@ These implementation resources are provided pursuant to OMB memorandum [M-19-17]
 These implementation resources provide guidance for SP 800-63-3 in three parts: Part A addresses SP 800-63A, Part B addresses SP 800-63B, and Part C addresses SP 800-63C. Section numbers are presented in parentheses in each part which refer to the SP 800-63-3 volume corresponding to that part. 
 
 Comments on these guidelines are welcomed and can be submitted via email to <dig-comments@nist.gov>.
+
+A PDF version of these implementation resources can be found online at <https://www.nist.gov/system/files/documents/2020/07/02/SP-800-63-3-Implementation-Resources_07012020.pdf>.
