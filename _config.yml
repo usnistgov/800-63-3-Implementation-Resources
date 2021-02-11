@@ -1,5 +1,5 @@
 # Site settings
-title: SP 800-63 Digital Identity Guidelines Resource Center
+title: SP 800-63 Digital Identity Guidelines Implementation Resources
 description: "Resource Center for the NIST Special Publication 800-63 Digital Identity Guidelines"
 baseurl: "/800-63-3-Implementation-Resources" # the subpath of your site, e.g. /blog
 
