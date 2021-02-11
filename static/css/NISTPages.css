@@ -167,7 +167,7 @@ table.authors td{
   border:hidden;
 }
 
-.nist-footer {
+nav ~ div .nist-footer {
   width: calc(100vw - 160px); /* Account for the sidebar */
   margin-left: 160px;
 }
@@ -194,6 +194,24 @@ ol.letter-list > li:before {
 
 [latex-literal="true"] {
   display: none !important;
+}
+
+.cover-title {
+	color:#333;
+	opacity:0.9;
+	text-align:center;
+	margin-bottom:40px;
+	font-size:64px;
+	font-weight:700
+}
+
+.cover-date {
+	color:#333;
+	opacity:0.9;
+	text-align:center;
+	margin-bottom:20px;
+	font-size:20px;
+	font-weight:700
 }
 
 @media screen and (max-width: 767px) {
