@@ -1,7 +1,7 @@
 ---
 layout: cover
-title: "NIST SP 800-63 Digital Identity Guidelines"
-description: "NIST Special Publication 800-63 Digital Identity Guidelines"
+title: SP 800-63 Digital Identity Guidelines Implementation Resources
+description: "NIST Special Publication 800-63 Digital Identity Guidelines Implementation Resources"
 ---
 
 # Digital Identity Guidelines: Implementation Resources
