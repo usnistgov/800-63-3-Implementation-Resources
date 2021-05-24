@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Authenticators
-permalink: /63B/Authenticators
+permalink: /63B/Authenticators/
 navOrder: 4  
 navTitle: Authenticators  
 ---

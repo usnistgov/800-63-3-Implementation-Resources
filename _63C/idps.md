@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Guide for Identity Providers
-permalink: /63C/IdP
+permalink: /63C/IdP/
 navOrder: 4  
 navTitle: IdPs  
 ---

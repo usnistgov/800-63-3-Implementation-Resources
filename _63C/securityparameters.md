@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Choosing Security Parameters
-permalink: /63C/SecurityParameters
+permalink: /63C/SecurityParameters/
 navOrder: 2  
 navTitle: Parameters  
 ---

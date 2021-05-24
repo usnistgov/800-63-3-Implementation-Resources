@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Federation Resources
-permalink: /63C/Resources
+permalink: /63C/Resources/
 navOrder: 6  
 navTitle: Resources  
 ---
