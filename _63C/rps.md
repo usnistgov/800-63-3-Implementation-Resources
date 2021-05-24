@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Guide for Relying Parties
-permalink: /63C/RP
+permalink: /63C/RP/
 navOrder: 3 
 navTitle: RPs  
 ---
