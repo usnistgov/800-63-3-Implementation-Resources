@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Example Federation Scenarios
-permalink: /63C/Scenarios
+permalink: /63C/Scenarios/
 navOrder: 5  
 navTitle: Scenarios  
 ---

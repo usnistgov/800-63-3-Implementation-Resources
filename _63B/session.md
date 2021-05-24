@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Session Management
-permalink: /63B/Session
+permalink: /63B/Session/
 navOrder: 6  
 navTitle: Sessions  
 ---

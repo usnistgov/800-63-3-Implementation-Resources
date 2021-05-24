@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Terminology
-permalink: /63B/terminology
+permalink: /63B/terminology/
 navOrder: 2  
 navTitle: Terminology  
 ---
