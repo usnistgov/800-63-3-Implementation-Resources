@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Authenticator Assurance Levels
-permalink: /63B/AAL
+permalink: /63B/AAL/
 navOrder: 3  
 navTitle: AAL  
 ---

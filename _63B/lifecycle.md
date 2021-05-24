@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Lifecycle Management
-permalink: /63B/Lifecycle
+permalink: /63B/Lifecycle/
 navOrder: 5  
 navTitle: Lifecycle  
 ---
