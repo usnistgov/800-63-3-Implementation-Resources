@@ -65,6 +65,12 @@ An attacker that gains possession of a bearer assertion could try to replay that
 
 The RP ought to remember the identifiers of assertions as long as those identifiers are valid. Since assertions have a relatively short lifespan, this can be accomplished without large storage requirements by remembering only otherwise-valid assertion IDs within their validity window. If an assertion is replayed after it has expired, it will be rejected based on its expiration.
 
+### C.3.1.5 Requesting and Enforcing IAL and AAL {#s-c-3-1-5}
+
+Many federation protocols allow signaling between the IdP and RP to enable communication of the assurance levels in play for a given federation transaction. The RP can require that the IdP authenticate the subscriber using a particular AAL, or it can indicate that the IdP should only respond if the subscriber has been proofed at a given IAL or higher. 
+
+The IdP in turn can indicate what IAL and AAL are applicable to the subscriber in this transaction. When the RP receives this information, it can decide how to process the results in context with the RP application. For example, an RP can accept AAL2 as a general login for a subscriber, but disallow access to certain functionality unless the subscriber can authenticate to the IdP at AAL3. 
+
 ## C.3.2 Guidance by Product Family {#s-c-3-2}
 
 This document covers two main product families that enable federated identity transactions - SAML and OpenID Connect, the latter of which is built on top of OAuth. Other protocols and approaches are possible to use while fulfilling the requirements of the guidelines.
