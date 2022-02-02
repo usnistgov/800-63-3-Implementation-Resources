@@ -67,7 +67,7 @@ The RP ought to remember the identifiers of assertions as long as those identifi
 
 ### C.3.1.5 Requesting and Enforcing IAL and AAL {#s-c-3-1-5}
 
-Many federation protocols allow signaling between the IdP and RP to enable communication of the assurance levels in play for a given federation transaction. The RP can require that the IdP authenticate the subscriber using a particular AAL, or it can indicate that the IdP should only respond if the subscriber has been proofed at a given IAL or higher. 
+Many federation protocols allow signaling between the IdP and RP to enable communication of the assurance levels required for a given federation transaction. The RP can require that the IdP authenticate the subscriber using a particular AAL, or it can indicate that the IdP should only respond if the subscriber has been proofed at a given IAL or higher. 
 
 The IdP in turn can indicate what IAL and AAL are applicable to the subscriber in this transaction. When the RP receives this information, it can decide how to process the results in context with the RP application. For example, an RP can accept AAL2 as a general login for a subscriber, but disallow access to certain functionality unless the subscriber can authenticate to the IdP at AAL3. 
 
